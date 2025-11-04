@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Standard Galactic Suite — Retro Index</title>
+
+<style>
+/* -------- Retro Green Monochrome Theme -------- */
+body {
+  background-color: #000;
+  color: #00ff99;
+  font-family: "Courier New", monospace;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 5px #00ff99;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #00ff99;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 0;
+  text-shadow: 0 0 10px #00ff99;
+}
+
+/* -------- Blog List & Content Display -------- */
+#content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.article-link {
+  display: block;
+  padding: 6px 0;
+  border-left: 2px solid #00ff99;
+  padding-left: 10px;
+}
+
+#backButton {
+  display: none;
+  background: none;
+  color: #00ff99;
+  border: 1px solid #00ff99;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: "Courier New", monospace;
+}
+
+#backButton:hover {
+  background: #00ff99;
+  color: #000;
+}
+
+/* -------- Audio Player & Subtitles -------- */
+#audioContainer {
+  text-align: center;
+  border-bottom: 1px solid #00ff99;
+  padding: 15px 0;
+}
+
+audio {
+  width: 80%;
+  filter: hue-rotate(90deg) saturate(0.8);
+  outline: none;
+  margin-bottom: 8px;
+}
+
+#subtitle {
+  font-size: 1.1em;
+  text-align: center;
+  color: #00ff99;
+  height: 1.4em;
+  text-shadow: 0 0 8px #00ff99;
+}
+
+/* -------- Terminal Glow Animation -------- */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.95; }
+  100% { opacity: 1; }
+}
+body { animation: flicker 3s infinite; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🪐 Standard Galactic Suite — Knowledge Index</h1>
+</header>
+
+<div id="audioContainer">
+  <audio id="player" controls>
+    <source src="background/Geometric_Consciousness_and_LLMs.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+  <div id="subtitle">[Subtitles loading...]</div>
+</div>
+
+<div id="content">
+  <button id="backButton" onclick="showList()">⟵ Back</button>
+  <div id="articleList">
+    <h2>Available Articles</h2>
+    <a href="#" class="article-link" data-file="background/blog-post.md">Blog Post</a>
+    <a href="#" class="article-link" data-file="background/concept-explainer.md">Concept Explainer</a>
+    <a href="#" class="article-link" data-file="background/explanatory-dialogue.md">Explanatory Dialogue</a>
+    <a href="#" class="article-link" data-file="background/research-monograph.md">Research Monograph</a>
+    <a href="#" class="article-link" data-file="background/briefing-doc.md">Briefing Document</a>
+    <a href="#" class="article-link" data-file="background/conceptual-overview.md">Conceptual Overview</a>
+    <a href="#" class="article-link" data-file="background/monograph.md">Monograph</a>
+    <a href="#" class="article-link" data-file="background/study-guide.md">Study Guide</a>
+  </div>
+  <div id="articleContent" style="display:none;"></div>
+</div>
+
+<script>
+// -------- Load and Display Markdown Articles --------
+const articleLinks = document.querySelectorAll('.article-link');
+const articleList = document.getElementById('articleList');
+const articleContent = document.getElementById('articleContent');
+const backButton = document.getElementById('backButton');
+
+articleLinks.forEach(link => {
+  link.addEventListener('click', async e => {
+    e.preventDefault();
+    const file = link.getAttribute('data-file');
+    const res = await fetch(file);
+    const text = await res.text();
+    articleList.style.display = 'none';
+    backButton.style.display = 'inline-block';
+    articleContent.style.display = 'block';
+    articleContent.innerHTML = marked.parse(text);
+  });
+});
+
+function showList() {
+  articleContent.style.display = 'none';
+  backButton.style.display = 'none';
+  articleList.style.display = 'block';
+}
+
+</script>
+
+<script>
+// -------- Subtitles Sync with Audio (CORRECTED & ROBUST) --------
+const player = document.getElementById('player');
+const subtitleDiv = document.getElementById('subtitle');
+let subtitles = [];
+let currentSubIndex = -1;
+
+// Attempt to load VTT first, then SRT
+loadSubtitles('background/Geometric_Consciousness_and_LLMs.vtt')
+  .then(success => {
+    if (!success) return loadSubtitles('background/Geometric_Consciousness_and_LLMs.srt');
+    return success;
+  })
+  .then(success => {
+    if (success) {
+      subtitleDiv.textContent = "[Subtitles loaded — press play]";
+    } else {
+      subtitleDiv.textContent = "[No subtitles found]";
+    }
+  })
+  .catch(() => {
+    subtitleDiv.textContent = "[Subtitle error]";
+  });
+
+async function loadSubtitles(path) {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) return false;
+    const text = await response.text();
+    parseSubtitles(text);
+    return subtitles.length > 0;
+  } catch (err) {
+    console.warn(`Subtitle load failed for ${path}:`, err);
+    return false;
+  }
+}
+
+function parseSubtitles(data) {
+  subtitles = [];
+  const isVTT = data.trimStart().startsWith("WEBVTT");
+
+  const lines = data.replace(/\r\n/g, '\n').split('\n');
+  let i = 0;
+
+  if (isVTT) i = skipVTTHeader(lines, i);
+
+  while (i < lines.length) {
+    const cue = parseCue(lines, i, isVTT);
+    if (cue) {
+      subtitles.push(cue);
+      i = cue.nextIndex;
+    } else {
+      i++;
+    }
+  }
+}
+
+function skipVTTHeader(lines, i) {
+  while (i < lines.length && (lines[i].trim() === "WEBVTT" || lines[i].includes("-->") === false)) {
+    i++;
+  }
+  return i;
+}
+
+function parseCue(lines, startIdx, isVTT) {
+  let i = startIdx;
+  // Skip empty or note lines
+  while (i < lines.length && (!lines[i].includes('-->') && lines[i].trim() !== '')) i++;
+  if (i >= lines.length || !lines[i].includes('-->')) return null;
+
+  const timeLine = lines[i].trim();
+  const match = timeLine.match(
+    /(\d{2}):(\d{2}):(\d{2})[.,](\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2})[.,](\d{3})/
+  );
+  if (!match) return null;
+
+  const start = toSeconds(match[1], match[2], match[3], match[4]);
+  const end = toSeconds(match[5], match[6], match[7], match[8]);
+
+  i++;
+  let text = '';
+  while (i < lines.length && lines[i].trim() !== '' && !lines[i].includes('-->')) {
+    text += (text ? ' ' : '') + lines[i].trim();
+    i++;
+  }
+
+  return { start, end, text, nextIndex: i + 1 };
+}
+
+function toSeconds(h, m, s, ms) {
+  return parseInt(h, 10) * 3600 + parseInt(m, 10) * 60 + parseInt(s, 10) + parseInt(ms, 10) / 1000;
+}
+
+// Efficient subtitle lookup using linear forward scan with index tracking
+player.addEventListener('timeupdate', () => {
+  const currentTime = player.currentTime;
+  if (subtitles.length === 0) return;
+
+  // If current subtitle is active, keep it
+  if (currentSubIndex >= 0 && 
+      currentTime >= subtitles[currentSubIndex].start && 
+      currentTime <= subtitles[currentSubIndex].end) {
+    return;
+  }
+
+  // Move forward from current index
+  let nextIndex = currentSubIndex + 1;
+  while (nextIndex < subtitles.length && currentTime > subtitles[nextIndex].end) {
+    nextIndex++;
+  }
+
+  if (nextIndex < subtitles.length && 
+      currentTime >= subtitles[nextIndex].start && 
+      currentTime <= subtitles[nextIndex].end) {
+    currentSubIndex = nextIndex;
+    subtitleDiv.textContent = subtitles[nextIndex].text;
+  } else {
+    currentSubIndex = -1;
+    subtitleDiv.textContent = '';
+  }
+});
+
+// Reset on seek or end
+player.addEventListener('seeked', () => {
+  currentSubIndex = -1; // Force re-evaluation
+});
+</script>
+
+<!-- Load marked.js for Markdown rendering -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
