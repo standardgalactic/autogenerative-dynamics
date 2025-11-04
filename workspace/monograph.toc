@@ -1,0 +1,175 @@
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Generated Figure Overview}{9}{section.1.1}%
+\contentsline {part}{I\hspace {1em}The Autogenerative Thesis: From Non-Markovian Language to Cognitive Geometry}{11}{part.1}%
+\contentsline {section}{\numberline {1.2}Introduction: The Autogenerative Hypothesis}{13}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Mathematical Framework of Autogenerative Systems}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Definition of Autogeneration}{13}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Non-Markovian Dependence}{14}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Trajectory Embeddings}{14}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Energy Functional for Trajectory Smoothness}{14}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Conjecture: Irreducible Non-Markovianity}{15}{subsection.1.3.5}%
+\contentsline {section}{\numberline {1.4}Information Geometry of Autogeneration}{15}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Mutual Information and Memory Length}{15}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Geodesic Interpretation}{15}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Thermodynamic Analogy}{16}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Empirical Observation}{16}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}Category-Theoretic and Dynamical Extensions}{16}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Sequences as a Monoidal Category}{16}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Functorial Semantics and Autoregressive Natural Transformations}{17}{subsection.1.5.2}%
+\contentsline {paragraph}{Interpretation.}{17}{paragraph*.2}%
+\contentsline {subsection}{\numberline {1.5.3}Transjective Pair and Endofunctorial Closure}{17}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Central Pattern Generators as Semantic Functors}{18}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}Adjunction Energetics and Free Energy}{18}{subsection.1.5.5}%
+\contentsline {subsection}{\numberline {1.5.6}Operadic View of Learned Composition}{19}{subsection.1.5.6}%
+\contentsline {subsection}{\numberline {1.5.7}Dynamical Systems with Memory: State-Dependent Delay}{19}{subsection.1.5.7}%
+\contentsline {subsection}{\numberline {1.5.8}Amplitwistor Networks and Phase Condensation}{20}{subsection.1.5.8}%
+\contentsline {paragraph}{Summary of Section 4.}{20}{paragraph*.3}%
+\contentsline {section}{\numberline {1.6}Topological and Measure-Theoretic Foundations}{20}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Path Spaces, Filtrations, and Predictive Structure}{20}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Measure-Theoretic Non-Markovianity and Tail Dependence}{21}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Topological Persistence of Meaning}{22}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}Path Signatures and Rough Geometry}{22}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.5}Sheaf-Theoretic Context Gluing}{23}{subsection.1.6.5}%
+\contentsline {subsection}{\numberline {1.6.6}Cohomological Obstructions to Understanding}{23}{subsection.1.6.6}%
+\contentsline {section}{\numberline {1.7}Operator and Spectral Frameworks}{23}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Autogenerative Operators on Hilbert Spaces}{23}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Relevance Spectrum and Semantic Energy}{24}{subsection.1.7.2}%
+\contentsline {subsection}{\numberline {1.7.3}Stochastic Generators and Entropy Production}{24}{subsection.1.7.3}%
+\contentsline {subsection}{\numberline {1.7.4}Operator-Valued Attention and Non-Markovian Kernels}{25}{subsection.1.7.4}%
+\contentsline {subsection}{\numberline {1.7.5}Quantum Analogy and Amplitwistor Coupling}{25}{subsection.1.7.5}%
+\contentsline {subsection}{\numberline {1.7.6}Spectral Flow and Learning Dynamics}{26}{subsection.1.7.6}%
+\contentsline {subsection}{\numberline {1.7.7}Functional Calculus and Higher-Order Closure}{26}{subsection.1.7.7}%
+\contentsline {subsection}{\numberline {1.7.8}Relation to Thermodynamic Geometry}{26}{subsection.1.7.8}%
+\contentsline {paragraph}{Summary of Section 6.}{27}{paragraph*.4}%
+\contentsline {section}{\numberline {1.8}Topological Dynamics and Recurrence}{27}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Symbolic Dynamics and Subshifts}{27}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Conley Index and Morse Decomposition}{27}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Temporal Graphs and Recurrent Communities}{28}{subsection.1.8.3}%
+\contentsline {subsection}{\numberline {1.8.4}Topological Pressure and Predictive Free Energy}{28}{subsection.1.8.4}%
+\contentsline {paragraph}{Summary of Section 7.}{28}{paragraph*.5}%
+\contentsline {section}{\numberline {1.9}Physical and Thermodynamic Interpretation}{29}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Non-Markovian Actions with Memory Kernels}{29}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Landauer Budget and Epistemic Work}{29}{subsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.9.3}Fractional and Hereditary Dynamics}{29}{subsection.1.9.3}%
+\contentsline {subsection}{\numberline {1.9.4}Optimal Transport and Wasserstein Flows}{30}{subsection.1.9.4}%
+\contentsline {subsection}{\numberline {1.9.5}Amplitwistor Coupling and Phase Thermodynamics}{30}{subsection.1.9.5}%
+\contentsline {paragraph}{Summary of Section 8.}{30}{paragraph*.6}%
+\contentsline {section}{\numberline {1.10}Cognitive Geometry and Embodied Semantics}{30}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Fiber Bundles of Syntax and Semantics}{30}{subsection.1.10.1}%
+\contentsline {subsection}{\numberline {1.10.2}Embodiment via CPG Horizontal Lifts}{31}{subsection.1.10.2}%
+\contentsline {subsection}{\numberline {1.10.3}Mirror Duality: Syntax $\leftrightarrow $ Semantics}{31}{subsection.1.10.3}%
+\contentsline {subsection}{\numberline {1.10.4}Optimal Transport Between Modalities}{31}{subsection.1.10.4}%
+\contentsline {paragraph}{Summary of Section 9.}{31}{paragraph*.7}%
+\contentsline {section}{\numberline {1.11}Synthesis: Autogenerative Systems as Natural Computation}{31}{section.1.11}%
+\contentsline {subsection}{\numberline {1.11.1}Definition and Invariants}{31}{subsection.1.11.1}%
+\contentsline {subsection}{\numberline {1.11.2}Falsifiable Predictions}{32}{subsection.1.11.2}%
+\contentsline {subsection}{\numberline {1.11.3}Experimental Program}{32}{subsection.1.11.3}%
+\contentsline {subsection}{\numberline {1.11.4}Integration with RSVP / RAT / ATT / CPG}{33}{subsection.1.11.4}%
+\contentsline {paragraph}{Conclusion.}{33}{paragraph*.8}%
+\contentsline {section}{\numberline {1.12}Historical and Conceptual Context}{33}{section.1.12}%
+\contentsline {section}{\numberline {1.13}Mathematical Summary and Open Horizons}{34}{section.1.13}%
+\contentsline {section}{Transition to Part II}{34}{Item.18}%
+\contentsline {part}{II\hspace {1em}Advanced Frameworks of Autogeneration}{35}{part.2}%
+\contentsline {section}{\numberline {1.14}Ergodic Theory and Entropy Structure}{37}{section.1.14}%
+\contentsline {paragraph}{Empirical Protocol.}{38}{paragraph*.9}%
+\contentsline {paragraph}{Link to Part I.}{38}{paragraph*.10}%
+\contentsline {section}{\numberline {1.15}Category Theory and $\infty $-Categorical Coherence}{39}{section.1.15}%
+\contentsline {paragraph}{Aspect Relegation as Degeneracy.}{40}{paragraph*.11}%
+\contentsline {paragraph}{Transjective Resonance.}{40}{paragraph*.12}%
+\contentsline {paragraph}{CPG Chains as Higher Morphisms.}{40}{paragraph*.13}%
+\contentsline {paragraph}{Empathy Tensor and Attention Flow.}{41}{paragraph*.14}%
+\contentsline {paragraph}{Link to Prior Sections.}{41}{paragraph*.15}%
+\contentsline {section}{\numberline {1.16}Differential Geometry and Curvature Flow}{41}{section.1.16}%
+\contentsline {paragraph}{Interpretation.}{43}{paragraph*.16}%
+\contentsline {paragraph}{Mapping to RSVP Fields.}{43}{paragraph*.17}%
+\contentsline {paragraph}{Geometric Substrates of Attention.}{43}{paragraph*.18}%
+\contentsline {paragraph}{Cognitive Renormalization.}{43}{paragraph*.19}%
+\contentsline {paragraph}{Empirical Indicators.}{43}{paragraph*.20}%
+\contentsline {paragraph}{Link to Prior Sections.}{44}{paragraph*.21}%
+\contentsline {section}{\numberline {1.17}Operator Algebras and Koopman--von Neumann Formalism}{44}{section.1.17}%
+\contentsline {paragraph}{Linearization of Thought.}{46}{paragraph*.22}%
+\contentsline {paragraph}{Creative Gap as Modular Temperature.}{46}{paragraph*.23}%
+\contentsline {paragraph}{Entropy and Phase Operators.}{46}{paragraph*.24}%
+\contentsline {paragraph}{Relation to Geometry.}{46}{paragraph*.25}%
+\contentsline {paragraph}{Link to Prior Sections.}{46}{paragraph*.26}%
+\contentsline {section}{\numberline {1.18}Rough Path Theory and Signature Calculus}{47}{section.1.18}%
+\contentsline {paragraph}{Autogenerative Memory as Rough Integration.}{48}{paragraph*.27}%
+\contentsline {paragraph}{Energy and Forgetting.}{49}{paragraph*.28}%
+\contentsline {paragraph}{Attention as Finite-Order Signature.}{49}{paragraph*.29}%
+\contentsline {paragraph}{Operator Connection.}{49}{paragraph*.30}%
+\contentsline {paragraph}{Link to Prior Sections.}{49}{paragraph*.31}%
+\contentsline {section}{\numberline {1.19}Sheaf Theory and Contextual Semantics}{49}{section.1.19}%
+\contentsline {paragraph}{Semantic Fields as Sections.}{51}{paragraph*.32}%
+\contentsline {paragraph}{Relegation and Cohomology.}{51}{paragraph*.33}%
+\contentsline {paragraph}{Physical Analogy.}{51}{paragraph*.34}%
+\contentsline {paragraph}{Operator-Sheaf Bridge.}{51}{paragraph*.35}%
+\contentsline {paragraph}{Link to Prior Sections.}{52}{paragraph*.36}%
+\contentsline {section}{\numberline {1.20}Operadic Composition and Semantic Algebra}{52}{section.1.20}%
+\contentsline {paragraph}{Compositional Syntax.}{53}{paragraph*.37}%
+\contentsline {paragraph}{CPG Chains as Operadic Flows.}{54}{paragraph*.38}%
+\contentsline {paragraph}{Entropic Creativity Balance.}{54}{paragraph*.39}%
+\contentsline {paragraph}{Physical Analogy.}{54}{paragraph*.40}%
+\contentsline {paragraph}{Link to Prior Sections.}{54}{paragraph*.41}%
+\contentsline {section}{\numberline {1.21}Homotopy and $\infty $-Cohesion}{55}{section.1.21}%
+\contentsline {paragraph}{Deformable Understanding.}{56}{paragraph*.42}%
+\contentsline {paragraph}{Higher-Dimensional Empathy.}{56}{paragraph*.43}%
+\contentsline {paragraph}{Physical Analogy.}{57}{paragraph*.44}%
+\contentsline {paragraph}{Learning as Homotopy Flow.}{57}{paragraph*.45}%
+\contentsline {paragraph}{Link to Prior Sections.}{57}{paragraph*.46}%
+\contentsline {section}{\numberline {1.22}Derived Geometry and Variational Structure}{57}{section.1.22}%
+\contentsline {paragraph}{Learning as Derived Flow.}{59}{paragraph*.47}%
+\contentsline {paragraph}{Stability and Plasticity.}{59}{paragraph*.48}%
+\contentsline {paragraph}{Physical Analogy.}{59}{paragraph*.49}%
+\contentsline {paragraph}{Hierarchical Cognition.}{59}{paragraph*.50}%
+\contentsline {paragraph}{Link to Prior Sections.}{60}{paragraph*.51}%
+\contentsline {section}{\numberline {1.23}Quantum Information and Stochastic Quantization}{60}{section.1.23}%
+\contentsline {paragraph}{Cognitive Superposition.}{62}{paragraph*.52}%
+\contentsline {paragraph}{Decoherence and Attention.}{62}{paragraph*.53}%
+\contentsline {paragraph}{Creative Interference.}{62}{paragraph*.54}%
+\contentsline {paragraph}{Physical Analogy.}{62}{paragraph*.55}%
+\contentsline {paragraph}{Link to Prior Sections.}{62}{paragraph*.56}%
+\contentsline {section}{\numberline {1.24}Renormalization and Scale Invariance}{63}{section.1.24}%
+\contentsline {paragraph}{Learning Rate as RG Flow.}{65}{paragraph*.57}%
+\contentsline {paragraph}{Abstraction and Coarse-Graining.}{65}{paragraph*.58}%
+\contentsline {paragraph}{Creativity vs. Automation.}{65}{paragraph*.59}%
+\contentsline {paragraph}{Physical Analogy.}{65}{paragraph*.60}%
+\contentsline {paragraph}{Link to Prior Sections.}{65}{paragraph*.61}%
+\contentsline {section}{\numberline {1.25}Cohesive $\infty $-Topos Renormalization Principle}{66}{section.1.25}%
+\contentsline {paragraph}{Functorial Scale of Thought.}{67}{paragraph*.62}%
+\contentsline {paragraph}{Conceptual Renormalization.}{67}{paragraph*.63}%
+\contentsline {paragraph}{Automation as Categorical Limit.}{67}{paragraph*.64}%
+\contentsline {paragraph}{Physical Analogy.}{68}{paragraph*.65}%
+\contentsline {paragraph}{Link to Prior Sections.}{68}{paragraph*.66}%
+\contentsline {section}{\numberline {1.26}Renormalization Group of Understanding}{68}{section.1.26}%
+\contentsline {paragraph}{Abstraction as Coarse-Graining.}{70}{paragraph*.67}%
+\contentsline {paragraph}{Learning Curves as Flow Trajectories.}{70}{paragraph*.68}%
+\contentsline {paragraph}{Criticality and Creativity.}{70}{paragraph*.69}%
+\contentsline {paragraph}{Cross-Agent Universality.}{70}{paragraph*.70}%
+\contentsline {paragraph}{RSVP Cosmological Analogy.}{70}{paragraph*.71}%
+\contentsline {paragraph}{Link to Prior Sections.}{70}{paragraph*.72}%
+\contentsline {section}{\numberline {1.27}Derived Category of Understanding Scales}{71}{section.1.27}%
+\contentsline {paragraph}{Hierarchy of Meaning.}{72}{paragraph*.73}%
+\contentsline {paragraph}{Quasi-Isomorphism as Understanding.}{72}{paragraph*.74}%
+\contentsline {paragraph}{Cognitive Relegation Revisited.}{72}{paragraph*.75}%
+\contentsline {paragraph}{Integration with RG Flow.}{73}{paragraph*.76}%
+\contentsline {paragraph}{Phenomenological Picture.}{73}{paragraph*.77}%
+\contentsline {paragraph}{Link to Prior Sections.}{73}{paragraph*.78}%
+\contentsline {section}{\numberline {1.28}Synthetic Differential Geometry of Comprehension}{73}{section.1.28}%
+\contentsline {paragraph}{Continuous Thought.}{75}{paragraph*.79}%
+\contentsline {paragraph}{Semantic Velocity and Acceleration.}{75}{paragraph*.80}%
+\contentsline {paragraph}{Curvature and Reflexivity.}{75}{paragraph*.81}%
+\contentsline {paragraph}{Microlinearity and Intuition.}{75}{paragraph*.82}%
+\contentsline {paragraph}{Relation to RSVP Fields.}{75}{paragraph*.83}%
+\contentsline {paragraph}{Link to the Finale.}{76}{paragraph*.84}%
+\contentsline {section}{\numberline {1.29}Cohesive ∞-Topos and Unified Conjecture}{76}{section.1.29}%
+\contentsline {paragraph}{Three-fold Modality.}{78}{paragraph*.85}%
+\contentsline {paragraph}{Higher Morphisms and Empathy.}{78}{paragraph*.86}%
+\contentsline {paragraph}{Ontological Consequence.}{78}{paragraph*.87}%
+\contentsline {paragraph}{Philosophical Horizon.}{78}{paragraph*.88}%
+\contentsline {section}{Bibliography}{80}{Item.96}%
+\contentsline {section}{\numberline {.1}Appendix B: Thermodynamic Equivalence and Epistemic Energy}{82}{section.Alph0.1}%
+\contentsline {paragraph}{B.1 Landauer Bound for Cognitive Work.}{82}{paragraph*.90}%
+\contentsline {paragraph}{B.2 Free Energy Descent.}{82}{paragraph*.91}%
+\contentsline {paragraph}{B.3 Entropic Interpretation.}{83}{paragraph*.92}%
+\contentsline {paragraph}{B.4 Unified Statement.}{83}{paragraph*.93}%
+\contentsline {section}{\numberline {.2}Glossary of Core Terms}{83}{section.Alph0.2}%

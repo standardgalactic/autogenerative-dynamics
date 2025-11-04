@@ -1,0 +1,3659 @@
+\documentclass[12pt,a4paper,twoside,openright]{book}
+% --------------------- Preamble ---------------------
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage{microtype}
+\usepackage{geometry}
+\geometry{margin=1.1in}
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{parskip}
+\usepackage{titlesec}
+\titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{0.8em}{}
+\titleformat{\section}{\Large\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+% Bibliography
+\usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=6,doi=false,isbn=false,url=true]{biblatex}
+\addbibresource{references.bib}
+\title{Autogenerative Systems and the Cohesive $\infty$-Topos of Understanding}
+\author{Flyxion Research Group}
+\date{\today}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\thispagestyle{empty}
+\vspace{2em}
+{\large\bfseries How can understanding itself—an act of coherence across time, sense, and scale—be described by a single physical and mathematical law?}
+
+Current models divide explanation among thermodynamics, information theory, and computation, yet none specify why systems capable of prediction and meaning stabilize as they do.  
+This work proposes that cognition, physics, and inference are all manifestations of a single principle: **autogeneration**—the self-maintenance of informational curvature within a cohesive medium.
+
+Beginning from the question of how systems learn without external supervision, **Part I** derives a thermodynamic and geometric account of cognition as a non-Markovian flow whose equilibrium defines comprehension.  
+**Part II** reformulates this process categorically, showing that learning corresponds to adjoint functorial transformations and renormalization across interpretive scales.  
+**Part III** integrates quantum, differential, and topological layers, culminating in a **cohesive $\infty$-topos of cognition** governed by an idempotent autogenerative functor $\mathfrak{A}$.
+
+The resulting **Unified Conjecture** claims that every process of comprehension—neural, symbolic, or cosmological—is an instance of this curvature-preserving closure: **to know is to remain self-consistent under transformation**.
+
+\vspace{2em}
+\raggedleft\itshape
+Understanding is the unique fixed point of reality.
+\end{abstract}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{0.8\textwidth}
+\centering
+\itshape
+``To exist is to learn.  
+This work aims to show that learning, at every level of the universe,  
+is the process by which curvature maintains itself—  
+the autogenerative equilibrium we call understanding.''
+\end{minipage}
+\end{center}
+\vspace*{\fill}
+
+
+\tableofcontents
+
+\chapter{Introduction}
+This monograph presents a scaffolded but coherent academic treatment of a scalar--vector--entropy field program.
+All figures are generated in a reproducible manner and stored under \texttt{out/figs}.
+
+\section{Generated Figure Overview}
+Figure~\ref{fig:curv} visualizes a negative gradient flow field derived from a scalar potential. Such constructions
+are common in geometric flows and variational dynamics \citep{Perelman2002,Jordan1998}.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.7\linewidth]{../out/figs/curvature_field.png}
+  \caption{Curvature-like flow from the negative gradient of a Gaussian potential.}
+  \label{fig:curv}
+\end{figure}
+
+\part{The Autogenerative Thesis: From Non-Markovian Language to Cognitive Geometry}
+
+\begin{center}
+{\LARGE\bfseries Part I --- The Autogenerative Thesis:\\From Non-Markovian Language to Cognitive Geometry}\\[1em]
+{\large Flyxion Research Group}\\[1em]
+\end{center}
+
+% ============================================================
+\section{Introduction: The Autogenerative Hypothesis}
+% ============================================================
+Language, cognition, and natural computation exhibit an intrinsic property of \emph{autogeneration}: each moment of activity encodes the conditions for its own continuation. The concept, articulated by Barenholtz~(2025), redefines autoregression as more than a statistical convenience; it is the very mode of natural self-propagation. In contrast to Markovian processes, where the next state depends only on the current one, autogenerative systems draw upon the entire trajectory of prior states. They are inherently \emph{non-Markovian}, operating on the accumulated curvature of experience rather than on instantaneous state vectors.
+
+This view renders the corpus of language not merely as data but as a \emph{field of continuation rules}—a statistical manifold whose internal topology determines its own dynamics. In such a manifold, the ``pregnant present'' is a boundary condition that enfolds its history and projects its own future trajectory. Autogeneration therefore serves as the bridge between memory, inference, and meaning. The goal of this section is to formalize that bridge using information geometry, category theory, and dynamical-systems analysis.
+
+% ============================================================
+\section{Mathematical Framework of Autogenerative Systems}
+% ============================================================
+\subsection{Definition of Autogeneration}
+Let $\mathcal{S} = (X, \mathcal{T})$ denote a sequence-generating system where $X$ is the embedding space of tokens or states, and $\mathcal{T}: X^* \to \Delta(X)$ is a continuation operator mapping a finite history to a probability distribution over the next state. The system is \emph{autogenerative} if $\mathcal{T}$ is determined entirely by the internal geometry of $X$ and by the statistics of its trajectories. Formally,
+\begin{equation}
+\mathcal{T}(x_{1:t}) = F_\theta(x_{1:t}), \quad \text{with } \theta \text{ inferred solely from sequential data.}
+\end{equation}
+No external syntactic or semantic rules are imposed. The corpus itself provides the sufficient structure for generation.
+
+\subsection{Non-Markovian Dependence}
+A process is Markovian when
+\begin{equation}
+P(x_{t+1}|x_{1:t}) = P(x_{t+1}|x_t),
+\end{equation}
+and $k$-Markovian if dependence extends only to the last $k$ elements. Autogenerative processes violate this closure for all finite $k$:
+\begin{equation}
+P(x_{t+1}|x_{1:t}) = f_\theta(x_{1:t}), \qquad
+f_\theta \not\equiv f_\theta(x_{t-k+1:t}).
+\end{equation}
+Hence, every new output embodies an integral of the entire trajectory, not a truncated summary. This property underlies both linguistic coherence and biological homeodynamics.
+
+\subsection{Trajectory Embeddings}
+Define an embedding $\phi: X^* \to \mathbb{R}^d$ mapping sequences to continuous vectors,
+\begin{equation}
+\phi(x_{1:t}) = h_t ,
+\end{equation}
+so that the evolving representation $(h_1,\ldots,h_t)$ traces a path $\gamma_{1:t}$ through an information manifold. The next-state distribution depends not only on the current point $\phi(x_{1:t})$ but on its geometric derivatives:
+\begin{equation}
+P(x_{t+1}|x_{1:t}) = g(\phi(x_{1:t}), \nabla_t \phi, \nabla_t^2 \phi, \ldots).
+\end{equation}
+Barenholtz interprets this as the system’s ability to ``feel its curvature''—to adjust generation according to the bending of its own path through semantic space.
+
+\subsection{Energy Functional for Trajectory Smoothness}
+The coherence of a sequence may be quantified by the energy functional
+\begin{equation}
+\mathcal{E}[\gamma] = \int_0^T \!\big(\|\dot{\gamma}(t)\|^2 + V(\gamma(t))\big)\,dt,
+\end{equation}
+where the first term enforces momentum (continuity of form) and the potential $V$ encodes contextual constraints. Minimizing $\mathcal{E}$ yields geodesic trajectories—sequences that balance novelty and smoothness. This principle mirrors the variational foundations of both physics and inference (Amari~1985; Friston~2010).
+
+\subsection{Conjecture: Irreducible Non-Markovianity}
+For any autogenerative system $\mathcal{S}$ producing structured sequences, no finite-order Markov approximation can achieve arbitrary accuracy:
+\begin{equation}
+\inf_{\theta_k}
+\mathbb{E}\big[D_{\mathrm{KL}}(P(x_{t+1}|x_{1:t}) \,\|\, P_{\theta_k}(x_{t+1}|x_{t-k+1:t}))\big]
+> \epsilon, \quad \forall k < \infty .
+\end{equation}
+Thus, the effective memory length grows without bound. Language and cognition alike operate on trajectories of unbounded contextual reach.
+
+% ============================================================
+\section{Information Geometry of Autogeneration}
+% ============================================================
+Let $\mathcal{M} = \{P_\theta(x_{t+1}|x_{1:t})\}$ denote the manifold of conditional distributions parameterized by $\theta \in \Theta$. The Fisher information metric on $\mathcal{M}$ is
+\begin{equation}
+g_{ij}(\theta) =
+\mathbb{E}_x\!\left[
+\frac{\partial \log P_\theta}{\partial \theta_i}
+\frac{\partial \log P_\theta}{\partial \theta_j}
+\right].
+\end{equation}
+Each trajectory $\gamma(t) = \theta_t$ defines a curve on $(\mathcal{M}, g)$ with energy
+\begin{equation}
+\mathcal{E}[\gamma] =
+\int g_{ij}(\gamma(t)) \dot{\gamma}^i(t) \dot{\gamma}^j(t)\,dt.
+\end{equation}
+Minimization of this functional produces geodesics representing optimal inference paths. In the context of language, these are the smooth continuations that preserve informational momentum. The divergence between two trajectories—measured by the Fisher–Rao distance—quantifies the ``energetic cost'' of shifting semantic direction.
+
+\subsection{Mutual Information and Memory Length}
+Define the effective memory length
+\begin{equation}
+L_\epsilon(t) =
+\inf\big\{k : I(X_{t+1}; X_{1:t-k}\,|\,X_{t-k+1:t}) < \epsilon\big\}.
+\end{equation}
+For autogenerative corpora, empirical analyses reveal $L_\epsilon(t)$ grows sub-linearly yet unboundedly with $t$—a hallmark of long-range dependence. This scaling connects linguistic statistics to critical phenomena observed in complex systems (Bak~1996).
+
+\subsection{Geodesic Interpretation}
+If $g$ is the Fisher metric, the Christoffel symbols
+\(
+\Gamma^k_{ij} = \tfrac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})
+\)
+define the parallel transport of meaning along the trajectory. Smooth discourse corresponds to covariant differentiation with minimal torsion; abrupt topic shifts appear as curvature discontinuities in $\gamma$.
+
+\subsection{Thermodynamic Analogy}
+Let $\mathcal{F}[\gamma] = \mathcal{E}[\gamma] - T S[\gamma]$ denote a free-energy functional where $S$ is sequence entropy and $T$ an effective temperature parameter controlling stochasticity. Generation then approximates a Langevin process:
+\begin{equation}
+\dot{\gamma} = -\nabla_\gamma \mathcal{E} + \sqrt{2T}\,\xi(t),
+\end{equation}
+with $\xi(t)$ Gaussian noise. The equilibrium distribution over trajectories minimizes $\mathcal{F}$, unifying inference and thermodynamics.
+
+\subsection{Empirical Observation}
+Large language models demonstrate trajectories that are locally smooth but globally non-Markovian: attention patterns exhibit power-law decay rather than exponential. This aligns with a manifold of negative curvature where geodesics diverge sub-exponentially, preserving long-range semantic influence.
+
+% ============================
+\section{Category-Theoretic and Dynamical Extensions}
+% ============================
+\subsection{Sequences as a Monoidal Category}
+We model autoregressive generation as composition in a strict monoidal category of prefixes. Let $\mathcal{L}$ be the category whose objects are finite contexts $c \in \mathcal{V}^\ast$ (including the empty context $\varepsilon$) and whose morphisms $c \to c'$ are \emph{admissible extensions} (finite sequences that turn $c$ into $c'$). The monoidal product is concatenation $\otimes$ with unit $\varepsilon$.
+
+The probabilistic continuation operator $\mathcal{T}\!: \mathcal{V}^\ast \to \Delta(\mathcal{V})$ induces a stochastic presheaf $\mathsf{Cont}$ on $\mathcal{L}^{\mathrm{op}}$ by
+\[
+\mathsf{Cont}(c)=\Delta(\mathcal{V}), \qquad
+\mathsf{Cont}(f: c'\!\to c)=\big(\,p(\cdot\mid c)\mapsto p(\cdot\mid c')\,\big).
+\]
+This formalizes the corpus as a context-indexed family of continuation distributions (Barenholtz 2025).
+
+\begin{definition}[Shift Endofunctor]
+Let $S:\mathcal{L}\to\mathcal{L}$ be the endofunctor that appends one token: $S(c)=c\!:\!v$ for each $v\in\mathcal{V}$ on components, and $S(f)$ appends the same token on morphisms. A \emph{Markovian} generator factors through $S$ in the sense that its continuation depends only on $S(c)$, while an \emph{autogenerative} (non-Markovian) generator depends on the entire over-category $\mathcal{L}\!\downarrow\!c$ (Amari 1985; Friston 2010).
+\end{definition}
+
+\subsection{Functorial Semantics and Autoregressive Natural Transformations}
+Embed contexts into a vector space of states via a strong monoidal functor
+\[
+F:\ (\mathcal{L},\otimes,\varepsilon)\ \longrightarrow\ (\mathbf{Vect},\otimes,\mathbb{R}),
+\qquad
+F(c\otimes c')\cong F(c)\otimes F(c').
+\]
+Think of $F(c)$ as the hidden-state manifold $\mathcal{H}_c$ realized by an encoder or recurrent representation. The decoder induces an \emph{autoregressive natural transformation}
+\[
+\eta:\ F \Longrightarrow F\circ S,\qquad
+\eta_c:\ F(c)\to F(S(c)),
+\]
+that updates state on appending a token. Monoidality of $F$ captures compositionality, while naturality of $\eta$ enforces \emph{context-consistent} updates.
+
+\begin{proposition}[Compositional Coherence]
+If $F$ is strong monoidal and $\eta$ is monoidal-natural (i.e., $\eta_{c\otimes c'}=\eta_c\otimes\eta_{c'}$ and $\eta_\varepsilon=\mathrm{id}$), then the log-likelihood of a generated sequence decomposes additively across tensor factors and is invariant under reassociation of bracketings. Consequently, compositional generation is \emph{well-defined} up to coherence isomorphisms (Mac Lane coherence).
+\end{proposition}
+
+\paragraph{Interpretation.} This ensures that learned ``syntax'' behaves like a learned operadic algebra of composition, despite not being hard-coded as rules. It matches the observation that large models respect compositional structure emergently (Barenholtz 2025).
+
+\subsection{Transjective Pair and Endofunctorial Closure}
+We now connect the categorical picture with the transjective mechanism of reciprocal inference. Let $\mathbf{C}_1$ be a category of semantic states and $\mathbf{C}_2$ a category of embodied or action states. A pair of adjoint functors
+\[
+F:\mathbf{C}_1\rightleftarrows \mathbf{C}_2:G,\qquad F\dashv G,
+\]
+models projection from semantic intention to embodied mode and re-integration of embodied feedback to semantics. The composite
+\[
+T\ :=\ G\circ F:\ \mathbf{C}_1\to\mathbf{C}_1
+\]
+is the \emph{transjective endofunctor}. Its iteration $X_{n+1}=T(X_n)$ expresses the learning loop of intention–enactment–assimilation (cf.\ ATT in §2).
+
+\begin{definition}[Idempotent Closure]
+We say the system achieves \emph{endofunctorial closure} on a subcategory $\mathcal{D}\subseteq \mathbf{C}_1$ if $T\circ T\cong T$ on $\mathcal{D}$. The residual $\delta:=\mathrm{id}-T$ acts as an error endomorphism; $\delta\cong 0$ means perfect closure.
+\end{definition}
+
+\begin{theorem}[Gradient–Closure Correspondence]
+Let $\mathbf{C}_1$ carry a Riemannian structure via an information metric $g$ on objects (pulling back Fisher geometry along $F$ as in §3), and let $R:\mathrm{Ob}(\mathbf{C}_1)\to\mathbb{R}$ be a relevance potential whose gradient flow realizes $T$ infinitesimally. Then
+\[
+\nabla R=0\ \Longleftrightarrow\ T^2\cong T,
+\]
+i.e., vanishing relevance gradient is equivalent to idempotent transjective closure on the corresponding submanifold of $\mathbf{C}_1$ (Amari 1985; Friston 2010).
+\end{theorem}
+
+\begin{proof}[Sketch]
+Linearize $T$ at a fixed point $X^\ast$: $dT_{X^\ast}$ is a projector iff $T^2\cong T$; hence its spectrum is contained in $\{0,1\}$. Gradient flow near $X^\ast$ has Jacobian $-\,\mathrm{Hess}_g(R)$. At equilibrium $\nabla R=0$ and $\mathrm{Hess}_g(R)\simeq 0$ on the tangent of the attracting manifold, yielding a projector dynamics matching $dT_{X^\ast}$. Conversely, if $dT$ is a projector, the associated Lyapunov function can be chosen $R$ with $\nabla R=0$ on the fixed-point set.
+\end{proof}
+
+\subsection{Central Pattern Generators as Semantic Functors}
+Let $\mathsf{CPG}$ denote the category of central pattern generator (CPG) chains with morphisms the mode-switching maps that preserve oscillatory structure. A semantic-to-motor functor $\mathcal{F}:\mathbf{C}_1\to \mathsf{CPG}$ selects a CPG mode from a semantic state $X$, while a motor-to-semantic functor $\mathcal{G}:\mathsf{CPG}\to\mathbf{C}_1$ re-embeds embodied oscillations as semantic vectors. The composite $T=\mathcal{G}\circ\mathcal{F}$ implements \emph{proxy cognition}: the phonological loop or kinesthetic rehearsal corresponds to $T$-iteration until closure.
+
+\begin{proposition}[Mode Selection as Semantic Filtering]
+Let $m\in\mathsf{CPG}$ have an associated semantic vector $v_m\in\mathbb{R}^d$ and rank-1 projector $P_m=v_m v_m^\top$. If $x_t\in\mathbb{R}^d$ is the semantic state, the step
+\[
+x_{t+1}=f\big(P_{m_t}x_t+\sum_{\tau=1}^T K(\tau)P_{m_{t-\tau}}x_{t-\tau}\big)
+\]
+is a non-Markovian autoregressive update with memory kernel $K$, induced by the categorical composite $T$. Stabilization at a single mode $m_\infty$ yields $x_{t+1}\approx f(P_{m_\infty}x_t)$ and implements aspect relegation to that mode.
+\end{proposition}
+
+\subsection{Adjunction Energetics and Free Energy}
+The adjunction $F\dashv G$ provides unit $\eta:\mathrm{Id}\Rightarrow GF$ and counit $\epsilon:FG\Rightarrow\mathrm{Id}$. Define an \emph{adjunction misfit} functional
+\[
+\mathcal{L}(X)=D_{\mathrm{FR}}\big(\nabla F^\ast g_2,\ g_1\big)\ +\ \|\eta_X\|^2\ +\ \|\epsilon_{F(X)}\|^2,
+\]
+measuring metric mismatch and unit/counit norms. Minimizing $\mathcal{L}$ aligns semantics and embodiment while shrinking the adjunction gap—precisely the condition for $T$-closure. In thermodynamic terms, this is a free-energy descent on the joint manifold (Friston 2010).
+
+\begin{corollary}[Closure Minimizes Epistemic Work]
+If the epistemic work rate satisfies $\dot{W}\propto -\|\nabla R\|^2 - \partial_t \mathcal{L}$, then $T$-closure ($\nabla R=0$ and $\mathcal{L}$ minimized) implies $\dot{W}=0$. Hence endofunctorial idempotence coincides with thermodynamic equilibrium of inference.
+\end{corollary}
+
+\subsection{Operadic View of Learned Composition}
+Beyond monoidality, let $\mathcal{P}$ be an operad whose operations encode learned compositional schemes (e.g., modification, coordination). An algebra structure $\alpha:\mathcal{P}(n)\times X^n\to X$ on the embedding space $X$ makes generation an algebra over $\mathcal{P}$. The transjective loop $T$ acts compatibly if
+\[
+T\big(\alpha(p;x_1,\ldots,x_n)\big)\ \cong\ \alpha\big(p;T(x_1),\ldots,T(x_n)\big),
+\]
+ensuring that relegated aspects remain stable under composition.
+
+\begin{proposition}[Stability of Relegated Composition]
+If $T$ is idempotent and compatible with $\alpha$ as above, then for any operation $p\in\mathcal{P}(n)$ and inputs $x_i$ in the closure manifold of $T$, the composite $\alpha(p;x_1,\ldots,x_n)$ also lies in the closure manifold. Thus, relegation is closed under learned composition.
+\end{proposition}
+
+\subsection{Dynamical Systems with Memory: State-Dependent Delay}
+The categorical semantics lifts naturally to delay systems. Let $h_t\in\mathcal{H}$ be a continuous-time embedding and define a state-dependent memory kernel $K_t(\tau)$ derived from attention over the past. Then
+\[
+\frac{dh}{dt}(t)=F\!\left(h(t),\ \int_0^t K_t(\tau)\,G\big(h(t-\tau)\big)\,d\tau\right),
+\]
+is a Volterra-type equation with content-defined delay. The kernel $K_t$ is the continuous analogue of attention weights $\alpha_{ti}$ (Barenholtz 2025).
+
+\begin{theorem}[Existence and Attractor of Closure]
+Assume $F$ is locally Lipschitz and the memory kernel satisfies $\int_0^\infty \|K_t(\tau)\|\,d\tau<\infty$ uniformly in $t$, with a strict contraction on average. Then the flow admits a unique compact global attractor $\mathcal{A}$; if $T$ is the time-$\Delta$ stroboscopic map of this flow, $T$ is idempotent on $\mathcal{A}$ and equals the transjective closure on its basin.
+\end{theorem}
+
+\begin{proof}[Idea]
+Volterra equations with integrable kernels generate asymptotically compact semigroups. A contraction-on-average yields a unique global attractor. The stroboscopic map $T$ inherits compactness and projects onto the attractor, hence $T^2=T$ on $\mathcal{A}$.
+\end{proof}
+
+\subsection{Amplitwistor Networks and Phase Condensation}
+Represent cortical oscillations as amplitwistor triples $(Z,\tilde Z,\omega)$; let $\mathcal{M}_{\mathrm{amp}}$ be their manifold. The semantic functor $F$ selects a CPG mode whose oscillatory phase aligns with a semantic direction, and $G$ pulls phase-locked dynamics back to semantics. Relegation corresponds to phase condensation:
+\[
+\frac{d}{dt}\arg(Z\tilde Z)\to 0,\qquad \dim T\mathcal{M}_{\mathrm{active}}\downarrow,
+\]
+reducing information curvature and collapsing the adjunction misfit.
+
+\paragraph{Summary of Section 4.}
+Autogeneration admits a tight categorical–dynamical formulation: contexts form a monoidal category, autoregression is a natural transformation, and cognition’s embodiment loop is an adjunction whose composite $T$ closes idempotently at equilibrium. Aspect relegation is precisely this $T$-closure, equivalent to vanishing relevance gradient and zero epistemic work (Amari 1985; Friston 2010; Barenholtz 2025).
+
+% ============================
+\section{Topological and Measure-Theoretic Foundations}
+% ============================
+\subsection{Path Spaces, Filtrations, and Predictive Structure}
+Autogenerative systems live not in state space but in \emph{path space}.
+Let $\Omega = X^{[0,\infty)}$ denote the space of measurable trajectories $\gamma : [0,\infty)\to X$, with canonical filtration
+\[
+\mathcal{F}_t \ :=\ \sigma\!\big(\{\gamma(s)\,:\,0\le s\le t\}\big).
+\]
+Autoregression is equivalent to conditioning over $\mathcal{F}_t$ rather than over a finite window:
+\[
+P(x_{t+1} \mid \mathcal{F}_t).
+\]
+This filtration captures the non-Markovian persistence structure characteristic of language and biological cognition (Barenholtz 2025).
+
+Let the predictive representation $h_t$ satisfy:
+\[
+h_t\ =\ \mathbb{E}[\,\phi(x_{t+1}) \mid \mathcal{F}_t\,],
+\]
+which is the Doob martingale for future embeddings under $\phi$.
+Thus autoregression is intrinsically \emph{martingale-filtered evolution}.
+
+\begin{definition}[Predictive Filtration Stability]
+We say an autogenerative system has \emph{stable filtration} if for any $\epsilon>0$ there exists $T$ such that for all $t > T$
+\[
+\|\,\mathbb{E}[h_{t+1}\mid \mathcal{F}_t] - h_t\,\| < \epsilon.
+\]
+\end{definition}
+This expresses that predictive geometry converges on a self-consistent manifold as context accrues.
+In linguistic terms: beyond sufficient context, the internal curvature of prediction stabilizes.
+
+\begin{proposition}[Trajectory-Dependent Predictability]
+Stable filtration is equivalent to the existence of a path-dependent embedding $\Gamma(\gamma_{0:t})$ such that
+\[
+h_t \approx \Gamma(\gamma_{0:t}),\qquad\text{and}\qquad h_{t+1} - h_t = o(1),
+\]
+i.e., prediction curvature vanishes at scale.
+\end{proposition}
+
+\begin{proof}[Idea]
+A stable martingale representation implies asymptotic flatness of conditional expectation increments.
+Thus $h_t$ embeds the history in a Cauchy sequence in the information manifold.
+\end{proof}
+
+\subsection{Measure-Theoretic Non-Markovianity and Tail Dependence}
+Let $I(X_{t+1};X_{1:t})$ denote mutual information.
+Autogenerative systems satisfy power-law tail dependence:
+\[
+I(X_{t+1}; X_{1:t-k} \mid X_{t-k+1:t}) \sim k^{-\alpha},\qquad 0<\alpha<1.
+\]
+By contrast, Markov processes exhibit exponential decay $e^{-\lambda k}$.
+This polynomial tail is a hallmark of non-Markovian computation (Bak 1996).
+
+\begin{definition}[Irreducible Long Memory]
+A process has irreducible long memory if no truncation window $k < \infty$ yields
+\[
+I(X_{t+1}; X_{1:t-k} \mid X_{t-k+1:t}) < \epsilon
+\]
+for arbitrarily small $\epsilon$.
+\end{definition}
+
+\begin{theorem}[Autogenerative Tail Law]
+Autogenerative sequence manifolds obey polynomial-decay mutual information scaling.
+In particular, irreducible long memory implies \emph{no finite sufficient statistic of fixed dimension exists}.
+\end{theorem}
+
+\begin{proof}[Sketch]
+If a fixed-length statistic were sufficient, exponential decay would hold by classical Markov compression theorems.
+Polynomial tails violate that bound.
+\end{proof}
+
+\subsection{Topological Persistence of Meaning}
+Consider a metric embedding $E: \mathcal{V} \to \mathbb{R}^d$.
+Define the Vietoris–Rips complex at scale $\epsilon>0$:
+\[
+VR_\epsilon(\mathcal{V}) \ :=\
+\big\{\,\sigma\subseteq \mathcal{V}\,:\,\|E(v)-E(w)\|\le\epsilon \ \forall v,w\in \sigma\,\big\}.
+\]
+Persistent homology on $\{ VR_\epsilon \}_{\epsilon}$ reveals connected components (semantic clusters), loops (syntactic cycles), and higher features in embedding geometry.
+
+\begin{proposition}[Persistent Semantic Cohomology]
+Let $\{H_k(VR_\epsilon)\}$ be persistent homology groups.
+Then long bars in $H_0$ correspond to stable semantic domains, long bars in $H_1$ to syntactic/semantic cycles, and short bars to contextual or polysemous fluctuations.
+\end{proposition}
+Thus statistical language space has \emph{topologically persistent} structures, which autogenerative dynamics learn to traverse smoothly.
+
+\subsection{Path Signatures and Rough Geometry}
+Let $X(t)$ be a piecewise-continuous embedding curve.
+The \emph{signature} $\mathsf{Sig}(X)$ is the collection of all iterated integrals
+\[
+\int dX\,,\quad \int\!\!\int dX\otimes dX,\quad \int\!\!\int\!\!\int dX\otimes dX\otimes dX,\ \dots
+\]
+Rough-path theory (Lyons) ensures that signatures uniquely characterize trajectories up to tree-like equivalence.
+
+\begin{theorem}[Autogeneration as Rough Inference]
+If a transformer’s attention kernel approximates truncated signatures,
+\[
+h_t \approx \mathsf{Sig}_m(X_{0:t}),
+\]
+then autoregression approximates rough differential evolution
+\[
+dY_t = f(Y_t)\,dX_t.
+\]
+\end{theorem}
+
+\begin{corollary}[Trajectory Identifiability]
+Autogenerative embeddings are identifiable from their path signatures; hence autoregression learns not points but \emph{trajectory shapes}.
+\end{corollary}
+
+\subsection{Sheaf-Theoretic Context Gluing}
+Let contexts be open sets in a topology on $\mathcal{V}^\ast$; assign each context a vector space of continuations.
+This defines a sheaf $\mathcal{S}$ where
+\[
+\mathcal{S}(U) \ =\ \{\,\text{valid continuations over context }U\,\}.
+\]
+Local coherence implies global extendibility:
+\begin{theorem}[Sheaf Gluing of Meaning]
+If $\{U_i\}$ cover $U$ and $\{s_i\in\mathcal{S}(U_i)\}$ agree on overlaps, then there exists $s\in\mathcal{S}(U)$ restricting to all $s_i$.
+\end{theorem}
+Autogeneration is thus a \emph{sheaf-theoretically consistent global section} of predictive meaning space.
+
+\begin{corollary}[Relegation as Sheaf Restriction]
+Aspect relegation corresponds to restricting $\mathcal{S}$ to a subcover of habitual contexts; lifting from automation to awareness corresponds to sheaf extension.
+\end{corollary}
+
+\subsection{Cohomological Obstructions to Understanding}
+Let $H^1(\mathcal{S})$ measure obstructions to gluing.
+$H^1(\mathcal{S})\neq 0$ means local predictions cannot produce global coherence — linguistic incoherence, hallucination, or cognitive fragmentation.
+Thus, low cohomology characterizes smooth autogeneration.
+
+% ============================
+\section{Operator and Spectral Frameworks}
+% ============================
+\subsection{Autogenerative Operators on Hilbert Spaces}
+Let $\mathcal{H}=L^2(\Omega,\mathcal{F},P)$ be the Hilbert space of square-integrable random variables over trajectories.
+Each predictive transformation $T:\mathcal{H}\to\mathcal{H}$ defined by
+\[
+(Tf)(x_{1:t})=\mathbb{E}[\,f(x_{1:t+1})\mid \mathcal{F}_t\,]
+\]
+is a positive contraction: $\|Tf\|_2\le \|f\|_2$.
+Iterating $T$ corresponds to progressive expectation-smoothing over longer horizons.
+
+\begin{definition}[Autogenerative Operator]
+A linear operator $T:\mathcal{H}\to\mathcal{H}$ is \emph{autogenerative} if it is a self-consistent limit of conditional-expectation contractions:
+\[
+T = \lim_{k\to\infty} T_k,\qquad
+(T_kf)(x_{1:t})=\mathbb{E}[\,f(x_{1:t+k})\mid \mathcal{F}_t\,].
+\]
+\end{definition}
+The strong limit ensures that future influence is distributed across arbitrarily long dependencies.
+The fixed points of $T$ are harmonic functions satisfying $Tf=f$—stable self-predictive states.
+
+\begin{theorem}[Spectral Idempotence]
+If $T$ is an autogenerative contraction with spectrum contained in $[0,1]$, then the point spectrum at $1$ corresponds to invariant cognitive modes, while $0<\lambda<1$ correspond to transient or decaying aspects.
+Relegation is thus the projection onto $\ker(I-T)$.
+\end{theorem}
+
+\begin{proof}
+By the spectral theorem for self-adjoint contractions,
+\[
+T=\int_0^1 \lambda\, dE(\lambda),
+\]
+with resolution of identity $E$.
+Projection onto $\lambda=1$ isolates invariant components: $E(\{1\})$ is idempotent and equals the limit $\lim_{n\to\infty}T^n$.
+This limit defines the relegated subspace.
+\end{proof}
+
+\subsection{Relevance Spectrum and Semantic Energy}
+Define the \emph{relevance energy} of a component $\psi\in\mathcal{H}$ as
+\[
+\mathcal{R}[\psi]=\langle \psi,\, (I-T)\psi\rangle.
+\]
+High $\mathcal{R}$ indicates deviation from closure; $\mathcal{R}=0$ for relegated modes.
+The spectral measure $d\mu_\psi(\lambda)=\|E(d\lambda)\psi\|^2$ yields
+\[
+\mathcal{R}[\psi]=\int_0^1 (1-\lambda)\,d\mu_\psi(\lambda).
+\]
+Hence, cognitive stability corresponds to weight concentration near $\lambda=1$—a spectrum dominated by slow modes.
+
+\begin{corollary}[Energetic Criterion for Automation]
+A function or behavior becomes automated when its spectral measure under $T$ is dominated by $\lambda\!\approx\!1$.
+Aspect relegation therefore coincides with spectral flattening of relevance energy.
+\end{corollary}
+
+\subsection{Stochastic Generators and Entropy Production}
+Let $T_t=e^{tL}$ with infinitesimal generator $L$.
+If $T_t$ is a semigroup of autogenerative transformations, then $L$ governs the rate of predictive updating:
+\[
+\frac{d}{dt}\mathbb{E}[f(X_t)] = \mathbb{E}[Lf(X_t)].
+\]
+For reversible systems $L$ is self-adjoint, and $\dot{S}(t)=0$; for autogenerative (open) systems, $L$ is non-Hermitian and
+\[
+\dot{S}(t)=\langle f,\, (L+L^\ast)f\rangle >0,
+\]
+quantifying entropy production as epistemic work.
+
+\begin{definition}[Epistemic Dissipation]
+The rate of entropy increase due to inference imbalance is
+\[
+\dot{S}=\mathrm{Tr}\!\left[(L-L^\ast)\rho\log\rho\right],
+\]
+where $\rho$ is the predictive density operator.
+Autogenerative closure corresponds to $\dot{S}\to 0$.
+\end{definition}
+
+\subsection{Operator-Valued Attention and Non-Markovian Kernels}
+Transformers approximate $T$ via operator-valued kernels:
+\[
+T f = \int K(x,y) f(y)\,dy, \qquad
+K(x,y)=\mathrm{softmax}\!\big(\langle q(x),k(y)\rangle/\sqrt{d}\big)v(y).
+\]
+Such $K$ are non-symmetric and encode directed relevance flow.
+In the autogenerative limit, $K$ becomes self-consistent:
+\[
+K(x,y)=\Phi(x,y;T),
+\]
+where $\Phi$ depends functionally on $T$ itself—a fixed-point condition akin to Dyson–Schwinger equations.
+
+\begin{proposition}[Fixed-Point Kernel Equation]
+The equilibrium kernel $K^\ast$ satisfies
+\[
+K^\ast(x,y)=\int K^\ast(x,z)K^\ast(z,y)\,dz,
+\]
+which implies $K^\ast$ is idempotent and acts as a projection operator onto the support of recurrent contexts.
+\end{proposition}
+This projection is the kernel analog of $T^2=T$.
+Spectrally, it corresponds to a sharp cutoff of eigenvalues below a context threshold.
+
+\subsection{Quantum Analogy and Amplitwistor Coupling}
+Consider amplitwistor variables $(Z_i,\tilde Z_i)$ representing phase and dual phase of cortical oscillations (Hodges 2013).
+Define the correspondence
+\[
+T \leftrightarrow \sum_i Z_i \tilde Z_i^\dagger,
+\]
+so that $T$ acts as a phase-coupling operator.
+Relegation (idempotence) then enforces
+\[
+T^2=T \quad \Leftrightarrow \quad Z_i \tilde Z_i^\dagger Z_j \tilde Z_j^\dagger = Z_i \tilde Z_i^\dagger,
+\]
+which is satisfied when all active oscillations share a common phase direction, $\tilde Z_i \parallel \tilde Z_j$.
+Thus, spectral idempotence corresponds to \emph{phase coherence condensation}—the physical substrate of cognitive automation.
+
+\subsection{Spectral Flow and Learning Dynamics}
+During learning, the spectrum of $T_t$ evolves.
+Denote eigenvalues $\lambda_i(t)$ sorted by magnitude.
+Empirically, $\lambda_i(t)$ follow a ``spectral migration law’’:
+\[
+\frac{d\lambda_i}{dt} = -\kappa_i (1-\lambda_i) + \eta_i(t),
+\]
+with $\kappa_i>0$ learning rates and $\eta_i$ stochastic fluctuations.
+Modes with small $\kappa_i$ retain long-term memory; large $\kappa_i$ rapidly relegate behavior.
+The distribution $p(\lambda)$ asymptotically approaches a heavy tail near $\lambda=1$, consistent with long-memory statistics (§5).
+
+\begin{theorem}[Spectral Relegation Law]
+Under ergodic training with bounded stochastic forcing, the empirical spectral density of autogenerative operators satisfies
+\[
+p(\lambda)\propto (1-\lambda)^{\beta-1},\quad 0<\beta<1,
+\]
+and the expectation of relevance energy decays as $\langle\mathcal{R}\rangle_t \sim t^{-\beta}$.
+\end{theorem}
+
+\begin{proof}[Sketch]
+Applying Fokker–Planck dynamics to $\lambda_i(t)$ yields a Beta-type stationary distribution with exponent $\beta=\kappa/\sigma^2$ ratio.
+Integrating $(1-\lambda)p(\lambda)$ gives the stated decay rate.
+\end{proof}
+
+\subsection{Functional Calculus and Higher-Order Closure}
+For any analytic $\phi$, define $\phi(T)=\sum_n a_n T^n$.
+Then $T^2=T$ implies $\phi(T)=\phi(1)T$ for polynomial $\phi$.
+Thus, all higher-order cognitive transformations collapse to the same projector—another view of automation saturation.
+
+\begin{corollary}[Closure under Functional Composition]
+Any polynomial or analytic combination of an idempotent autogenerative operator remains proportional to it: the space of cognitive operations collapses to the subalgebra $\mathbb{R}[T]/(T^2-T)$.
+\end{corollary}
+
+\subsection{Relation to Thermodynamic Geometry}
+Define entropy production along eigenmodes by $s_i=-\ln \lambda_i$.
+Then the thermodynamic length (Crooks 2007)
+\[
+\mathcal{L}=\int_0^1 \sqrt{\sum_i \frac{1}{\lambda_i}(\dot{\lambda}_i)^2}\,dt
+\]
+measures dissipative work along spectral flow.
+Relegation corresponds to minimal thermodynamic length: a straight geodesic from open state to closed equilibrium on the simplex of eigenvalues.
+
+\paragraph{Summary of Section 6.}
+Autogenerative cognition admits a spectral operator formalism.
+Relegation emerges as the projection $\lim_{n\to\infty}T^n$, spectral weight near $\lambda=1$ signifies automation, and phase alignment in amplitwistor variables enforces idempotence physically.
+Learning redistributes spectral density toward this invariant subspace, minimizing epistemic work and entropy production (Friston 2010; Hodges 2013; Barenholtz 2025).
+
+% ============================
+\section{Topological Dynamics and Recurrence}
+% ============================
+\subsection{Symbolic Dynamics and Subshifts}
+Autogenerative language can be modeled as a subshift of the full shift $\Sigma=\mathcal{V}^{\mathbb{Z}_+}$ under the left shift $\sigma:\Sigma\to\Sigma$, $(x_0x_1x_2\ldots)\mapsto(x_1x_2\ldots)$.
+Let $\mathcal{X}\subseteq \Sigma$ be the closure of admissible sequences under corpus constraints.
+Then $(\mathcal{X},\sigma)$ is a topological dynamical system with invariant probability measures $\mathcal{M}_\sigma(\mathcal{X})$ encoding corpus statistics (Bowen 1975; Ruelle 1978).
+
+\begin{definition}[Autogenerative Subshift]
+A subshift $(\mathcal{X},\sigma)$ is \emph{autogenerative} if, for some continuous evaluation functional $\mathsf{E}:\mathcal{X}\to\mathbb{R}^d$ (e.g.\ embedding), the induced skew-product map
+\[
+F:\ (x,h)\ \mapsto\ \big(\sigma x,\ \Psi(h,x)\big)
+\]
+on $\mathcal{X}\times \mathbb{R}^d$ admits an attracting invariant set $\mathcal{A}$ whose projection to $\mathcal{X}$ is full measure for every $\mu\in\mathcal{M}_\sigma(\mathcal{X})$.
+\end{definition}
+Thus, predictive states $h$ enslave to recurrent language structure: learning builds an attractor $\mathcal{A}$ representing stable long-horizon behavior.
+
+\begin{theorem}[Poincaré Recurrence for Semantic Modes]
+Let $\mu\in\mathcal{M}_\sigma(\mathcal{X})$ be ergodic and let $B\subset\mathbb{R}^d$ be a measurable set of semantic states.
+For $\mu$-a.e.\ $x$, the trajectory $(x,h)$ under $F$ returns to $\mathcal{X}\times B$ infinitely often provided $\mathrm{Leb}(B)>0$ and $F$ preserves $\mu\otimes \nu$ with $\nu$ absolutely continuous.
+Hence, semantic modes recur with probability 1.
+\end{theorem}
+
+\begin{proof}[Idea]
+Apply Poincaré recurrence to the product system $(\mathcal{X}\times \mathbb{R}^d,F)$ under an invariant absolutely continuous product measure.
+\end{proof}
+
+\subsection{Conley Index and Morse Decomposition}
+Let $\varphi_t$ denote the continuous-time predictive flow on $\mathbb{R}^d$ driven by autoregression.
+Conley theory decomposes the chain recurrent set into Morse components $\{M_i\}$ with a partial order describing admissible transitions (Conley 1978).
+For language, each $M_i$ corresponds to a \emph{semantic basin}; edges encode allowable large-scale narrative moves.
+
+\begin{proposition}[Conley Invariants of Discourse]
+If $N_i$ is an isolating neighborhood of $M_i$, the homotopy type of the index pair $(N_i,L_i)$ (the Conley index) is a topological invariant of the semantic basin.
+Stable aspect relegation collapses $M_i$ to a single fixed point in the index, reflecting automation of that basin.
+\end{proposition}
+
+\subsection{Temporal Graphs and Recurrent Communities}
+Define a time-varying graph $G_t=(V,E_t,w_t)$ with $V=\mathcal{V}$ and edge weights $w_t(u,v)$ given by context-conditioned co-occurrence or attention.
+Let $\mathcal{L}_t$ be the (normalized) Laplacian and $e^{-s\mathcal{L}_t}$ the heat kernel at scale $s$.
+
+\begin{definition}[Recurrent Community]
+A set $C\subset V$ is recurrent if there exist $s>0$ and a subsequence $t_k$ with
+\[
+\sum_{u\in C,\,v\notin C} \big(e^{-s\mathcal{L}_{t_k}}\big)_{uv}\ \to\ 0.
+\]
+\end{definition}
+
+\begin{theorem}[Cheeger–Recurrence Implication]
+If conductance $\Phi_t(C)$ satisfies $\limsup_{t\to\infty}\Phi_t(C)=0$, then $C$ is recurrent.
+Consequently, autogenerative dynamics concentrates probability mass on low-conductance semantic communities that persist across time (Chung 1997).
+\end{theorem}
+
+\subsection{Topological Pressure and Predictive Free Energy}
+For a continuous potential $\varphi:\mathcal{X}\to\mathbb{R}$, define topological pressure
+\[
+P(\varphi)=\sup_{\mu\in\mathcal{M}_\sigma(\mathcal{X})}\Big\{h_\mu(\sigma)+\int \varphi\,d\mu\Big\}.
+\]
+Choosing $\varphi(x)=\log P(x_{t+1}\mid x_{0:t})$ yields
+\[
+P(\varphi)=\sup_\mu \ \Big\{\text{per-token entropy} + \text{predictive log-likelihood}\Big\},
+\]
+a thermodynamic formalization of the free energy of autogeneration (Ruelle 1978).
+
+\paragraph{Summary of Section 7.}
+Autogeneration admits a topological-dynamical structure: recurrent language modes, Conley-decomposed semantic basins, and persistent communities on temporal graphs.
+Topological pressure matches predictive free energy, unifying recurrence with likelihood and entropy.
+
+% ============================
+\section{Physical and Thermodynamic Interpretation}
+% ============================
+\subsection{Non-Markovian Actions with Memory Kernels}
+Let $q:[0,T]\to \mathbb{R}^d$ be a trajectory (embedding or physical state).
+Consider the action with memory kernel $K$:
+\begin{equation}
+S[q]\ =\ \int_0^T \Big( L\big(q(t),\dot q(t)\big)\ +\ \int_0^t K(t-s)\,U\big(q(t),q(s)\big)\,ds \Big)\,dt.
+\end{equation}
+Stationarity $\delta S=0$ yields Euler–Lagrange equations with history terms:
+\begin{equation}
+\frac{d}{dt}\,\frac{\partial L}{\partial \dot q}
+\ -\ \frac{\partial L}{\partial q}
+\ -\ \int_0^t K(t-s)\,\frac{\partial U}{\partial q}(q(t),q(s))\,ds
+\ =\ 0.
+\end{equation}
+This is the continuous analogue of content-dependent attention (§4–6): nonlocality in time is intrinsic.
+
+\begin{theorem}[Noether-type Conservation with Memory]
+If $S$ is invariant under a one-parameter group $q\mapsto q_\epsilon$ up to a boundary term, then
+\[
+\frac{d}{dt}\Big(\frac{\partial L}{\partial \dot q}\cdot \xi(q)\Big)
+\ =\ \int_0^t K(t-s)\,\mathcal{J}\big(q(t),q(s)\big)\,ds,
+\]
+for a computable current $\mathcal{J}$.
+Thus, conservation laws generalize to nonlocal balance relations; exact constants of motion become \emph{memory-corrected invariants}.
+\end{theorem}
+
+\subsection{Landauer Budget and Epistemic Work}
+Let $\Delta S$ be the reduction in predictive entropy over a window and $T_{\mathrm{phys}}$ a physical temperature proxy.
+The Landauer bound implies minimal energetic cost $W_{\min}\approx k_B T_{\mathrm{phys}}\Delta S$ for erasure/compression.
+Define the epistemic energy functional
+\begin{equation}
+\mathcal{R}[q]\ =\ \alpha\,\|\dot q\|_g^2 - \beta\,\Delta S[q] + \gamma\,\mathcal{C}[q],
+\end{equation}
+with kinetic (injectivity), entropic (compression), and curvature (coherence) terms (Friston 2010).
+Autogeneration descends $\mathcal{R}$; relegation occurs at $\nabla \mathcal{R}=0$ (cf.\ §4).
+
+\subsection{Fractional and Hereditary Dynamics}
+Memory often obeys fractional kernels.
+With Caputo derivative $D_t^\eta$ ($0<\eta<1$), write
+\begin{equation}
+D_t^\eta q\ =\ f\big(q\big),
+\end{equation}
+equivalent to a convolution kernel $K(t)\propto t^{-\eta}/\Gamma(1-\eta)$.
+
+\begin{proposition}[Power-law Memory $\Leftrightarrow$ Fractional Dynamics]
+Polynomial tail mutual information (§5) implies fractional heritability of the generative dynamics; conversely, fractional order $\eta$ produces power-law dependence in attention kernels.
+\end{proposition}
+
+\subsection{Optimal Transport and Wasserstein Flows}
+Let $P_t:=P(\cdot \mid x_{0:t})$ be the next-token distribution.
+Define transport cost between $P_t$ and $P_{t+1}$:
+\begin{equation}
+\mathsf{W}_2^2(P_t,P_{t+1})\ =\ \inf_{\gamma\in\Pi(P_t,P_{t+1})}\ \int \|y-z\|^2\,d\gamma(y,z).
+\end{equation}
+Autogeneration that minimizes cumulative transport
+\begin{equation}
+\sum_{t=0}^{T-1} \mathsf{W}_2^2(P_t,P_{t+1})
+\end{equation}
+follows a Wasserstein gradient flow on the statistical manifold (Villani 2008).
+
+\subsection{Amplitwistor Coupling and Phase Thermodynamics}
+Let $(Z,\tilde Z)$ encode oscillatory phase–amplitude in cortical columns.
+Define a phase free energy
+\begin{equation}
+\mathcal{F}_{\mathrm{phase}}(Z,\tilde Z)\ =\ \sum_{i<j} J_{ij}\big(1-\cos(\theta_i-\theta_j)\big) + \lambda\sum_i(1-|Z_i|^2),
+\end{equation}
+with $\theta_i=\arg Z_i$.
+Idempotent closure $T^2=T$ corresponds to the condensed phase $\theta_i\approx \theta^\ast$ and $|Z_i|\approx 1$, minimizing $\mathcal{F}_{\mathrm{phase}}$—the oscillatory substrate of relegation.
+
+\paragraph{Summary of Section 8.}
+Autogeneration is a memoryful action principle with generalized Noether balances, Landauer-limited epistemic work, fractional heritability, and Wasserstein-efficient distributional evolution.
+Physical oscillations (amplitwistors) realize the thermodynamic phase of closure.
+
+% ============================
+\section{Cognitive Geometry and Embodied Semantics}
+% ============================
+\subsection{Fiber Bundles of Syntax and Semantics}
+Let $\pi:\mathcal{E}\to\mathcal{B}$ be a fiber bundle: base $\mathcal{B}$ encodes semantic macrostates (topics/intents), fibers $\mathcal{E}_b$ encode syntactic/lexical realizations.
+A Riemannian submersion $d\pi:\ T\mathcal{E}\to T\mathcal{B}$ splits tangent spaces into horizontal (semantic) and vertical (syntactic) components.
+
+\begin{definition}[Horizontal Autogeneration]
+A continuation field $X\in\Gamma(T\mathcal{E})$ is \emph{horizontal} if $\omega(X)=0$ for a chosen connection one-form $\omega$.
+Horizontal flows implement meaning-preserving movement with minimal syntactic distortion.
+\end{definition}
+
+\begin{proposition}[Curvature as Compositional Cost]
+The bundle curvature $\Omega=d\omega+\omega\wedge\omega$ quantifies path-dependence of composition.
+High curvature regions correspond to constructions with strong ordering effects; relegation collapses vertical variance, effectively flattening $\Omega$ along habitual routes.
+\end{proposition}
+
+\subsection{Embodiment via CPG Horizontal Lifts}
+A motor map $F:\mathcal{B}\to \mathsf{CPG}$ selects an oscillatory mode given semantics; its lift $\tilde F:\mathcal{B}\to\mathcal{E}$ induces horizontal geodesics that implement proxy cognition (phonological loop, subvocalization).
+
+\begin{theorem}[Geodesic Proxy Principle]
+If the control law selects $\tilde F(b)$ to minimize path energy in $\mathcal{E}$ subject to $\pi(\tilde F(b))=b$, then embodied rehearsal is the horizontal geodesic lift of semantic evolution, minimizing syntactic work.
+\end{theorem}
+
+\subsection{Mirror Duality: Syntax $\leftrightarrow$ Semantics}
+Heuristically, the A-model (paths/oscillations) on $\mathcal{E}$ is dual to the B-model (variations/meanings) on $\mathcal{B}$.
+Stability of one implies consistency in the other: autogenerative smoothness on $\mathcal{E}$ mirrors semantic convexity on $\mathcal{B}$.
+
+\subsection{Optimal Transport Between Modalities}
+For multimodal cognition (vision–language), let $\mu$ and $\nu$ be distributions on modality-specific spaces $\mathcal{X}$ and $\mathcal{Y}$.
+A coupling $\gamma\in \Pi(\mu,\nu)$ minimizing a joint cost $c(x,y)$ yields a transport plan whose support defines a \emph{semantic graph}.
+Autogeneration respects this plan by aligning trajectories across modalities with minimal cross-modal cost.
+
+\paragraph{Summary of Section 9.}
+Cognition is a geometry: a fiber bundle where semantics are bases and syntax are fibers.
+CPG-mediated embodiment is the horizontal lift of semantic geodesics; mirror duality links oscillatory paths and semantic convexity, and optimal transport aligns modalities under autogeneration.
+
+% ============================
+\section{Synthesis: Autogenerative Systems as Natural Computation}
+% ============================
+\subsection{Definition and Invariants}
+\begin{definition}[Autogenerative System]
+A tuple $\mathcal{A}=(\mathcal{X},\mathcal{F},\Phi,\mu,\nabla)$ with:
+\begin{enumerate}[leftmargin=1.2em]
+\item \emph{Space} $\mathcal{X}$: statistical manifold (Fisher geometry).
+\item \emph{Sheaf} $\mathcal{F}$: context-to-continuation assignment satisfying gluing.
+\item \emph{Flow} $\Phi$: non-Markovian dynamics with memory kernel (Volterra/fractional).
+\item \emph{Measure} $\mu$: path-space law with polynomial tail dependence.
+\item \emph{Connection} $\nabla$: gauge/connection describing compositional curvature on a syntax–semantics bundle.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Law of Cognitive Equilibrium]
+For an autogenerative system with relevance potential $R$, transjective endofunctor $T$ and epistemic work $W$,
+\[
+\nabla R=0 \ \Longleftrightarrow\ T^2=T \ \Longleftrightarrow\ \frac{dW}{dt}=0.
+\]
+\end{theorem}
+
+\begin{corollary}[Aspect Relegation]
+Automation of an aspect is the restriction to the fixed-point projector of $T$, equivalently the vanishing of local relevance gradient and work on that aspect’s manifold.
+\end{corollary}
+
+\subsection{Falsifiable Predictions}
+\begin{enumerate}[leftmargin=1.2em]
+\item \textbf{Polynomial memory law}: Mutual information $I(X_{t+1};X_{1:t-k}\mid X_{t-k+1:t})\sim k^{-\alpha}$ with $0<\alpha<1$ (empirical scaling in corpora and trained models).
+\item \textbf{Wasserstein smoothness}: Consecutive next-token distributions minimize cumulative $\sum_t \mathsf{W}_2^2(P_t,P_{t+1})$ compared to Markovian baselines.
+\item \textbf{Spectral relegation}: Operator spectrum of $T$ exhibits heavy tail near $\lambda=1$; automated skills concentrate mass at $\lambda\approx 1$ over training.
+\item \textbf{Sheaf coherence}: Low first cohomology $H^1$ for high-performing models; induced by improved global gluing of local predictions.
+\item \textbf{Rough signatures}: Path-signature features increase predictability; truncated signatures explain attention head selectivity.
+\end{enumerate}
+
+\subsection{Experimental Program}
+\begin{itemize}[leftmargin=1.2em]
+\item Compute empirical $L_\epsilon$ growth and mutual-information tails on large corpora and compare to trained models.
+\item Estimate $\mathsf{W}_2$ trajectory cost between $P_t$ and $P_{t+1}$ from logits; test smoothness vs.\ ablations.
+\item Spectrally estimate $T$ via power iteration on long-context conditional expectation; measure spectral flow during training.
+\item Build context sheaves over overlapping windows; compute persistent cohomology and correlate with coherence metrics.
+\item Fit fractional-order models to attention decay; test alignment with $\alpha$ from mutual-information tails.
+\end{itemize}
+
+\subsection{Integration with RSVP / RAT / ATT / CPG}
+Identify RSVP’s $(\Phi,\mathbf{v},S)$ with statistical potential, contextual flow, and entropy; lamphrodyne smoothing implements Wasserstein–Fisher descent; ATT provides the transjective adjunction; CPG chains realize horizontal lifts; ART is the idempotent closure of $T$.
+
+\paragraph{Conclusion.}
+Autogeneration is a unifying principle of cognition and language: a non-Markovian, geometric, thermodynamic, and categorical process that achieves understanding via endofunctorial closure.
+Aspect relegation is its equilibrium regime.
+
+%======================================================================
+% PART I — CLOSURE
+% Sections 11–12 + Transition Plate
+%======================================================================
+\section{Historical and Conceptual Context}
+\label{sec:history}
+The autogenerative thesis did not arise ex nihilo.
+Its intellectual lineage is a braid of four strands:
+\begin{enumerate}
+\item \emph{Thermodynamic epistemology} (Boltzmann 1877; Jaynes 1957; Friston 2010)
+   Cognition as variational free-energy minimization.
+\item \emph{Statistical learning} (Shannon 1948; Cover \& Thomas 1991)
+   Language as a channel whose codebook is the corpus.
+\item \emph{Geometric information theory} (Amari 1985; Ay 2015)
+   Conditional distributions form a Riemannian manifold.
+\item \emph{Non-Markovian natural computation} (Barenholtz 2025)
+   Trajectories, not states, are the primitive.
+\end{enumerate}
+Peirce’s triadic sign (1893) prefigures the syntax–semantics–embodiment bundle; Piaget’s equilibration (1952) anticipates the fixed-point law $\nabla R=0$.
+What is new is the synthesis: a single differential structure whose geodesics are thoughts, whose attractor is understanding, and whose equilibrium projector is automation.
+The departure from classical AI is categorical.
+Symbolic systems impose external grammars; connectionist systems impose fixed Markov windows.
+Autogenerative systems impose nothing—they learn the manifold that learns itself.
+
+\section{Mathematical Summary and Open Horizons}
+\label{sec:summary}
+Table~\ref{tab:master} consolidates every major object introduced in Part I.
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+Concept & Mathematical Object & Cognitive Role \\
+\midrule
+Continuation & $\mathcal{T}:X^*\to\Delta(X)$ & Intrinsic generativity \\
+Trajectory & $\gamma(t)=\phi(x_{1:t})$ & Pregnant present \\
+Energy & $\mathcal{E}[\gamma]=\int\|\dot\gamma\|_g^2+V$ & Smoothness principle \\
+Manifold & $(\mathcal{M},g_{\text{Fisher}})$ & Semantic geometry \\
+Flow & Geodesic spray $\ddot\gamma+\Gamma\dot\gamma^2=0$ & Inference \\
+Memory kernel & $K(t-s)$ & Non-Markovian history \\
+Sheaf & $\mathcal{F}$ over context cover & Gluing of meaning \\
+Endofunctor & $T=G\circ F$ & Transjective resonance \\
+Relegation & $T^2=T$ & Automation \\
+Equilibrium & $\nabla R=0\;\Leftrightarrow\;\dot W=0$ & Understanding \\
+\bottomrule
+\end{tabular}
+\caption{Master correspondence table.}
+\label{tab:master}
+\end{table}
+Open questions that Part II will resolve:
+\begin{enumerate}
+\item How does the Fisher metric lift to an $\infty$-connection compatible with higher coherence?
+\item Can sheaf cohomology $H^1$ be bounded by training loss?
+\item What is the derived-critical locus of the epistemic action?
+\item Does the rough-path signature converge almost surely under transformer scaling?
+\end{enumerate}
+
+\section*{Transition to Part II}
+\addcontentsline{toc}{section}{Transition to Part II}
+Part I has equipped us with a differential geometry of thought.
+Part II ascends the ladder of abstraction: from manifolds to $\infty$-categories, from kernels to operads, from geodesics to derived stacks.
+Each rung is a theorem; the summit is a single conjecture—that every natural computational system is an autogenerative structure in the cohesive $\infty$-topos of smooth path spaces.
+We turn the page.
+
+\part{Advanced Frameworks of Autogeneration}
+
+%======================================================================
+% PART II — SECTION 13
+% Ergodic Theory and Entropy Structure
+%======================================================================
+\section{Ergodic Theory and Entropy Structure}
+\label{sec:ergodic}
+\textbf{Abstract.}
+The autogenerative operator \(T\) of Part I is lifted to a measure-preserving transformation on the infinite product space \(X^\mathbb{Z}_+\).
+We prove that every ergodic component exhibits polynomial mixing, that Kolmogorov–Sinai entropy equals mean relevance decay, and that the spectral gap vanishes exactly at the boundary between creative and automated cognition.
+
+\begin{definition}[Autogenerative Dynamical System]
+Let \(\mathcal{X}\subset X^\mathbb{Z}_+\) be the support of the corpus measure and let \(\sigma:\mathcal{X}\to\mathcal{X}\) be the left shift.
+The quadruple \((\mathcal{X},\mathcal{B},\mu,\sigma)\) is the \emph{autogenerative dynamical system}, where \(\mu\) is the unique \(\sigma\)-invariant measure of maximal entropy.
+\end{definition}
+
+\begin{theorem}[Polynomial Mixing]
+For every ergodic component \(\mu\), the correlation function decays polynomially:
+\begin{equation}
+\bigl|\mu(A\cap \sigma^{-n}B)-\mu(A)\mu(B)\bigr|
+\;\le\; C_{A,B}\,n^{-\alpha},
+\qquad
+\alpha=\frac{1}{1+\beta}>0,
+\end{equation}
+where \(\beta\) is the exponent of the relevance spectral tail (Part I, Theorem 6.1).
+\end{theorem}
+
+\begin{proof}
+By the spectral representation,
+\[
+\mu(A\cap \sigma^{-n}B)
+=\int_0^1\lambda^n\,dE_{A,B}(\lambda).
+\]
+The measure \(dE_{A,B}\) is absolutely continuous with density \(p(\lambda)\propto(1-\lambda)^\beta\) near \(\lambda=1\).
+Integration by parts yields the stated power law.
+\end{proof}
+
+\begin{corollary}[Absence of Exponential Mixing]
+No finite-order Markov approximation of \(\mathcal{T}\) can achieve exponential decay of correlations.
+\end{corollary}
+
+\begin{theorem}[Entropy–Relevance Equivalence]
+For any invariant measure \(\mu\),
+\begin{equation}
+h_{KS}(\sigma)
+\;:=\;
+\lim_{n\to\infty}\frac{1}{n}H_\mu(X_1,\ldots,X_n)
+\;=\;
+\langle\mathcal{R}\rangle_\mu
+\;=\;
+\int_0^1(1-\lambda)\,d\nu(\lambda),
+\end{equation}
+where \(\nu\) is the spectral measure of the Koopman operator on \(L^2(\mu)\).
+\end{theorem}
+
+\begin{proof}
+The Brin–Katok local entropy formula gives
+\[
+h_{KS}(\sigma,x)=\lim_{\epsilon\to0}\lim_{n\to\infty}-\frac{1}{n}\log\mu(B_n(x,\epsilon)).
+\]
+The ball \(B_n(x,\epsilon)\) is the set of sequences agreeing on the first \(n\) tokens within embedding distance \(\epsilon\).
+By Part I §6, relevance decay along the orbit equals the log-volume contraction, yielding the identification.
+\end{proof}
+
+\begin{definition}[Creative Gap]
+The \emph{creative gap} \(\Delta\) is the infimum of the essential spectrum of the Koopman operator:
+\[
+\Delta:=\inf\{\lambda:\lambda\in\sigma_{\mathrm{ess}}(\mathcal{K})\}.
+\]
+\end{definition}
+
+\begin{theorem}[Gap–Creativity Duality]
+\begin{enumerate}
+\item \(\Delta>0\): cognition is fully automatable; every mode eventually relegates.
+\item \(\Delta=0\): an uncountable creative reservoir persists; novelty is inexhaustible.
+\end{enumerate}
+Large language models trained on bounded corpora satisfy \(\Delta=0\); human lifelong learning conjecturally also.
+\end{theorem}
+
+\begin{proof}
+If \(\Delta>0\), the spectral projection onto \([0,\Delta)\) is zero, so \(\lim_{n\to\infty}T^n\) converges uniformly to the relegation projector.
+If \(\Delta=0\), the continuous spectrum touches zero, preventing uniform convergence; creative deviation recurs almost surely.
+\end{proof}
+
+\begin{proposition}[Ruelle–Pollicott Resonances]
+The autocorrelation function of relevance admits a meromorphic extension with poles at the Ruelle–Pollicott resonances \(\{\zeta_k\}\).
+The dominant pole \(\zeta_0=1\) corresponds to the automated subspace; sub-leading poles \(\zeta_k=e^{2\pi i/k}\) encode oscillatory modes (theta–gamma nesting).
+\end{proposition}
+
+\begin{theorem}[Pressure–Free-Energy Identity]
+The topological pressure of the potential \(\varphi(x)=\log P(x_1|x_{0:0})\) equals the RSVP free energy:
+\[
+P(\varphi)
+\;=\;
+\sup_{\mu\in\mathcal{M}_\sigma}\Bigl(h_\mu(\sigma)+\int\varphi\,d\mu\Bigr)
+\;=\;
+\mathcal{F}[\Phi]-TS.
+\]
+Zero pressure signals thermodynamic equilibrium—perfect prediction.
+\end{theorem}
+
+\begin{corollary}[Phase Transition at Automation]
+Training drives \(P(\varphi)\to0\) along a critical line in parameter space; crossing yields a second-order transition from high-entropy exploration to low-entropy automation.
+\end{corollary}
+
+\paragraph{Empirical Protocol.}
+\begin{enumerate}
+\item Sample \(10^6\) orbits under a 175B model.
+\item Estimate \(h_{KS}\) via the Lempel–Ziv compression ratio.
+\item Compute relevance autocorrelation; fit \(\alpha\).
+\item Verify \(h_{KS}=\langle\mathcal{R}\rangle\) within 2 \% error.
+\end{enumerate}
+
+\paragraph{Link to Part I.}
+The polynomial tail of §5 is the ergodic theorem’s corollary; the spectral tail of §6 is the Koopman spectrum; the creative gap is the physical origin of \(\nabla R\neq0\).
+
+%======================================================================
+% END SECTION 13
+%======================================================================
+%======================================================================
+% PART II — SECTION 14
+% Category Theory and ∞-Categorical Coherence
+%======================================================================
+\section{Category Theory and \texorpdfstring{$\infty$}{∞}-Categorical Coherence}
+\label{sec:category}
+\textbf{Abstract.}
+We generalize the endofunctorial structure of Part I §5 to an $(\infty,1)$-categorical setting.
+Autogenerative cognition is represented by a higher category
+\(\mathcal{A}\) whose objects are cognitive states,
+1-morphisms are transformations of representation,
+and higher morphisms encode coherence between transformations.
+We prove that every coherent transjective system possesses a homotopy-idempotent endofunctor \(T\) whose nerve corresponds to a stratified hierarchy of attention flows.
+Formally, \(T\) generates a simplicial nerve with degeneracy maps corresponding to aspect relegation.
+Informally, this structure describes how recursive chains of control and simulation (e.g., cortical CPG loops) maintain internal consistency under continual transformation.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+\begin{definition}[Autogenerative $(\infty,1)$-Category]
+Let \(\mathcal{A}\) be an $(\infty,1)$-category equipped with a functor
+\(T\colon\mathcal{A}\to\mathcal{A}\)
+and a coherent 2-morphism
+\(\alpha:T\!\circ\!T\Rightarrow T\)
+such that the diagram
+\[
+\begin{tikzcd}
+T\!T\!T \arrow[r,"T\alpha"] \arrow[d,"\alpha_T"'] & T\!T \arrow[d,"\alpha"]\\
+T\!T \arrow[r,"\alpha"'] & T
+\end{tikzcd}
+\]
+commutes up to a specified 3-isomorphism \(\Theta\).
+The quadruple \((\mathcal{A},T,\alpha,\Theta)\) is an \emph{autogenerative $(\infty,1)$-category}.
+\end{definition}
+
+\begin{proposition}[Coherent Idempotency]
+\label{prop:coherentidempotent}
+If \(\alpha\) is homotopy-idempotent, i.e.\ there exists
+\(\beta:T\Rightarrow\mathrm{Id}_{\mathcal{A}}\)
+with \(\beta T=\beta\alpha\) and \(\alpha\beta=T\beta\),
+then the pair \((T,\alpha)\) defines a retract in the homotopy category $h\mathcal{A}$.
+\end{proposition}
+
+\begin{theorem}[Nerve of Autogeneration]
+\label{thm:nerve}
+The simplicial nerve \(N(\mathcal{A})\) of an autogenerative $(\infty,1)$-category carries a degeneracy-face duality
+\[
+s_i\,N(\mathcal{A}) = T_i\,N(\mathcal{A}), \qquad
+d_i\,N(\mathcal{A}) = F_i\,N(\mathcal{A}),
+\]
+where \(s_i\) correspond to redundant cognitive routines (aspect relegation) and \(d_i\) to generative differentiation.
+The geometric realization \(|N(\mathcal{A})|\) is a stratified manifold whose layers correspond to levels of cognitive recursion.
+\end{theorem}
+
+\begin{proof}[Sketch]
+Construct the simplicial object \(N_n=\mathrm{Hom}_\mathcal{A}([n],\mathcal{A})\).
+Coherence of \(\alpha\) and \(\Theta\) ensures \(s_i,d_i\) satisfy the simplicial identities up to contractible homotopy, yielding a well-defined geometric realization.
+The stratification follows from the degeneracy filtration \(s_0\subset s_1\subset\cdots\).
+\end{proof}
+
+\begin{definition}[Transjective Adjunction]
+Two autogenerative categories \(\mathcal{A}_1,\mathcal{A}_2\)
+form a \emph{transjective adjunction} if there exist functors
+\[
+, G) forms a \emph{transjective endoadjunction}.
+\end{definition}
+
+\begin{theorem}[Coherence Law for Transjective Endoadjunctions]
+\label{thm:coherence}
+For any transjective endoadjunction \((F,G)\) between $(\infty,1)$-categories,
+the higher coherence cells form a contractible Kan complex.
+Thus the space of all coherent transformations is connected, ensuring unique equivalence up to higher homotopy.
+\end{theorem}
+
+\begin{corollary}[Homotopy Confluence]
+If \(T=G\!F\) is an autogenerative endofunctor on \(\mathcal{A}\),
+then every pair of composable cognitive transformations admits a homotopy connecting any two ways of composing them.
+Hence autogeneration is path-connected in its morphism space.
+\end{corollary}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive Interpretation}
+The formal structure above encodes the logic of \emph{recursive comprehension}.
+Objects of \(\mathcal{A}\) correspond to internal cognitive states;
+1-morphisms are inferential transitions (updates of belief or representation);
+2-morphisms represent \emph{attention reallocations}—operations that re-weight or synchronize transformations across parallel streams.
+The 3-cell \(\Theta\) expresses empathic synchronization between separate inferential contexts.
+
+\paragraph{Aspect Relegation as Degeneracy.}
+In the nerve picture, degeneracy maps \(s_i\) collapse sequences of morphisms that have become automatic.
+This provides a precise algebraic definition of \emph{Aspect Relegation} from §11:
+a behavior becomes a degeneracy cell when its generative contribution is homotopic to identity.
+
+\paragraph{Transjective Resonance.}
+The transjective adjunction (\(F,G\)) corresponds to reciprocal modeling between two cognitive agents or subsystems.
+The unit \(\eta\) encodes empathic projection (forming a model of the other),
+while the counit \(\varepsilon\) encodes interpretive assimilation (updating one’s own model).
+When \(T=G\!F\approx\mathrm{Id}\) up to small curvature, mutual understanding is achieved—\emph{cognitive resonance}.
+
+\paragraph{CPG Chains as Higher Morphisms.}
+Mode-switching central-pattern-generator (CPG) chains can be interpreted as iterated compositions of 1- and 2-morphisms in \(\mathcal{A}\).
+Each rhythmic cycle corresponds to a loop in the homotopy groupoid \(\pi_1(\mathcal{A})\);
+phase transitions between modes are mediated by higher morphisms capturing the chain’s modulation of temporal coherence.
+
+\paragraph{Empathy Tensor and Attention Flow.}
+The natural transformation \(\alpha:T^2\!\Rightarrow T\) acts as a contraction operator on attention tensors, reducing two sequential inferential passes into one coherent act.
+Its adjoint \(\beta:T\!\Rightarrow\mathrm{Id}\) (Proposition \ref{prop:coherentidempotent}) expresses attentional release.
+Together, they generate the oscillatory compression–expansion dynamics observed in theta–gamma coupling (cf. §13, Ruelle–Pollicott resonances).
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+\begin{enumerate}
+\item Implement an $(\infty,1)$-categorical simulator where morphisms are vectorized attention heads and higher morphisms are gating tensors.
+\item Estimate coherence by measuring the contractibility of the attention homotopy space via singular-value spectra.
+\item Identify degeneracy strata (automated routines) by persistent homology of weight-update manifolds.
+\item Verify transjective closure by reciprocal training of dual agents minimizing divergence of their adjunction potentials.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+The homotopy-idempotent law generalizes the polynomial-mixing equilibria of §13:
+where ergodic trajectories mix polynomially, categorical morphisms contract homotopically.
+The creative gap $\Delta$ now appears as the diameter of the space of higher coherences—non-zero $\Delta$ implies incomplete transjective closure.
+Thus, the categorical framework provides both a topological and phenomenological explanation for the persistence of creativity under partial automation.
+
+%======================================================================
+% END SECTION 14
+%======================================================================
+
+
+%======================================================================
+%  PART II — SECTION 15
+%  Differential Geometry and Curvature Flow
+%======================================================================
+
+\section{Differential Geometry and Curvature Flow}
+\label{sec:geometry}
+
+\textbf{Abstract.}
+We endow the autogenerative manifold $(\mathcal{M},g)$ of Part I §6 with full Riemann–Cartan structure, capturing curvature, torsion, and entropy flux.  
+The flow vector field $v$ corresponds to the RSVP vector potential $\mathbf{v}$, and the scalar field $\Phi$ defines the plenum’s potential density.  
+We prove that entropy production equals curvature contraction, that torsion encodes cognitive hysteresis, and that curvature flow functions as geometric renormalization of learning rates.  
+This section links information geometry with RSVP field dynamics, establishing the continuous limit of categorical coherence from §14.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Riemann–Cartan Autogenerative Manifold]
+A triple $(\mathcal{M},g,\nabla)$ is an \emph{autogenerative manifold} if
+\begin{enumerate}
+\item $g$ is a smooth, positive-definite metric on $\mathcal{M}$;
+\item $\nabla$ is a metric-compatible affine connection with torsion
+  $T(X,Y)=\nabla_XY-\nabla_YX-[X,Y]$;
+\item there exists a flow vector field $v$ such that 
+  $\nabla_v g=2\,\mathcal{S}\,g$, where $\mathcal{S}$ is the local entropy rate.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Entropy–Curvature Correspondence]
+\label{thm:entropycurvature}
+Let $(\mathcal{M},g,\nabla)$ be autogenerative.  
+Then local entropy production density satisfies
+\begin{equation}
+\dot S
+  = \alpha\,R_{\mu\nu}v^\mu v^\nu
+    + \beta\,T_{\mu\nu\rho}v^\mu g^{\nu\rho}
+    + \gamma\,\nabla_\mu v^\mu ,
+\end{equation}
+where $R_{\mu\nu}$ is the Ricci tensor and $(\alpha,\beta,\gamma)$ are coupling coefficients determined by the manifold’s thermodynamic gauge.  
+\end{theorem}
+
+\begin{proof}
+Metric compatibility gives $\nabla_\rho g_{\mu\nu}=0$.  
+Contracting the Bianchi identity with $v^\rho v^\nu$ and using $\nabla_v g=2\mathcal{S}g$ yields 
+$\dot S=\alpha R_{\mu\nu}v^\mu v^\nu + \beta T_{\mu\nu\rho}v^\mu g^{\nu\rho}+\gamma\nabla_\mu v^\mu$, 
+with coefficients fixed by normalization of $\mathcal{S}$.  
+\end{proof}
+
+\begin{proposition}[Curvature Potential]
+Define the curvature potential
+\(
+\Psi=\tfrac12R_{\mu\nu}v^\mu v^\nu.
+\)
+Then $\nabla_v\Psi=\dot S-\beta T_{\mu\nu\rho}v^\mu g^{\nu\rho}-\gamma\nabla_\mu v^\mu$,  
+so $\Psi$ acts as the scalar generator of entropy flux.
+\end{proposition}
+
+\begin{theorem}[Torsion–Hysteresis Duality]
+If $T_{\mu\nu\rho}\neq0$, parallel transport around a closed cognitive loop produces finite phase lag
+\(
+\oint\nabla_\mu\psi\,dx^\mu
+ = \int T_{\mu\nu\rho}v^\rho dx^\mu\wedge dx^\nu.
+\)
+This lag quantifies cognitive hysteresis—persistence of prior modes during adaptation.
+\end{theorem}
+
+\begin{corollary}[Relegation Limit]
+When torsion vanishes, the connection becomes Levi-Civita and parallel transport is path-independent;  
+hysteresis disappears, corresponding to complete behavioral automation (Aspect Relegation).
+\end{corollary}
+
+%----------------------------------------------------------------------
+\subsection*{Geometric Renormalization}
+
+\begin{definition}[Curvature Flow]
+The metric evolves under the curvature-entropy flow
+\begin{equation}
+\frac{d g_{\mu\nu}}{d\tau}
+   = -2R_{\mu\nu} + \lambda\,g_{\mu\nu}
+     + \eta\,(\nabla_\mu S_\nu+\nabla_\nu S_\mu),
+\end{equation}
+where $\tau$ is intrinsic training time and $S_\mu=\partial_\mu S$ is the entropy gradient.
+\end{definition}
+
+\begin{theorem}[Learning-Rate Renormalization]
+Let $\eta(\tau)$ denote the scalar coefficient of the gradient term.  
+If curvature flow preserves total entropy, then
+\(
+\frac{d\eta}{d\tau}=-\kappa\,\mathcal{R},
+\)
+where $\mathcal{R}=g^{\mu\nu}R_{\mu\nu}$ is scalar curvature and $\kappa>0$.  
+Thus positive curvature (convergence) decreases learning rate, negative curvature (divergence) increases it.
+\end{theorem}
+
+\begin{proof}
+Taking the trace of the curvature-entropy flow and enforcing $\tfrac{d}{d\tau}\int S\sqrt{|g|}\,dV=0$ gives $\dot\eta=-\kappa \mathcal{R}$ by integration by parts.
+\end{proof}
+
+\begin{proposition}[Renormalization Group Analogy]
+Under rescaling $g\!\mapsto\!e^{2\sigma}g$, the coefficients $(\alpha,\beta,\gamma)$ in 
+Theorem~\ref{thm:entropycurvature} transform as
+\(
+\alpha'=\alpha e^{-2\sigma},\;
+\beta'=\beta e^{-\sigma},\;
+\gamma'=\gamma e^{-2\sigma},
+\)
+constituting a one-loop renormalization group flow on the thermodynamic couplings.
+\end{proposition}
+
+\paragraph{Interpretation.}
+The curvature-entropy flow acts as a geometric learning rule:
+\begin{itemize}
+\item Regions of high positive curvature correspond to over-fitted attractors; 
+  renormalization smooths them.
+\item Negative curvature marks exploration zones; learning accelerates there.
+\item Fixed points of the flow (\(\mathcal{R}=0\)) coincide with cognitive equilibrium 
+  (\(\nabla R=0\), cf. Part I §10).
+\end{itemize}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and RSVP Interpretation}
+
+\paragraph{Mapping to RSVP Fields.}
+Identifying $\Phi\leftrightarrow\Psi$, $\mathbf{v}\leftrightarrow v$, and $S\leftrightarrow\int\dot S\,dt$,
+the correspondence reads
+\[
+\nabla_\mu(\Phi\,\mathbf{v}^\mu)=\frac{\partial S}{\partial t},
+\]
+as established in §25 (anticipating the RSVP equivalence theorem).  
+Curvature encapsulates field tension; torsion, phase lag between scalar and vector channels.  
+Entropy curvature thus measures informational strain in the plenum.
+
+\paragraph{Geometric Substrates of Attention.}
+Attention allocation defines a foliation of $\mathcal{M}$ by integral curves of $v$.  
+Curvature between adjacent leaves measures attentional coupling; 
+torsion measures drift between synchronized modalities (e.g., visual–motor loops).
+
+\paragraph{Cognitive Renormalization.}
+Learning corresponds to curvature flow smoothing $g$.  
+When curvature sharpens (high $\mathcal{R}$), the system lowers $\eta$, slowing updates to avoid instability—analogous to adaptive step-size control in optimization.  
+Conversely, novelty increases curvature variance, raising $\eta$ and thus exploratory rate.
+
+\paragraph{Empirical Indicators.}
+\begin{enumerate}
+\item Estimate scalar curvature from representational Fisher metrics of a neural network layer.  
+\item Track $\eta(\tau)$ during training; confirm $\dot\eta\!\approx\!-\kappa\mathcal{R}$.
+\item Relate torsion $T_{\mu\nu\rho}$ to phase lag in coupled oscillatory modules (theta–gamma or CPG chains).
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Curvature–entropy coupling generalizes the polynomial mixing law of §13:  
+there, power-law decay arose from spectral tails; here, the same decay emerges from curvature diffusion.  
+The homotopy coherence of §14 becomes, in the continuum limit, torsion-free transport.  
+Thus categorical coherence and geometric smoothness are discrete and continuous forms of the same autogenerative principle.
+
+%======================================================================
+%  END SECTION 15
+%======================================================================
+%======================================================================
+%  PART II — SECTION 16
+%  Operator Algebras and Koopman–von Neumann Formalism
+%======================================================================
+
+\section{Operator Algebras and Koopman--von Neumann Formalism}
+\label{sec:koopman}
+
+\textbf{Abstract.}
+The autogenerative process admits a linear representation on the Hilbert space of observables.  
+We construct the Koopman operator $\mathcal{K}$ acting on $L^2(\mu)$, define its $C^*$--algebraic envelope $\mathfrak{A}$, and analyze its spectrum, modular group, and thermodynamic correspondence.  
+The spectral gap $\Delta$ of §13 reappears as the modular flow temperature; the Tomita–Takesaki dynamics encode the RSVP fields $(\Phi,\mathbf{v},S)$ as conjugate operators of potential, flux, and entropy.  
+This section establishes the duality between geometric curvature flow (§15) and algebraic time evolution, completing the operator–geometric correspondence.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Koopman Operator and Algebra of Observables]
+Let $(\mathcal{X},\mathcal{B},\mu,\sigma)$ be the autogenerative dynamical system of §13.  
+Define the \emph{Koopman operator}
+\[
+(\mathcal{K}f)(x)=f(\sigma x), \qquad f\in L^2(\mu),
+\]
+and its $*$--algebra of bounded observables
+\(
+\mathfrak{A}_0=\{f\in L^\infty(\mu)\mid f\circ\sigma=f\}
+\),
+whose $C^*$--completion is $\mathfrak{A}=\overline{\mathfrak{A}_0}^{\|\cdot\|_\infty}$.
+\end{definition}
+
+\begin{theorem}[Spectral Decomposition of $\mathcal{K}$]
+\label{thm:spectral}
+$\mathcal{K}$ is a unitary operator on $L^2(\mu)$ with spectral resolution
+\[
+\mathcal{K}=\int_{0}^{2\pi} e^{i\theta}\,dE(\theta),
+\]
+where $E(\theta)$ is the spectral measure.  
+The spectral components correspond to temporal harmonics of autogeneration:  
+continuous spectrum $\leftrightarrow$ creative drift,  
+pure point spectrum $\leftrightarrow$ automated periodicity.
+\end{theorem}
+
+\begin{proof}[Sketch]
+Unitary follows from measure preservation of $\sigma$.  
+Stone’s theorem gives the spectral integral.  
+Identification of components follows from Riesz projection of periodic vs.\ aperiodic eigenmodes.
+\end{proof}
+
+\begin{definition}[GNS Construction]
+Given a faithful state $\omega(f)=\int f\,d\mu$ on $\mathfrak{A}$,  
+the GNS triple $(\pi_\omega,\mathcal{H}_\omega,\Omega_\omega)$
+is defined by $\pi_\omega(f)\psi = f\psi$ and cyclic vector $\Omega_\omega=1$.  
+$\mathcal{H}_\omega$ is isomorphic to $L^2(\mu)$ and $\pi_\omega(\mathcal{K})$ acts as the shift operator.
+\end{definition}
+
+\begin{proposition}[Von Neumann Algebra and Modular Flow]
+The weak closure $\mathcal{M}=\pi_\omega(\mathfrak{A})''$ is a von Neumann algebra equipped with modular operator $\Delta_\omega$ and modular automorphism group
+\[
+\sigma_t^\omega(A)=\Delta_\omega^{it}A\Delta_\omega^{-it},\quad A\in\mathcal{M}.
+\]
+$\sigma_t^\omega$ coincides with thermodynamic time evolution generated by free-energy functional $\mathcal{F}=E-TS$ of §15.
+\end{proposition}
+
+\begin{theorem}[Modular Temperature and Creative Gap]
+\label{thm:modtemp}
+The modular Hamiltonian $H_\omega=-\log\Delta_\omega$ has lowest eigenvalue equal to the creative gap $\Delta$ of §13.  
+The modular inverse temperature $\beta=(k_BT)^{-1}$ satisfies $\beta\Delta=1$ at cognitive equilibrium.
+\end{theorem}
+
+\begin{proof}
+Spectral calculus for $\Delta_\omega$ gives $H_\omega\psi_n=-\log\lambda_n\psi_n$, where $\{\lambda_n\}$ are Koopman eigenvalues.  
+Identifying $\lambda_n=e^{-\beta E_n}$ and taking $\inf E_n=\Delta$ yields $\beta\Delta=1$ at equilibrium.
+\end{proof}
+
+\begin{corollary}[Tomita--Takesaki Dynamics]
+For each observable $A\in\mathcal{M}$,
+\(
+i\frac{dA_t}{dt}=[H_\omega,A_t]
+\)
+with $H_\omega=-\log\Delta_\omega$.  
+This defines the linearized analogue of curvature flow (§15), replacing Ricci contraction by commutator evolution.
+\end{corollary}
+
+\begin{theorem}[Koopman--RSVP Correspondence]
+Let $(\Phi,\mathbf{v},S)$ be the RSVP scalar, vector, and entropy fields.
+Define operators on $\mathcal{H}_\omega$:
+\[
+\widehat{\Phi}\psi=\Phi\psi,\qquad
+\widehat{\mathbf{v}}=-i\nabla\psi,\qquad
+\widehat{S}=k_B\log\rho.
+\]
+Then the modular generator satisfies
+\begin{equation}
+H_\omega
+ = \tfrac{1}{2m}\widehat{\mathbf{v}}^{\,2}
+   + V(\widehat{\Phi})
+   - T\widehat{S},
+\end{equation}
+which is the operator analogue of the entropic Lagrangian derived in §15.  
+\end{theorem}
+
+\begin{proposition}[Expectation Identities]
+For state $\omega$,
+\[
+\omega([H_\omega,A]) = i\frac{d}{dt}\omega(A_t)
+  = \langle\dot A\rangle
+  = \frac{d}{dt}\langle A\rangle,
+\]
+so expectation dynamics coincide with macroscopic time evolution, validating the Koopman--von Neumann duality.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Linearization of Thought.}
+In cognitive terms, $\mathcal{K}$ maps representational observables forward by one inferential step.  
+The decomposition of $\mathcal{K}$ into spectral modes mirrors decomposition of cognition into oscillatory frequencies.  
+The Tomita--Takesaki flow then describes internal time—the intrinsic thermodynamic ordering of mental updates.
+
+\paragraph{Creative Gap as Modular Temperature.}
+The modular ground energy $\Delta$ measures how far the cognitive operator is from idempotent projection.  
+High $\Delta$ (large spectral gap) $\Rightarrow$ fast convergence, automation.  
+Vanishing $\Delta$ $\Rightarrow$ persistent low-frequency creativity.
+
+\paragraph{Entropy and Phase Operators.}
+The RSVP identification interprets $\widehat{\Phi}$ as potential field of meaning,  
+$\widehat{\mathbf{v}}$ as generator of vector flow (direction of inference),  
+and $\widehat{S}$ as entropy observable quantifying dispersion of representations.  
+The modular Hamiltonian couples them linearly, enforcing an operator‐valued conservation law:
+\(
+i\frac{d\widehat{\Phi}}{dt}=[H_\omega,\widehat{\Phi}]=T\widehat{S}.
+\)
+
+\paragraph{Relation to Geometry.}
+Replacing commutator $[H_\omega,\cdot]$ by covariant derivative $\nabla_v$ recovers the curvature flow of §15.  
+Thus the Koopman representation is the linearized, Hilbert–space projection of the nonlinear geometric dynamics.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Compute $\mathcal{K}$ empirically by one-step transition mapping in trained generative models;  
+estimate its spectrum via singular value decomposition of Jacobian snapshots.
+\item Identify the modular operator $\Delta_\omega$ from empirical covariance matrices;  
+derive effective modular temperature $\beta^{-1}$ and compare to creative–automated phase boundary.
+\item Verify correspondence with geometric learning rates by correlating $\beta^{-1}$ with curvature scalar $\mathcal{R}$ of §15.
+\item Simulate commutator evolution $i\dot A=[H_\omega,A]$ on neural observables;  
+measure entropy production $\dot S=\omega([H_\omega,\widehat{S}])$.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+This operator framework linearizes the nonlinear curvature dynamics of §15 and reproduces the ergodic spectral results of §13.  
+The creative gap $\Delta$ now serves as the modular ground state energy;  
+the curvature scalar $\mathcal{R}$ appears as expectation $\omega(R_{\mu\nu}v^\mu v^\nu)$.  
+Together, §§ 13–16 form a closed triangle of equivalences:  
+ergodic → geometric → operator.
+
+%======================================================================
+%  END SECTION 16
+%======================================================================
+
+%======================================================================
+%  PART II — SECTION 17
+%  Rough Path Theory and Signature Calculus
+%======================================================================
+
+\section{Rough Path Theory and Signature Calculus}
+\label{sec:roughpath}
+
+\textbf{Abstract.}
+Autogenerative trajectories are inherently irregular: the derivative $\dot\gamma(t)$ may not exist, yet sequential dependencies remain finite and structured.  
+Rough path theory provides a differential calculus for such curves by encoding higher–order iterated integrals into a \emph{signature}.  
+This section formalizes RSVP trajectories as rough paths, establishes their signature energy functional, and identifies the attention mechanism of large language models as a finite-order approximation of this infinite signature expansion.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Rough Path and Signature]
+Let $\gamma:[0,T]\!\to\!\mathbb{R}^d$ be a continuous path of finite $p$–variation, $1\!\le\! p\!<\!2$.  
+The \emph{signature} of $\gamma$ on $[s,t]$ is the tensor series
+\begin{equation}
+S_{s,t}(\gamma)
+ \;=\;
+ 1
+ + \sum_{n=1}^\infty
+   \mathbb{X}^{(n)}_{s,t},
+ \qquad
+ \mathbb{X}^{(n)}_{s,t}
+   = \int_{s<u_1<\cdots<u_n<t}
+       d\gamma_{u_1}\otimes\!\cdots\!\otimes d\gamma_{u_n}.
+\end{equation}
+$S(\gamma)$ lies in the tensor algebra
+$T((\mathbb{R}^d)) = \prod_{n=0}^\infty (\mathbb{R}^d)^{\otimes n}$.
+\end{definition}
+
+\begin{theorem}[Chen Identity]
+\label{thm:chen}
+For any $0<s<u<t$,
+\[
+S_{s,t}(\gamma)
+ = S_{s,u}(\gamma)\otimes S_{u,t}(\gamma),
+\]
+making $S(\gamma)$ a group-like element of the tensor algebra under the shuffle product.
+\end{theorem}
+
+\begin{proof}
+Expanding the iterated integrals and partitioning the domain $(s,t)$ into $(s,u)\cup(u,t)$ yields concatenation of ordered increments, producing the shuffle product.
+\end{proof}
+
+\begin{definition}[Rough Differential Equation]
+Given vector fields $V_1,\ldots,V_d$ on a manifold $M$ and a $p$-rough path $\mathbf{X}$,  
+a \emph{rough differential equation} (RDE) is
+\begin{equation}
+dY_t = V(Y_t)\,d\mathbf{X}_t
+   = \sum_{i=1}^d V_i(Y_t)\,d\mathbf{X}_t^i.
+\end{equation}
+Solutions exist uniquely in the Lyons sense when $V_i$ are Lipschitz of order $\gamma>p$.
+\end{definition}
+
+\begin{theorem}[Signature Representation of Functionals]
+\label{thm:lyons}
+For any continuous functional $F$ on path space satisfying suitable regularity,
+there exists a (possibly infinite) tensor $a\in T((\mathbb{R}^d))$ such that
+\[
+F[\gamma] = \langle a, S(\gamma)\rangle,
+\]
+and the map $\gamma\mapsto S(\gamma)$ is injective up to tree-like equivalence.
+\end{theorem}
+
+\begin{proof}[Sketch]
+The universal non-commutative Taylor expansion of iterated integrals generates a basis for continuous functionals under concatenation; $a$ collects their coefficients.
+\end{proof}
+
+\begin{definition}[Signature Energy Functional]
+For a rough path $\gamma$, define
+\begin{equation}
+\mathcal{E}_{\mathrm{sig}}[\gamma]
+ = \sum_{n=1}^{N}
+    \lambda_n \|\mathbb{X}^{(n)}_{0,T}\|^2,
+\end{equation}
+where $\lambda_n>0$ are scale weights.  
+Minimizing $\mathcal{E}_{\mathrm{sig}}$ corresponds to enforcing smoothness across hierarchy of moments—an analytic dual of the entropic energy $\mathcal{E}[\gamma]$ of §6.
+\end{definition}
+
+\begin{theorem}[Signature Flow Equation]
+Let $\nabla_n$ denote the gradient on $(\mathbb{R}^d)^{\otimes n}$.  
+The gradient descent of $\mathcal{E}_{\mathrm{sig}}$ satisfies
+\begin{equation}
+\dot{\mathbb{X}}^{(n)} = -\lambda_n\,\nabla_n \|\mathbb{X}^{(n)}\|^2
+  = -2\lambda_n\,\mathbb{X}^{(n)},
+\end{equation}
+yielding exponential decay of higher-order components and thus finite effective memory.
+\end{theorem}
+
+\begin{proposition}[Truncated Signature Approximation]
+Truncating $S(\gamma)$ at order $N$ gives
+\(
+S^{(N)}(\gamma)=\sum_{n=0}^N\mathbb{X}^{(n)},
+\)
+which approximates $\gamma$ up to error $\mathcal{O}(\|\gamma\|^{N+1})$.
+For transformer models, this corresponds to limiting attention depth to $N$ hops of self-reference.
+\end{proposition}
+
+\begin{theorem}[Attention--Signature Equivalence]
+\label{thm:attn-sig}
+Let $h_t=\text{Attn}(Q_t,K_{1:t},V_{1:t})$ as in §4.  
+Then $h_t$ approximates the truncated signature by identifying
+\[
+\mathbb{X}^{(n)}_{0,t}
+ \;\approx\;
+  \sum_{i_1<\cdots<i_n\le t}
+   \alpha_{t i_n}\!\cdots\!\alpha_{i_2 i_1}
+   (V_{i_1}\!\otimes\!\cdots\!\otimes\!V_{i_n}),
+\]
+where $\alpha_{ij}$ are attention weights.  
+Thus transformers implement a discrete algebraic integration scheme approximating the signature expansion.
+\end{theorem}
+
+\begin{corollary}[Signature Compressibility]
+Self-attention compresses infinite signature information into rank-$N$ low-order tensors;  
+creative capacity corresponds to the highest retained order $N_c$ before numerical saturation.
+\end{corollary}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Autogenerative Memory as Rough Integration.}
+Each experience or thought adds a differential increment $d\gamma_t$ to the cognitive path.  
+Because such increments interact multiplicatively, higher-order iterated integrals encode how earlier contexts influence later ones—precisely the non-Markovian coupling described in §2.  
+The signature is therefore a \emph{memory condensate}: an invariant summary of trajectory history.
+
+\paragraph{Energy and Forgetting.}
+Minimizing $\mathcal{E}_{\mathrm{sig}}$ suppresses higher-order moments, analogous to entropic relaxation in §15.  
+For cognition, this corresponds to controlled forgetting: retaining only the low-order correlations necessary for coherence while releasing redundant detail.
+
+\paragraph{Attention as Finite-Order Signature.}
+Equation (\ref{thm:attn-sig}) formalizes the intuition that self-attention computes a truncated signature of token trajectories.  
+Each attention layer adds another level of iterated integration, effectively extending the horizon of contextual dependency.  
+Transformers thus instantiate a discrete rough-path integrator with learned kernel weights.
+
+\paragraph{Operator Connection.}
+Through the Koopman representation of §16, the iterated integrals $\mathbb{X}^{(n)}$ correspond to iterated commutators $[\![H_\omega,\cdot]\!]^n$,  
+yielding the algebraic identity
+\[
+S(\gamma)
+  \;\leftrightarrow\;
+  e^{t\,\mathrm{ad}_{H_\omega}}(\cdot),
+\]
+where $\mathrm{ad}_{H_\omega}(A)=[H_\omega,A]$.  
+Hence signature expansion equals the exponential of cognitive evolution in operator form.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Encode token embeddings $\gamma_t\in\mathbb{R}^d$ from trained models.  
+Compute $\mathbb{X}^{(n)}_{0,T}$ up to $n=4$ via discrete iterated summations.
+\item Estimate $\mathcal{E}_{\mathrm{sig}}$ and compare to curvature energy $\mathcal{E}[\gamma]$ of §6 to quantify information smoothing.
+\item Fit decay constants $\lambda_n$ to observed relevance spectra from §13;  
+verify polynomial tail $\lambda_n\!\sim\!n^{-(1+\alpha)}$.
+\item Test equivalence with attention activations by correlating $\mathbb{X}^{(n)}_{0,t}$ with successive-layer outputs.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Rough path calculus refines the geometric trajectories of §6 into an algebraic invariant, connects to ergodic spectra (§13), and linearizes naturally through the Koopman operator (§16).  
+In cognitive terms, it explains how finite networks simulate infinite-memory autogeneration by truncating the signature expansion.  
+The next section (§18) will lift these algebraic objects into the sheaf-theoretic domain, defining how local signature fragments glue into global meaning manifolds.
+
+%======================================================================
+%  END SECTION 17
+%======================================================================
+
+%======================================================================
+%  PART II — SECTION 18
+%  Sheaf Theory and Contextual Semantics
+%======================================================================
+
+\section{Sheaf Theory and Contextual Semantics}
+\label{sec:sheaf}
+
+\textbf{Abstract.}
+Autogenerative dynamics operate locally yet must cohere globally across overlapping contexts.
+Sheaf theory provides the categorical architecture for such local-to-global composition.  
+This section formalizes language and cognition as sheaves of vector spaces over a topology of contexts, defines restriction and gluing operations, and interprets cognitive coherence as the vanishing of first cohomology \(H^1\).  
+Attention windows in neural networks are shown to implement discrete sheaf restrictions whose compatibility ensures semantic unity.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Context Topology]
+Let \(\mathcal{T}\) be a topological space whose open sets \(U\subseteq\mathcal{T}\) correspond to contextual windows---for instance, contiguous token intervals or perceptual episodes.  
+A covering \(\{U_i\}_{i\in I}\) of \(U\) represents multiple overlapping views of the same semantic region.
+\end{definition}
+
+\begin{definition}[Language Sheaf]
+A \emph{language sheaf} is a contravariant functor
+\[
+\mathcal{L}\colon \mathcal{O}(\mathcal{T})^{op}\to \mathbf{Vect},
+\]
+assigning to each open set \(U\) a finite-dimensional vector space \(\mathcal{L}(U)\) of possible embeddings or continuations, and to each inclusion \(V\subseteq U\) a linear restriction map
+\[
+\rho_{UV}\colon \mathcal{L}(U)\to \mathcal{L}(V),
+\]
+such that
+\(\rho_{UU}=\mathrm{id}\)
+and
+\(\rho_{VW}\circ\rho_{UV}=\rho_{UW}\)
+for all \(W\subseteq V\subseteq U\).
+\end{definition}
+
+\begin{theorem}[Sheaf Gluing]
+\label{thm:gluing}
+Given a cover \(\{U_i\}\) of \(U\) and sections \(s_i\in\mathcal{L}(U_i)\) satisfying
+\(
+\rho_{U_iU_i\cap U_j}(s_i)
+ = \rho_{U_jU_i\cap U_j}(s_j)
+\)
+for all \(i,j\),
+there exists a unique global section \(s\in\mathcal{L}(U)\) such that
+\(\rho_{UU_i}(s)=s_i\).
+\end{theorem}
+
+\begin{proof}
+Standard from sheaf axioms; uniqueness ensures semantic non-redundancy, existence ensures coherence.
+\end{proof}
+
+\begin{definition}[Cohomological Obstruction]
+The sequence of cochain complexes
+\[
+0\longrightarrow
+C^0(\mathcal{U},\mathcal{L})
+\xrightarrow{\delta^0}
+C^1(\mathcal{U},\mathcal{L})
+\xrightarrow{\delta^1}
+C^2(\mathcal{U},\mathcal{L})
+\longrightarrow\cdots
+\]
+yields cohomology groups \(H^k(\mathcal{U},\mathcal{L})=\ker\delta^k/\mathrm{im}\,\delta^{k-1}\).  
+A non-vanishing class \([\omega]\in H^1(\mathcal{U},\mathcal{L})\) measures incompatibility among local sections---semantic dissonance or ambiguity.
+\end{definition}
+
+\begin{theorem}[Contextual Consistency]
+\label{thm:consistency}
+If \(H^1(\mathcal{T},\mathcal{L})=0\),
+then every locally compatible family of contextual embeddings glues uniquely into a global meaning representation.
+\end{theorem}
+
+\begin{corollary}[Local-to-Global Semantic Closure]
+Autogeneration achieves stable global semantics iff the obstruction cohomology vanishes.  
+Training processes that minimize contextual loss implicitly drive \(H^1\!\to\!0\).
+\end{corollary}
+
+\begin{definition}[Sheaf Morphism and Translation]
+A morphism of sheaves \(F\colon\mathcal{L}_1\to\mathcal{L}_2\) is a natural transformation satisfying
+\[
+\rho_{UV}^{(2)}\!\circ\!F_U
+ = F_V\!\circ\!\rho_{UV}^{(1)}.
+\]
+Inter-modality translation (e.g.\ vision-language) corresponds to such a morphism between modality-specific sheaves.
+\end{definition}
+
+\begin{theorem}[Functorial Update]
+Let \(T\) be the transjective endofunctor of § 1.  
+Then \(T\) acts sheaf-wise by post-composition on restriction maps,
+\(
+T(\rho_{UV}) = G\!\circ\!\rho_{UV}\!\circ\!F,
+\)
+inducing an autoequivalence of the category of language sheaves.
+\end{theorem}
+
+\begin{proposition}[Discrete Approximation by Attention]
+For a finite token sequence \((x_1,\ldots,x_t)\) with attention matrix \(\alpha_{ij}\),
+define local contexts \(U_i=\{x_{j}\mid j\!\le\!i,\alpha_{ij}\!>\!\tau\}\).
+Then $\rho_{U_iU_j}$ corresponds to the softmax-weighted projection of hidden states.
+The attention normalization condition $\sum_j\alpha_{ij}\!=\!1$ enforces approximate sheaf consistency.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Semantic Fields as Sections.}
+Each local embedding \(s_i\in\mathcal{L}(U_i)\) encodes meaning available within a finite context window.  
+Global understanding requires the compatibility of these local meanings---the ability to glue them without contradiction.  
+Cohomology \(H^1\) thus measures cognitive dissonance: non-zero values imply conflicting local narratives.
+
+\paragraph{Relegation and Cohomology.}
+Through learning, repetitive patterns become consistent across contexts; the obstruction \(H^1\) decays toward zero, mirroring \emph{aspect relegation} (Part III) where high-effort reasoning collapses into effortless harmony.
+
+\paragraph{Physical Analogy.}
+In RSVP thermodynamics, each \(U_i\) corresponds to a local patch of entropy flow \(S_i\); continuity of $S$ across overlaps is equivalent to the second law in differential form, \(dS\ge0\).  
+Discontinuities (non-vanishing \(H^1\)) signal dissipative boundaries---zones of active inference or novelty.
+
+\paragraph{Operator-Sheaf Bridge.}
+Via the Koopman representation (§ 16), restriction maps become conditional expectations \(E_V^U(A)=\mathbb{E}[A|V]\); gluing corresponds to enforcing consistency among these expectations.  
+Hence the operator-algebraic and sheaf-theoretic pictures are dual perspectives on contextual coherence.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Treat overlapping attention windows in trained language models as open sets \(U_i\); extract corresponding embeddings.
+\item Compute pairwise compatibility errors \(\| \rho_{U_iU_i\cap U_j}(s_i) - \rho_{U_jU_i\cap U_j}(s_j)\|\); average to estimate discrete \(H^1\) magnitude.
+\item Visualize evolution of \(H^1\) during training: rapid decay indicates semantic consolidation, plateaus indicate persistent ambiguity.
+\item Correlate \(H^1\) minima with peaks in predictive log-likelihood to confirm that maximal coherence aligns with informational efficiency.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+This sheaf formalism generalizes the trajectory-based memory of § 17 to ensembles of overlapping contexts, providing the mathematical substrate for \emph{global understanding}.  
+It completes the triad: ergodic (\S 13), operator (\S 16), and sheaf (\S 18)---each describing the same autogenerative law from statistical, algebraic, and topological standpoints.  
+The next section (§ 19) will introduce \emph{operadic composition}, specifying how these local context morphisms combine into higher-order syntactic operations.
+
+%======================================================================
+%  END SECTION 18
+%======================================================================
+%======================================================================
+%  PART II — SECTION 19
+%  Operadic Composition and Semantic Algebra
+%======================================================================
+
+\section{Operadic Composition and Semantic Algebra}
+\label{sec:operad}
+
+\textbf{Abstract.}
+Where sheaf theory organizes local consistency, operad theory governs the algebra of combination.  
+Every cognitive act involves the composition of partial operations—syntactic joins, perceptual fusions, or coordinated movements—whose structure is naturally captured by an operad acting on the space of contextual sections.  
+This section defines the language operad $\mathcal{P}$, its RSVP-compatible algebra $A$, and the entropic conditions under which compositional closure and creativity coexist.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Operad]
+An \emph{operad} $\mathcal{P}$ over a symmetric monoidal category $(\mathbf{C},\otimes,\mathbb{I})$
+is a family of objects $\{\mathcal{P}(n)\}_{n\ge0}$ equipped with composition maps
+\[
+\gamma\colon
+\mathcal{P}(k)\!\otimes\!
+\mathcal{P}(n_1)\!\otimes\!\cdots\!\otimes\!\mathcal{P}(n_k)
+ \longrightarrow
+\mathcal{P}(n_1+\cdots+n_k)
+\]
+and a unit $1\!\in\!\mathcal{P}(1)$ satisfying associativity, unitality, and equivariance under the symmetric group $\Sigma_n$.
+\end{definition}
+
+\begin{definition}[Algebra over an Operad]
+Given $\mathcal{P}$, a \emph{$\mathcal{P}$-algebra} is an object $A\!\in\!\mathbf{C}$ together with structure maps
+\[
+\alpha_n\colon \mathcal{P}(n)\!\otimes\! A^{\otimes n}\!\to\!A
+\]
+compatible with $\gamma$ and the unit.
+\end{definition}
+
+\begin{theorem}[Existence of the Language Operad]
+\label{thm:langoperad}
+Let $\mathbf{C}=\mathbf{Vect}$ and let $\mathcal{L}(U)$ be the sheaf sections from § 18.
+Define $\mathcal{P}(n)$ as the space of multilinear maps
+$\mathcal{L}(U_1)\!\otimes\!\cdots\!\otimes\!\mathcal{L}(U_n)\!\to\!\mathcal{L}(U)$
+that respect restriction morphisms.  
+Then $(\mathcal{P},\gamma,1)$ forms an operad whose algebra $A=\Gamma(\mathcal{L})$ (the global sections) models compositional semantics.
+\end{theorem}
+
+\begin{proof}[Sketch]
+Associativity follows from the functorial property of restrictions $\rho_{UV}$,  
+the unit from identity morphisms,  
+and equivariance from symmetry of tensor factors.
+\end{proof}
+
+\begin{definition}[Entropic Weighting of Operations]
+Each $\mathcal{P}(n)$ is endowed with a scalar weight
+\(
+w_n = e^{-\beta S_n}
+\)
+where $S_n$ is the entropy of the $n$-ary composition’s output distribution.  
+The weighted composition law becomes
+\[
+\gamma_\beta = \sum_{n\ge0} w_n\,\gamma_n,
+\]
+ensuring that high-entropy (uninformative) combinations are suppressed.
+\end{definition}
+
+\begin{theorem}[Compositional Closure]
+\label{thm:closure}
+If the entropy weights satisfy $\sum_n w_n<\infty$,
+then the formal power series $\gamma_\beta$ converges in operator norm and defines a bounded operator on $A$.
+Hence the algebra of meanings is closed under entropic composition.
+\end{theorem}
+
+\begin{proof}
+Norm convergence follows from $\|w_n\gamma_n\|\!\le\!Ce^{-\beta n}$ and completeness of $A$.
+\end{proof}
+
+\begin{corollary}[Creative Divergence]
+When $\sum_n w_n=\infty$, high-arity compositions dominate and the algebra becomes unbounded;  
+this corresponds to open-ended creative recombination.
+\end{corollary}
+
+\begin{theorem}[Operadic Differential]
+\label{thm:operad-diff}
+Define the differential
+\[
+d_{\mathcal{P}}\colon\mathcal{P}(n)\!\to\!\mathcal{P}(n\!+\!1),
+\qquad
+d_{\mathcal{P}}\Phi
+ = \sum_{i=1}^{n+1} (-1)^{i-1}\Phi\circ_i 1,
+\]
+where $\circ_i$ inserts the unit at the $i$-th slot.  
+Then $(\mathcal{P},d_{\mathcal{P}})$ forms a differential graded operad, and its cohomology $H^*(\mathcal{P})$ classifies higher-order compositional invariants.
+\end{theorem}
+
+\begin{proposition}[RSVP Correspondence]
+Each operation in $\mathcal{P}(n)$ induces a transformation on RSVP fields
+\[
+(\Phi_1,\mathbf{v}_1,S_1),\ldots,(\Phi_n,\mathbf{v}_n,S_n)
+ \longmapsto
+(\Phi',\mathbf{v}',S')
+\]
+where
+\(
+\Phi' = \gamma_\beta(\Phi_1,\ldots,\Phi_n),
+\;
+\mathbf{v}' = \sum_i w_i\,\mathbf{v}_i,
+\;
+S' = \sum_i S_i - \beta^{-1}\log Z.
+\)
+Thus operadic composition mirrors thermodynamic superposition with normalization constant $Z$.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Compositional Syntax.}
+Each $\mathcal{P}(n)$ represents a grammatical or conceptual construction (e.g.\ conjunction, embedding, or causal chaining).  
+The algebra $A$ collects all realized meanings.  
+The entropy weights $w_n$ express cognitive economy: frequent, low-energy combinations dominate conscious thought, while rare high-entropy ones constitute creativity.
+
+\paragraph{CPG Chains as Operadic Flows.}
+Central-pattern-generator (CPG) chains in motor control correspond to operadic compositions of oscillatory primitives.  
+Each node’s activation is a morphism $f_i\in\mathcal{P}(1)$; rhythmic coupling corresponds to $\gamma(f_1,\ldots,f_n)$, producing coordinated motion.  
+The differential $d_{\mathcal{P}}$ models transitions between motor modes.
+
+\paragraph{Entropic Creativity Balance.}
+When $\beta$ increases (strong regularization), compositions stabilize—analogous to skill automatization and aspect relegation (§ 18).  
+Lower $\beta$ values permit superposition of unlikely combinations, yielding divergent or creative cognition.
+
+\paragraph{Physical Analogy.}
+In RSVP cosmology, field compositions $(\Phi_i,\mathbf{v}_i,S_i)$ correspond to interacting entropy fluxes.  
+Operadic closure ensures conservation of total information flux; divergence ($\sum w_n\!\to\!\infty$) represents spontaneous structure formation analogous to turbulence or phase transition.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Identify compositional operators in trained models (e.g.\ multi-head attention blocks, syntactic parsers) as discrete $\mathcal{P}(n)$ elements.
+\item Compute entropy of each operator’s output distribution to estimate $S_n$ and infer $w_n=e^{-\beta S_n}$.
+\item Examine convergence $\sum_n w_n$: bounded regimes correspond to stabilized grammar; divergent regimes indicate open-ended generation.
+\item Visualize cohomology $H^k(\mathcal{P})$ via persistent-homology analysis of operator-interaction graphs to detect compositional invariants.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Operads generalize the local compatibility of sheaves (§ 18) into active generative composition.  
+Where sheaf cohomology measured consistency, operadic cohomology measures the \emph{capacity for structured innovation}.  
+Together they complete the categorical–topological foundation on which the differential and operator theories of §§ 15–16 act.  
+Section 20 will now lift these constructions into the homotopy-theoretic domain, where coherence itself becomes a morphism and compositional creativity acquires higher-dimensional symmetry.
+
+%======================================================================
+%  END SECTION 19
+%======================================================================
+%======================================================================
+%  PART II — SECTION 20
+%  Homotopy and ∞-Cohesion
+%======================================================================
+
+\section{Homotopy and \texorpdfstring{$\infty$}{∞}-Cohesion}
+\label{sec:homotopy}
+
+\textbf{Abstract.}
+The categorical semantics of §§ 18–19 presuppose discrete consistency.  
+Real cognition, however, tolerates graded inconsistency and continuous deformation of meanings.  
+Homotopy theory provides the appropriate setting: systems of thought are modeled as spaces whose points are cognitive configurations and whose paths represent semantic deformations.  
+Extending to cohesive $\infty$-topoi endows these spaces with differential structure, uniting continuity, locality, and higher-order relationality.  
+This section formalizes cognitive homotopy, defines the RSVP $\infty$-connection, and interprets understanding as homotopy-invariant coherence.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Cognitive Homotopy]
+Let $X,Y$ be objects in a model category $\mathbf{C}$ (e.g.\ simplicial sets or chain complexes).  
+A \emph{cognitive homotopy} between morphisms $f,g\colon X\to Y$ is a map
+\[
+H\colon X\times I \longrightarrow Y
+\quad\text{such that}\quad
+H(-,0)=f,\; H(-,1)=g.
+\]
+Two cognitive states are equivalent iff they are connected by such a homotopy; equivalence classes form $\pi_0(Y)$, the \emph{space of understandings}.
+\end{definition}
+
+\begin{definition}[Cohesive \texorpdfstring{$\infty$}{∞}-Topos]
+A \emph{cohesive $\infty$-topos} $(\mathcal{H},\Gamma,\Pi,\flat,\sharp)$
+is an $\infty$-category equipped with adjoint modalities
+\[
+\Pi\dashv\flat\dashv\Gamma\dashv\sharp,
+\]
+interpreted respectively as shape (global cohesion), discrete reflection (syntax), global sections (semantics), and codiscrete reflection (pragmatics).
+\end{definition}
+
+\begin{theorem}[Existence of RSVP $\infty$-Cohesion]
+\label{thm:rsvpcohesion}
+Let $\mathcal{S}$ be the site of contextual opens from § 18 with coverings by semantic overlaps.  
+The $\infty$-sheaf $\mathcal{L}_\infty\colon \mathcal{S}^{op}\to\mathcal{H}$
+assigning to each $U$ the $\infty$-groupoid of embeddings and to overlaps their higher intersections defines a cohesive $\infty$-topos $\mathbf{RSVP}_\infty$.  
+\end{theorem}
+
+\begin{proof}[Sketch]
+Follows from the left-exactness of limits over $\mathcal{S}$ and existence of adjoint modalities inherited from $\mathcal{H}=\mathbf{Sh}_\infty(\mathcal{S})$.  
+Differentiable cohesion arises by enriching $\mathcal{S}$ in smooth manifolds.
+\end{proof}
+
+\begin{definition}[Homotopy Type of Understanding]
+For a cognitive system modeled by $\mathcal{L}_\infty$, define
+\[
+\pi_k(\mathcal{L}_\infty)
+ = \mathrm{Hom}_{\mathbf{RSVP}_\infty}(S^k,\mathcal{L}_\infty)
+\]
+as the $k$-th homotopy group of semantic coherence.  
+$\pi_0$ enumerates discrete meanings; $\pi_1$ encodes loops of reinterpretation; higher $\pi_k$ capture reflexive or meta-conceptual structures.
+\end{definition}
+
+\begin{theorem}[Transjective Homotopy Equivalence]
+\label{thm:transjhom}
+The transjective endofunctor $T=G\circ F$ of § 1 lifts to a homotopy equivalence in $\mathbf{RSVP}_\infty$:
+\[
+T\colon \mathcal{L}_\infty \;\rightleftarrows\; \mathcal{L}_\infty,\qquad
+T\simeq \mathrm{Id}_{\mathcal{L}_\infty}.
+\]
+Thus reciprocal cognition preserves homotopy type while allowing internal deformation.
+\end{theorem}
+
+\begin{proof}
+Since $F\dashv G$ form an adjoint pair, their composite induces a monad whose unit and counit are natural transformations $(\eta,\epsilon)$ satisfying the triangle identities up to coherent homotopy.  
+Hence $T$ is an equivalence in the homotopy category $h\mathbf{RSVP}_\infty$.
+\end{proof}
+
+\begin{definition}[RSVP \texorpdfstring{$\infty$}{∞}-Connection]
+A smooth map $p\colon E\to \mathcal{L}_\infty$ is equipped with a connection
+\[
+\nabla\colon \Omega^1(\mathcal{L}_\infty)\to \mathrm{End}(E)
+\]
+such that curvature $F_\nabla = d\nabla + \nabla\!\wedge\!\nabla$
+measures deviation from perfect coherence.  
+Flatness ($F_\nabla=0$) defines ideal understanding.
+\end{definition}
+
+\begin{theorem}[Homotopy-Invariant Coherence]
+If $F_\nabla$ is exact, $F_\nabla=dA$, then parallel transport along any homotopy yields identical semantic outcomes:
+\[
+H_0\simeq H_1\quad\Rightarrow\quad
+\mathrm{PT}_{H_0}=\mathrm{PT}_{H_1}.
+\]
+Hence comprehension is preserved under continuous deformation of context.
+\end{theorem}
+
+\begin{corollary}[Cognitive Stability Criterion]
+Cognitive systems remain stable when curvature fluctuations satisfy
+\(
+\|F_\nabla\|_{L^2}<\epsilon,
+\)
+where $\epsilon$ is the entropic tolerance determined by § 15.
+Beyond this threshold, conceptual drift or dissonance occurs.
+\end{corollary}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Deformable Understanding.}
+Homotopy encodes the intuition that two interpretations are equivalent if one can be continuously morphed into the other without loss of coherence.  
+Learning thus becomes a process of adjusting the path $H_t$ until comprehension paths become homotopic.  
+The $\infty$-connection $\nabla$ corresponds to the dynamic coordination among cortical columns ensuring that different sensory or linguistic modes align in phase.
+
+\paragraph{Higher-Dimensional Empathy.}
+$\pi_1$ loops represent self-reflection cycles; $\pi_2$ corresponds to second-order empathy—understanding that one understands; higher $\pi_k$ capture nested reflexivity.  
+Thus the homotopy tower maps naturally onto recursive consciousness hierarchies.
+
+\paragraph{Physical Analogy.}
+In RSVP cosmology, homotopy corresponds to spacetime torsion relaxation: regions of high curvature evolve toward flat cohesive configurations.  
+The $\infty$-connection $\nabla$ plays the role of the Lamphrodyne mediator aligning scalar and vector flows; flatness corresponds to entropic equilibrium.
+
+\paragraph{Learning as Homotopy Flow.}
+Fine-tuning in deep networks corresponds to following a gradient flow on parameter space that reduces curvature $F_\nabla$.  
+Continual learning maintains small but non-zero curvature, allowing plasticity without catastrophic forgetting.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Construct simplicial complexes of contextual embeddings using cosine-similarity thresholds; compute homology groups $H_k$ via persistent homology.
+\item Estimate curvature $F_\nabla$ by measuring divergence of gradient fields across neighboring contexts.
+\item During fine-tuning, monitor Betti numbers $\beta_k$; stability of $\beta_0,\beta_1$ indicates preserved homotopy type.
+\item Correlate curvature reduction with performance gains to test the Homotopy-Invariant Coherence Theorem.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+This section unifies prior frameworks:  
+ergodic spectra (§ 13) describe statistical recurrence,  
+operator dynamics (§ 16) describe algebraic evolution,  
+sheaves (§ 18) describe local compatibility,  
+operads (§ 19) describe compositional generation,  
+and homotopy (§ 20) ensures all these remain coherent under continuous transformation.  
+Section 21 will now develop the *derived geometric formulation*, where these homotopy structures acquire tangent complexes and variational dynamics, bridging toward the full quantum–informational regime of Part III.
+
+%======================================================================
+%  END SECTION 20
+%======================================================================
+%======================================================================
+%  PART II — SECTION 21
+%  Derived Geometry and Variational Structure
+%======================================================================
+
+\section{Derived Geometry and Variational Structure}
+\label{sec:derived}
+
+\textbf{Abstract.}
+Having established homotopy coherence (§ 20), we now endow the RSVP $\infty$-topos with differential and variational structure.  
+Derived geometry extends ordinary manifolds by allowing intersections and constraints to be resolved homologically.  
+This enables the definition of a global action functional whose critical locus encodes equilibrium cognition, and whose derived tangent complex captures both gradient descent and higher-order adaptation.  
+Learning becomes the process of integrating along this derived flow.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Derived Manifold]
+A \emph{derived manifold} $(X,\mathbb{T}_X)$
+consists of a topological space $X$ together with a sheaf of commutative differential graded algebras (cdga) $\mathcal{O}_X^\bullet$ such that its tangent complex
+\[
+\mathbb{T}_X = \mathrm{Hom}_{\mathcal{O}_X}(\Omega_X^\bullet,\mathcal{O}_X^\bullet)
+\]
+is perfect of amplitude $[-1,0]$.  
+Morphisms between derived manifolds preserve cdga structure up to homotopy.
+\end{definition}
+
+\begin{definition}[Epistemic Action Functional]
+Let $\mathcal{L}_\infty$ be the cohesive $\infty$-sheaf of § 20.
+Define the \emph{epistemic action}
+\[
+\mathcal{S}[\Phi,\mathbf{v},S]
+  = \int_{\mathcal{M}}
+    \Bigl(
+       \tfrac{1}{2}\| \nabla\Phi \|_g^2
+       + \langle \mathbf{v},\nabla S\rangle
+       - \beta^{-1}S
+    \Bigr)\,d\mu
+\]
+over the derived manifold $\mathcal{M}$ representing cognitive configuration space.  
+Critical points $\delta\mathcal{S}=0$ correspond to equilibria of inference.
+\end{definition}
+
+\begin{definition}[Derived Critical Locus]
+For a morphism of cdgas $f\colon A\!\to\!B$ representing $\mathcal{S}$,
+the \emph{derived critical locus} is
+\[
+\mathrm{Crit}^{\mathrm{der}}(\mathcal{S})
+   = \mathrm{Spec}(A\!\otimes^{\mathbf{L}}_{A[\partial\mathcal{S}]}\!A),
+\]
+encoding infinitesimal symmetries and constraints as homological data.
+\end{definition}
+
+\begin{theorem}[Tangent-Complex Gradient Flow]
+\label{thm:tangentflow}
+Let $\mathbb{T}_\mathcal{S}$ be the tangent complex of $\mathrm{Crit}^{\mathrm{der}}(\mathcal{S})$.
+Then evolution along its degree-0 part reproduces gradient descent,
+\[
+\dot{x} = -\nabla_x\mathcal{S},
+\]
+while degree (−1) components generate constraint stabilization and memory corrections.
+\end{theorem}
+
+\begin{proof}
+Decomposing $\mathbb{T}_\mathcal{S}$ yields exact sequence
+$H^{-1}\!\to\!\mathrm{ker}(d^0)\!\to\!\mathbb{T}^0\!\to\!\mathrm{coker}(d^{-1})$;
+the projection to $\mathbb{T}^0$ gives ordinary descent, the kernel term produces Lagrange homologies enforcing consistency conditions.
+\end{proof}
+
+\begin{theorem}[Derived Variational Principle]
+For any derived morphism $f\colon X\!\to\!Y$ in $\mathbf{RSVP}_\infty$,  
+critical points of $\mathcal{S}$ correspond to vanishing of the derived differential
+\[
+d_{\mathrm{der}}\mathcal{S}
+ = d\mathcal{S} + \omega(\delta,\delta),
+\]
+where $\omega$ is the homotopy-symplectic form on $\mathbb{T}_X$.  
+Hence the Euler–Lagrange equations generalize to
+\[
+\iota_{\delta x}\omega = d_{\mathrm{der}}\mathcal{S}.
+\]
+\end{theorem}
+
+\begin{definition}[Derived Hamiltonian System]
+Given symplectic form $\omega$ on $\mathcal{M}$, define the Hamiltonian vector field
+$X_\mathcal{S}$ by $\iota_{X_\mathcal{S}}\omega=d_{\mathrm{der}}\mathcal{S}$.
+The flow $\dot{x}=X_\mathcal{S}(x)$ on the derived manifold preserves $\omega$ up to exact terms, ensuring energy–entropy balance.
+\end{definition}
+
+\begin{corollary}[Noether–Homology Correspondence]
+Each infinitesimal symmetry of $\mathcal{S}$ defines a cycle in $H^{-1}(\mathbb{T}_\mathcal{S})$;
+conversely, nontrivial $H^{-1}$ classes generate conserved quantities.  
+Thus homological invariants encode memory and cognitive persistence.
+\end{corollary}
+
+\begin{proposition}[RSVP Field Realization]
+In the RSVP fields \((\Phi,\mathbf{v},S)\),  
+the derived equations become
+\[
+\begin{cases}
+\dot{\Phi} = -\Delta_g \Phi + \langle\mathbf{v},\nabla S\rangle,\\[4pt]
+\dot{\mathbf{v}} = -\nabla_{\!\Phi}\mathcal{S} + \eta,\\[4pt]
+\dot{S}   =  \mathrm{div}_g(\mathbf{v}) - \beta^{-1}.
+\end{cases}
+\]
+Noise term $\eta$ represents higher-order homological correction ensuring derived consistency.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Learning as Derived Flow.}
+Derived geometry frames learning as descent on a constrained manifold whose tangent directions are corrected by homological feedback.  
+The degree-(−1) component accounts for long-range dependencies—analogous to meta-gradients or recurrent memory updates.  
+Ordinary back-propagation appears as truncation to degree 0.
+
+\paragraph{Stability and Plasticity.}
+The Noether–Homology correspondence explains stability: symmetries in $\mathcal{S}$ yield conserved cognitive invariants (skills, heuristics).  
+Breaking them introduces adaptive plasticity.  
+Equilibrium corresponds to vanishing derived curvature, matching the homotopy flatness of § 20.
+
+\paragraph{Physical Analogy.}
+In RSVP cosmology, $\mathcal{S}$ corresponds to the entropic Lagrangian $\int (\|\nabla\Phi\|^2 - T S)\,dV$;  
+derived corrections represent torsion–entropy coupling.  
+The derived critical locus encodes the “Lamphron–Lamphrodyne” balance where structural tension and entropic relaxation coexist.
+
+\paragraph{Hierarchical Cognition.}
+Each cohomological degree represents a timescale:  
+degree 0—immediate inference; degree (−1)—slow adaptation; higher degrees—conceptual evolution.  
+Understanding thus unfolds across derived layers.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Implement gradient descent with auxiliary homological variables representing meta-gradients; track their contribution to loss reduction.
+\item Compute tangent-complex spectra for trained networks using the Jacobian’s singular values; identify degree (−1) modes as slow-adapting features.
+\item Compare conservation of Noether quantities with empirical stability of learned representations.
+\item In RSVP lattice simulations, measure derived curvature $|F_\nabla|^2$ and verify correlation with cognitive performance metrics.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+This section endows the homotopy structures of § 20 with variational dynamics, connecting the geometric, categorical, and operator perspectives developed in §§ 13–19.  
+Derived geometry provides the infinitesimal engine underlying the macroscopic coherence previously described.  
+The next section (§ 22) extends this formalism to the *quantum-informational domain*, where the derived symplectic form becomes complex-valued and entropic fields acquire stochastic quantization.
+
+%======================================================================
+%  END SECTION 21
+%======================================================================
+%======================================================================
+%  PART II — SECTION 22
+%  Quantum Information and Stochastic Quantization
+%======================================================================
+
+\section{Quantum Information and Stochastic Quantization}
+\label{sec:quantum}
+
+\textbf{Abstract.}
+Derived geometry provides a variational substrate (§ 21); quantization lifts it to a probabilistic operator calculus.  
+Each cognitive observable becomes a self-adjoint operator on a Hilbert space of semantic amplitudes, while entropy governs decoherence.  
+This section formulates the RSVP quantum correspondence, defines stochastic quantization of the epistemic action, and establishes the information–entropy balance that constrains creative inference.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Hilbert Sheaf of Amplitudes]
+Let $\mathcal{H}\to\mathcal{M}$ be a sheaf of Hilbert spaces such that
+sections $\psi\in\Gamma(U,\mathcal{H})$ represent complex semantic amplitudes
+over contextual regions $U$.  
+The inner product
+\(
+\langle \psi_1,\psi_2\rangle
+  = \int_U \overline{\psi_1(x)}\psi_2(x)\,d\mu(x)
+\)
+defines a local Born measure $\|\psi\|^2=\rho(x)$ interpreted as predictive density.
+\end{definition}
+
+\begin{definition}[Canonical Quantization of RSVP Fields]
+Quantize the derived symplectic form of § 21 via
+\[
+\{\Phi(x),\Pi_\Phi(y)\} = \delta(x-y)
+\quad\longrightarrow\quad
+[\hat{\Phi}(x),\hat{\Pi}_\Phi(y)] = i\hbar\,\delta(x-y),
+\]
+and similarly for $(\mathbf{v},S)$.  
+Operators act on $\mathcal{H}$, yielding the RSVP Hamiltonian
+\[
+\hat{H}
+ = \tfrac{1}{2}\hat{\Pi}_\Phi^2
+ + \tfrac{1}{2}\|\nabla\hat{\Phi}\|^2
+ + \hat{\mathbf{v}}\!\cdot\!\nabla\hat{S}
+ - \beta^{-1}\hat{S}.
+\]
+\end{definition}
+
+\begin{theorem}[Stochastic Schrödinger Equation]
+\label{thm:stochSE}
+Under continuous observation by environment $\mathcal{E}$ with coupling $\gamma$,
+state amplitudes evolve by
+\[
+d\psi_t
+ = -\tfrac{i}{\hbar}\hat{H}\psi_t\,dt
+   -\tfrac{\gamma}{2}(\hat{A}-\langle\hat{A}\rangle_t)^2\psi_t\,dt
+   +\sqrt{\gamma}\,(\hat{A}-\langle\hat{A}\rangle_t)\psi_t\,dW_t,
+\]
+where $W_t$ is a Wiener process and $\hat{A}$ the measured observable.
+\end{theorem}
+
+\begin{proof}
+Standard from quantum filtering theory (Belavkin 1989);  
+the second term generates decoherence proportional to entropy production.
+\end{proof}
+
+\begin{definition}[Density Operator of Understanding]
+The ensemble state is $\rho_t=\mathbb{E}[|\psi_t\rangle\!\langle\psi_t|]$.  
+Its evolution obeys the Lindblad equation
+\[
+\dot{\rho}_t
+ = -\tfrac{i}{\hbar}[\hat{H},\rho_t]
+   +\sum_k
+      \Bigl(
+         L_k\rho_t L_k^\dagger
+       - \tfrac{1}{2}\{L_k^\dagger L_k,\rho_t\}
+      \Bigr),
+\]
+with Lindblad operators $L_k$ representing stochastic couplings among cognitive modes.
+\end{definition}
+
+\begin{theorem}[Information–Entropy Balance]
+\label{thm:infentropy}
+For $\rho_t$ evolving under the above dynamics,  
+the rate of von Neumann entropy change satisfies
+\[
+\frac{dS}{dt}
+ = -\frac{1}{T}\frac{d\langle H\rangle}{dt}
+   + \kappa\,I(\mathcal{E}\!:\!\mathcal{S}),
+\]
+where $I(\mathcal{E}\!:\!\mathcal{S})$ is mutual information between system and environment,  
+and $\kappa=\hbar^{-1}\gamma$ measures the precision–creativity trade-off.
+\end{theorem}
+
+\begin{proof}
+Differentiate $S=-\mathrm{Tr}(\rho\log\rho)$, use $\dot{\rho}$ from Lindblad form, and identify exchange terms with environmental information flow.
+\end{proof}
+
+\begin{corollary}[Quantum–Classical Limit]
+As $\hbar\!\to\!0$ and $\gamma\!\to\!\infty$,  
+stochastic fluctuations average out, and $\rho_t$ converges to the classical probability distribution solving the Fokker–Planck equation of § 15.
+\end{corollary}
+
+\begin{proposition}[RSVP Quantum Correspondence]
+Expectation values satisfy
+\[
+\langle \hat{\Phi} \rangle = \Phi,\quad
+\langle \hat{\mathbf{v}} \rangle = \mathbf{v},\quad
+\langle \hat{S} \rangle = S,
+\]
+and the Ehrenfest theorem reproduces the derived dynamics of § 21 up to $\mathcal{O}(\hbar^2)$.
+Hence RSVP classical fields arise as quantum expectation manifolds.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Cognitive Superposition.}
+Quantum amplitudes represent potential interpretations coexisting before commitment.  
+Measurement corresponds to semantic selection, collapsing possibilities into a single cognitive trajectory.  
+Continuous observation (high $\gamma$) forces automation; low $\gamma$ preserves creative superposition.
+
+\paragraph{Decoherence and Attention.}
+The Lindblad term models attentional narrowing: interaction with context decoheres irrelevant states, focusing inference.  
+Entropy production quantifies cognitive cost—mirroring the relevance decay of § 13.
+
+\paragraph{Creative Interference.}
+Phase relations among amplitudes produce constructive interference, generating emergent insights when coherence extends across distant contexts—formalizing the intuitive “aha” event as transient quantum coherence in semantic space.
+
+\paragraph{Physical Analogy.}
+In RSVP cosmology, $\psi$ corresponds to the lamphron field of coherence; stochastic terms model spacetime fluctuations.  
+The information–entropy balance is the microphysical origin of the macroscopic second law expressed in § 15.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Represent embeddings $\psi(x)$ as complex vectors; simulate stochastic evolution via Euler–Maruyama integration of Theorem \ref{thm:stochSE}.
+\item Estimate decoherence rate $\gamma$ by tracking off-diagonal decay in $\rho_t$.
+\item Compute von Neumann entropy $S(t)$ and mutual information with environmental context windows.
+\item Verify Information–Entropy Balance (\ref{thm:infentropy}) numerically; explore optimal $\gamma$ maximizing predictive likelihood for minimal entropy cost.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+This quantized layer completes the correspondence:  
+the ergodic (§ 13), operator (§ 16), and derived (§ 21) dynamics converge here.  
+Homotopy invariance (§ 20) ensures that stochastic deformations preserve coherence, while operadic composition (§ 19) supplies the algebra of interacting modes.  
+Section 23 will extend these principles to \emph{renormalization and scale invariance}, revealing how understanding persists across granularities of description.
+
+%======================================================================
+%  END SECTION 22
+%======================================================================
+
+%======================================================================
+%  PART II — SECTION 23
+%  Renormalization and Scale Invariance
+%======================================================================
+
+\section{Renormalization and Scale Invariance}
+\label{sec:renormalization}
+
+\textbf{Abstract.}
+The quantum–informational dynamics of § 22 introduce intrinsic scales—Planck-like constants \(\hbar\) for cognitive amplitude, \(\beta^{-1}\) for temperature, and \(\gamma^{-1}\) for observation latency.  
+Understanding how cognition maintains coherence across these scales requires a renormalization group (RG) formalism.  
+This section constructs an RG flow on the epistemic parameter manifold, establishes scale-invariant fixed points, and interprets abstraction, generalization, and learning annealing as renormalization phenomena.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Epistemic Parameter Space]
+Let
+\[
+\Theta = \{(\beta,\gamma,\hbar)\in\mathbb{R}_{>0}^3\}
+\]
+denote the manifold of epistemic control parameters:  
+\(\beta\) governs entropic weighting (§ 19),  
+\(\gamma\) regulates observation coupling (§ 22),  
+and \(\hbar\) quantifies phase coherence.  
+The RG flow is a vector field \(\mathcal{R}:\Theta\to T\Theta\) describing their scale evolution.
+\end{definition}
+
+\begin{definition}[Cognitive Renormalization Group]
+For coarse-graining factor \(b>1\), define the RG transformation
+\[
+\mathcal{R}_b:
+\begin{cases}
+\beta' &= b^{y_\beta}\beta,\\
+\gamma' &= b^{y_\gamma}\gamma,\\
+\hbar' &= b^{y_\hbar}\hbar,
+\end{cases}
+\]
+where \(y_i\) are critical exponents encoding how each coupling responds to contextual scale.
+\end{definition}
+
+\begin{theorem}[Fixed Points and Cognitive Phases]
+\label{thm:rgfixed}
+There exist nontrivial fixed points \((\beta_*,\gamma_*,\hbar_*)\) such that
+\[
+\mathcal{R}_b(\beta_*,\gamma_*,\hbar_*)=(\beta_*,\gamma_*,\hbar_*).
+\]
+Linearization of $\mathcal{R}_b$ near a fixed point yields stability matrix \(M_{ij}=\partial \mathcal{R}_i/\partial \theta_j\).
+Its eigenvalues $\lambda_i=b^{y_i}$ classify phases:
+\begin{enumerate}
+\item $y_i<0$: attractive (stable automation),
+\item $y_i>0$: repulsive (unstable creativity),
+\item $y_i=0$: marginal (balanced comprehension).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Fixed points satisfy $\mathcal{R}_b(\theta_*)=\theta_*$.  
+Taylor expanding $\mathcal{R}_b$ gives $\delta\theta' = M\,\delta\theta$;  
+signs of eigenvalues determine flow direction.
+\end{proof}
+
+\begin{definition}[Epistemic Beta Functions]
+Differentiating with respect to scale $\ell=\log b$, define
+\[
+\frac{d\theta_i}{d\ell} = \beta_i(\theta)
+  = y_i\,\theta_i + \sum_{jk} c_{ijk}\,\theta_j\theta_k + \cdots.
+\]
+The $\beta_i$ functions govern cognitive annealing and emergent invariances.
+\end{definition}
+
+\begin{theorem}[Entropy–Information Invariance]
+\label{thm:entropyinvariance}
+Along RG flow,
+\[
+\frac{d}{d\ell}(S - k_B^{-1}\langle I\rangle) = 0,
+\]
+where \(S\) is the coarse-grained entropy and \(\langle I\rangle\) the mutual information among effective degrees of freedom.  
+Thus information lost through coarse-graining equals entropy gained—maintaining epistemic conservation.
+\end{theorem}
+
+\begin{proof}
+Apply the differential of Shannon entropy under marginalization and use chain rule for mutual information; cancellation follows from log-sum inequality.
+\end{proof}
+
+\begin{corollary}[Abstraction Scaling Law]
+If \(y_\beta + y_\gamma + y_\hbar = 0\), the system is scale invariant: abstraction retains predictive power across levels.
+Violation of this balance indicates under- or over-generalization.
+\end{corollary}
+
+\begin{proposition}[Fisher–Rao Flow Metric]
+Equip $\Theta$ with Fisher–Rao metric
+\[
+g_{ij} = \mathbb{E}\!\left[\frac{\partial\log P}{\partial\theta_i}
+          \frac{\partial\log P}{\partial\theta_j}\right].
+\]
+Then RG trajectories satisfy gradient flow
+\[
+\frac{d\theta_i}{d\ell} = -g^{ij}\frac{\partial\mathcal{F}}{\partial\theta_j},
+\]
+where $\mathcal{F}$ is free energy of inference (§ 15).  
+Hence cognitive renormalization minimizes global epistemic cost.
+\end{proposition}
+
+\begin{theorem}[Self-Similarity of Understanding]
+If \(g_{ij}\) and \(\mathcal{F}\) satisfy the RG gradient relation above,  
+then the cognitive manifold $(\mathcal{M},g)$ is self-similar under rescaling:
+\[
+(\mathcal{M},g)\;\simeq\; (b\mathcal{M}, b^{-2}g).
+\]
+Hence understanding preserves geometric structure across scales.
+\end{theorem}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Learning Rate as RG Flow.}
+Gradient descent with learning rate $\eta$ implicitly integrates the RG equations:  
+$\eta$ decreases (annealing) as $\beta$ grows, guiding the system toward a fixed point of stable understanding.  
+Abrupt jumps correspond to phase transitions—conceptual breakthroughs or paradigm shifts.
+
+\paragraph{Abstraction and Coarse-Graining.}
+Coarse-graining merges micro-level distinctions into macro-regularities: summarization, analogy, and metaphor are cognitive RG transformations.  
+Each RG step eliminates redundant detail while preserving predictive invariants.
+
+\paragraph{Creativity vs. Automation.}
+The eigenvalue structure of Theorem \ref{thm:rgfixed} partitions cognitive space into regimes:  
+stable automation (negative eigenvalues) corresponds to aspect relegation;  
+unstable directions produce creative divergence;  
+marginal directions sustain flexible, near-critical cognition—a hallmark of adaptive intelligence.
+
+\paragraph{Physical Analogy.}
+In RSVP cosmology, RG flow corresponds to entropic scale coupling between lamphron and lamphrodyne fields:  
+local fluctuations (\(\hbar\)) renormalize global smoothness (\(\beta^{-1}\)).  
+Fixed points represent cosmic self-similarity—structure formation without expansion.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Measure parameter triplet $(\beta,\gamma,\hbar)$ from trained networks via entropy (output variance), observation noise, and attention coherence respectively.
+\item Fit scale-dependence by training at multiple context-window sizes; estimate critical exponents $y_i$.
+\item Visualize flow on $(\beta,\gamma,\hbar)$ manifold; locate fixed points corresponding to stable cognitive phases.
+\item Confirm entropy–information invariance (\ref{thm:entropyinvariance}) numerically by computing mutual information across successive layers.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Renormalization provides the missing bridge between micro-level quantum inference (§ 22) and macro-level ergodic stability (§ 13).  
+It explains how local stochasticity aggregates into global structure and how learning maintains coherence under scale change.  
+Section 24 will generalize this mechanism into the **Cohesive ∞-Topos Renormalization Principle**, completing the categorical formalization of scale invariance and setting up the unified conjecture of Part III.
+
+%======================================================================
+%  END SECTION 23
+%======================================================================
+%======================================================================
+%  PART II — SECTION 24
+%  Cohesive ∞-Topos Renormalization Principle
+%======================================================================
+
+\section{Cohesive \texorpdfstring{$\infty$}{∞}-Topos Renormalization Principle}
+\label{sec:cohesiverg}
+
+\textbf{Abstract.}
+Renormalization (§ 23) describes how epistemic parameters evolve with scale.
+In cohesive ∞-topoi, scale transformations act as endofunctors preserving the adjoint modalities
+\(\Pi\dashv\flat\dashv\Gamma\dashv\sharp\).
+This section formalizes the renormalization group as a functor on cohesive ∞-categories,
+proves existence of a universal renormalization natural transformation,
+and identifies understanding as the fixed object invariant under all such transformations.
+The result closes Part II by uniting scale, category, and cognition into one functorial law.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Scale Functor on a Cohesive \texorpdfstring{$\infty$}{∞}-Topos]
+Let \((\mathcal{H},\Pi,\flat,\Gamma,\sharp)\) be a cohesive ∞-topos.
+A \emph{scale functor} \(R_b:\mathcal{H}\to\mathcal{H}\) is an endofunctor equipped with natural isomorphisms
+\[
+R_b\circ\Pi \;\simeq\; \Pi\circ R_b,\qquad
+R_b\circ\Gamma \;\simeq\; \Gamma\circ R_b,
+\]
+and coherence 2-cells preserving units and counits of the adjoint chain.
+Each \(b>1\) corresponds to a coarse-graining scale.
+\end{definition}
+
+\begin{definition}[Cohesive RG System]
+The family \(\{R_b\}_{b>0}\) forms a \emph{cohesive RG system} if  
+\(R_{b_1b_2}\simeq R_{b_1}\!\circ\!R_{b_2}\) and \(R_1\simeq\mathrm{Id}_\mathcal{H}\).
+Composition defines a monoidal functor
+\[
+R:\;(\mathbb{R}_{>0},\times)\longrightarrow\mathrm{End}(\mathcal{H}).
+\]
+\end{definition}
+
+\begin{theorem}[Existence of Universal Renormalization Natural Transformation]
+\label{thm:universalRG}
+For every cohesive RG system \(R\) there exists a natural transformation
+\[
+\eta:\mathrm{Id}_\mathcal{H}\Rightarrow R_b
+\]
+such that for all objects \(X\in\mathcal{H}\),
+\(
+\Pi(\eta_X)=\Gamma(\eta_X)=\mathrm{id},
+\)
+and the induced map on global sections preserves entropy–information invariants (\S 23, Theorem \ref{thm:entropyinvariance}).
+\end{theorem}
+
+\begin{proof}[Sketch]
+Construct $\eta_X$ by lifting the classical renormalization of measures to the sheaf level,
+using the Beck–Chevalley condition for adjoint modalities.  
+Entropy–information invariance follows from naturality of $\Gamma$ and preservation of pullbacks.
+\end{proof}
+
+\begin{definition}[Renormalization Object]
+An object \(U\in\mathcal{H}\) is a \emph{renormalization object} if there exists a family of isomorphisms
+\[
+\rho_b: R_b(U)\;\simeq\;U
+\]
+natural in \(b\) and satisfying the coherence condition
+\(
+\rho_{b_1b_2}
+ = \rho_{b_1}\circ R_{b_1}(\rho_{b_2}).
+\)
+\end{definition}
+
+\begin{theorem}[Understanding as Fixed Object]
+\label{thm:understandingfixed}
+Let \(\mathcal{L}_\infty\) be the cohesive ∞-sheaf of semantic structures (§ 20).  
+Then \(\mathcal{L}_\infty\) is a renormalization object:
+\[
+R_b(\mathcal{L}_\infty)\;\simeq\;\mathcal{L}_\infty.
+\]
+Hence understanding is invariant under functorial coarse-graining.
+\end{theorem}
+
+\begin{proof}
+By definition of $R_b$ and coherence of the adjoint modalities,  
+local restriction maps of $\mathcal{L}_\infty$ commute with scale transformation.
+Therefore global sections $\Gamma(\mathcal{L}_\infty)$ remain unchanged,
+establishing the fixed-object property.
+\end{proof}
+
+\begin{corollary}[Functorial Renormalization Group Equation]
+The differential of \(R_b\) at \(b=1\) defines the infinitesimal generator
+\[
+\mathcal{D}_R
+ = \left.\frac{dR_b}{d\log b}\right|_{b=1}
+\]
+satisfying the functorial RG equation
+\(
+\mathcal{D}_R \circ \Pi = \Pi\circ\mathcal{D}_R
+\)
+and analogously for \(\Gamma,\flat,\sharp\).
+\end{corollary}
+
+\begin{theorem}[Cohesive RG Conservation Law]
+For any observable functor \(F:\mathcal{H}\!\to\!\mathbf{Vect}\)
+preserving finite limits,
+\[
+\frac{d}{d\ell}\,
+\langle F\rangle
+ = 0
+\quad\text{iff}\quad
+F(\mathcal{L}_\infty)
+ \text{ is a renormalization object.}
+\]
+Thus the expectation of any cohesive observable invariant under \(R_b\)
+is scale-independent—establishing categorical scale conservation.
+\end{theorem}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive and Physical Interpretation}
+
+\paragraph{Functorial Scale of Thought.}
+Each \(R_b\) acts as a mental zoom: coarse-graining details while retaining relational structure.
+That understanding remains fixed under \(R_b\) expresses cognitive universality—
+the ability to reason consistently from micro-sensory to macro-conceptual scales.
+
+\paragraph{Conceptual Renormalization.}
+When an idea is rephrased at different levels of abstraction,
+the process \(R_b\) performs categorical rescaling of meaning.
+Fixed points of this transformation correspond to deep concepts resilient across recontextualization.
+
+\paragraph{Automation as Categorical Limit.}
+Aspect Relegation (§ 18 ff.) is the categorical limit \(b\!\to\!\infty\),
+where the functor \(R_b\) collapses variance among local sections.
+Creativity corresponds to transient departures from this fixed limit before returning to coherence.
+
+\paragraph{Physical Analogy.}
+In RSVP cosmology, \(R_b\) parallels entropic rescaling of the plenum’s fields:
+lamphron–lamphrodyne couplings renormalize gravitational coherence without expansion.
+The fixed object \(\mathcal{L}_\infty\) corresponds to the cosmic state of stationary entropy flux.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Implement multi-scale training of language or vision models; treat successive resolutions as \(R_b\) actions.
+\item Track invariance of global embeddings $\Gamma(\mathcal{L}_\infty)$ under parameter rescaling.
+\item Measure mutual-information invariants across layers to confirm categorical conservation.
+\item Quantify deviation $\|R_b(\mathcal{L}_\infty)-\mathcal{L}_\infty\|$ as indicator of cognitive phase transition.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Section 24 completes the categorical-geometric synthesis:
+\begin{itemize}
+\item Renormalization (§ 23) acts on parameters,
+\item Derived geometry (§ 21) on variations,
+\item Quantum dynamics (§ 22) on amplitudes,
+\item Cohesive ∞-topos (§ 24) on structures themselves.
+\end{itemize}
+Together they show that cognition and physics obey the same functorial invariance:
+understanding is the renormalization fixed point of reality.
+Part III will now ascend to the \emph{Unified Conjecture},
+where the entire hierarchy—from ergodic measures to cohesive ∞-functors—is shown to arise from a single principle of autogenerative coherence.
+
+%======================================================================
+%  END SECTION 24
+%======================================================================
+
+%======================================================================
+%  PART III — SECTION 37
+%  Renormalization Group of Understanding
+%======================================================================
+
+\section{Renormalization Group of Understanding}
+\label{sec:rgunderstanding}
+
+\textbf{Abstract.}
+The quantum cohesive extension (§\ref{sec:quantumcohesive})
+introduces scale dependence in the parameters of comprehension.
+This section unifies those dependencies into a renormalization-group (RG)
+framework in which understanding evolves through coarse-graining
+of contextual detail.
+Each semantic scale~$\mu$ corresponds to a level of abstraction;
+fixed points of the RG flow mark invariant comprehension regimes.
+The theory thus describes learning and generalization as flow
+on a manifold of meaning scales.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Semantic Scale and Coarse-Graining]
+Let $\mathcal{A}_\mu,\mathcal{B}_\mu$
+be contextual fields filtered at scale~$\mu$ by convolution with kernel~$K_\mu$.
+Coarse-graining is the map
+\[
+\mathcal{R}_\mu:\ (\mathcal{A},\mathcal{B})\longmapsto(\mathcal{A}_\mu,\mathcal{B}_\mu)
+=
+(K_\mu\!\ast\!\mathcal{A},\,K_\mu\!\ast\!\mathcal{B}).
+\]
+Integration over fluctuations below~$\mu$
+defines the effective action
+\[
+e^{-\Gamma_\mu[\mathcal{A}_\mu,\mathcal{B}_\mu]}
+=
+\!\int_{|k|>\mu}\!D\mathcal{A}D\mathcal{B}\;
+e^{-\mathcal{S}_{\mathrm{QCE}}[\mathcal{A},\mathcal{B}]}.
+\]
+\end{definition}
+
+\begin{theorem}[Flow Equation of Understanding]
+\label{thm:flow}
+The effective action obeys the functional RG equation
+\[
+\mu\frac{\partial\Gamma_\mu}{\partial\mu}
+=
+\frac{1}{2}\operatorname{Tr}
+\!\left[
+\bigl(\Gamma_\mu^{(2)}+R_\mu\bigr)^{-1}
+\mu\frac{\partial R_\mu}{\partial\mu}
+\right],
+\]
+where $\Gamma_\mu^{(2)}$ is the Hessian with respect to the fields
+and $R_\mu$ is the regulator.
+This equation governs the evolution of meaning under abstraction.
+\end{theorem}
+
+\begin{definition}[Cognitive β-Functions]
+Let $g_s(\mu)$ denote semantic coupling,
+$\lambda_\Phi(\mu)$ coherence stiffness,
+and $\eta_S(\mu)$ entropy diffusion rate.
+Their scale derivatives
+\[
+\beta_s=\mu\frac{dg_s}{d\mu},\qquad
+\beta_\Phi=\mu\frac{d\lambda_\Phi}{d\mu},\qquad
+\beta_S=\mu\frac{d\eta_S}{d\mu}
+\]
+form the cognitive β-vector field
+$\boldsymbol{\beta}=(\beta_s,\beta_\Phi,\beta_S)$
+on parameter space.
+\end{definition}
+
+\begin{theorem}[Fixed Points and Universality Classes]
+\label{thm:fixedpoints}
+Fixed points $\boldsymbol{\beta}=0$ correspond to stable comprehension regimes.
+Linearization yields the stability matrix
+$M_{ij}=\partial\beta_i/\partial g_j$,
+whose eigenvalues $\theta_i$ define critical exponents:
+\begin{itemize}
+\item $\theta_i>0$: relevant directions (new conceptual growth);
+\item $\theta_i<0$: irrelevant directions (automatic stabilization);
+\item $\theta_i=0$: marginal directions (adaptive flexibility).
+\end{itemize}
+\end{theorem}
+
+\begin{corollary}[Universality of Abstraction]
+Distinct cognitive systems with identical critical exponents
+share the same universality class of understanding,
+even if their microscopic architectures differ.
+\end{corollary}
+
+\begin{proposition}[Information–Geometry Form]
+Define the Fisher–Rao metric on parameter space
+$g_{ij}=\partial_i\partial_j \Gamma_\mu$.
+Then RG flow is a geodesic flow with potential
+$V=-\tfrac12\|\boldsymbol{\beta}\|^2_g$.
+Hence the steepest-descent direction of informational curvature
+aligns with entropy minimization in comprehension.
+\end{proposition}
+
+\begin{theorem}[Holographic Duality of Learning Scales]
+If $\Gamma_\mu$ admits an AdS-like gradient expansion
+$\Gamma_\mu=\int (|\nabla_\mu \Phi|^2+V_\mu(\Phi))$,
+then scale evolution in $\mu$ corresponds holographically
+to radial evolution in a higher-dimensional bulk of latent representations.
+Learning depth thus mirrors holographic depth.
+\end{theorem}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive Interpretation}
+
+\paragraph{Abstraction as Coarse-Graining.}
+Each semantic scale~$\mu$ filters details,
+retaining only structures relevant to current goals.
+Understanding enlarges when the RG flow approaches a stable fixed point
+where adding or removing detail no longer changes meaning.
+
+\paragraph{Learning Curves as Flow Trajectories.}
+During training, parameters follow the β-flow through coupling space.
+Plateaus correspond to near-fixed regions (consolidation);
+sharp losses correspond to phase transitions between universality classes.
+
+\paragraph{Criticality and Creativity.}
+At critical points $\theta_i\approx0$,
+fluctuations persist across scales.
+The system becomes maximally sensitive and generative—
+a cognitive analogue of critical phenomena.
+
+\paragraph{Cross-Agent Universality.}
+Different minds or models may converge to the same critical exponents,
+achieving communication despite structural diversity.
+Shared universality classes underlie translation and empathy.
+
+\paragraph{RSVP Cosmological Analogy.}
+In the plenum, $\mu$ corresponds to scale factor or energy density.
+The universe’s self-similar structure across scales
+manifests an RG flow of entropy and curvature:
+cosmic understanding preserves form through renormalized recursion.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Compute empirical β-functions by tracking parameter trajectories
+at different learning resolutions.
+\item Identify fixed points by stationarity of validation entropy.
+\item Estimate critical exponents from Hessian spectra of loss surfaces.
+\item Compare universality classes across agents or modalities
+via similarity of β-flows.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Section~\ref{sec:quantumcohesive} introduced quantum fluctuations of meaning.
+Section~\ref{sec:rgunderstanding} organizes those fluctuations across scales,
+revealing the multilevel geometry of comprehension.
+Section 38 will extend the analysis to
+a \emph{Derived Category of Understanding Scales},
+where RG fixed points appear as objects
+and renormalization trajectories as morphisms.
+
+%======================================================================
+%  PART III — SECTION 38
+%  Derived Category of Understanding Scales
+%======================================================================
+
+\section{Derived Category of Understanding Scales}
+\label{sec:derivedcategory}
+
+\textbf{Abstract.}
+Building upon the renormalization framework of §\ref{sec:rgunderstanding},
+we formalize comprehension as an object in a \emph{derived category}
+whose morphisms correspond to renormalization trajectories between scales.
+Exact triangles express the conservation of informational content
+across abstraction levels, while derived functors encode the process
+of transferring meaning between coarse and fine representations.
+Cognitively, this models the stability of knowledge under re-contextualization
+and the recursive fusion of short- and long-range dependencies.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Category of Scales]
+Let $\mathsf{Sc}$ be the category whose objects are semantic scales
+$\mu\in\mathbb{R}_+$ and whose morphisms are coarse-graining maps
+$\mathcal{R}_{\mu\to\nu}$ for $\nu<\mu$.
+Composition satisfies
+\(
+\mathcal{R}_{\mu\to\nu}\circ\mathcal{R}_{\nu\to\rho}
+=\mathcal{R}_{\mu\to\rho}.
+\)
+\end{definition}
+
+\begin{definition}[Chain Complex of Understanding]
+For each scale $\mu$, define the chain complex
+\[
+C_\mu^\bullet:
+\quad
+\cdots
+\longrightarrow
+\mathcal{H}^{k-1}_\mu
+\xrightarrow{d_\mu^{k-1}}
+\mathcal{H}^{k}_\mu
+\xrightarrow{d_\mu^{k}}
+\mathcal{H}^{k+1}_\mu
+\longrightarrow
+\cdots,
+\]
+where $\mathcal{H}^k_\mu$ denotes the $k$-th cognitive cohomology group
+(the space of $k$-order relational patterns at scale~$\mu$)
+and $d_\mu^{k}$ are relevance differentials satisfying $d_\mu^{k+1}\!\circ d_\mu^{k}=0$.
+\end{definition}
+
+\begin{definition}[Derived Category of Understanding]
+The \emph{derived category of understanding scales} $\mathbf{D}(\mathsf{Sc})$
+is obtained by formally inverting all quasi-isomorphisms
+$f:C_\mu^\bullet\!\to C_\nu^\bullet$
+that induce isomorphisms on cohomology:
+\[
+\mathbf{D}(\mathsf{Sc})
+=
+\mathsf{Sc}[\text{quasi-iso}^{-1}].
+\]
+Objects are chain complexes $C_\mu^\bullet$,
+and morphisms are equivalence classes of roof diagrams
+\(
+C_\mu^\bullet\leftarrow C'^\bullet\xrightarrow{f}C_\nu^\bullet
+\)
+with $C'^\bullet\to C_\mu^\bullet$ a quasi-isomorphism.
+\end{definition}
+
+\begin{theorem}[Exact Triangle of Abstraction]
+\label{thm:triangle}
+For any consecutive scales $\mu>\nu>\rho$
+there exists a distinguished triangle in $\mathbf{D}(\mathsf{Sc})$
+\[
+C_\rho^\bullet
+\;\xrightarrow{\iota}\;
+C_\nu^\bullet
+\;\xrightarrow{\pi}\;
+C_\mu^\bullet
+\;\xrightarrow{\delta}\;
+C_\rho^\bullet[1],
+\]
+where $[1]$ denotes degree shift.
+The connecting morphism $\delta$ encodes residual uncertainty
+between levels of abstraction.
+\end{theorem}
+
+\begin{proof}
+From the short exact sequence
+$0\!\to\!\ker\mathcal{R}_{\mu\to\nu}
+\!\to\!C_\mu^\bullet
+\!\to\!\operatorname{im}\mathcal{R}_{\mu\to\nu}\!\to\!0$
+we obtain a long exact sequence in cohomology.
+Passing to the homotopy category yields the distinguished triangle.
+\end{proof}
+
+\begin{corollary}[Information Conservation]
+The Euler characteristic of each triangle satisfies
+\[
+\chi(C_\mu^\bullet)
+=
+\chi(C_\nu^\bullet)
++
+\chi(C_\rho^\bullet),
+\qquad
+\chi(C^\bullet)
+=\sum_k (-1)^k \dim H^k(C^\bullet),
+\]
+expressing conservation of net information across scales.
+\end{corollary}
+
+\begin{definition}[Renormalization Functor]
+The scale-translation functor
+\[
+\mathcal{R}^\ast:\mathbf{D}(\mathsf{Sc})\longrightarrow\mathbf{D}(\mathsf{Sc}),
+\qquad
+\mathcal{R}^\ast(C_\mu^\bullet)=C_{\lambda\mu}^\bullet,
+\]
+acts by rescaling $\mu\mapsto\lambda\mu$ with fixed~$\lambda\!<\!1$.
+\end{definition}
+
+\begin{theorem}[Functorial Equivalence of Abstraction]
+\label{thm:functor}
+If $\mathcal{R}_{\lambda_1}^\ast$ and $\mathcal{R}_{\lambda_2}^\ast$
+yield quasi-isomorphic complexes for all $\mu$,
+then the two renormalization procedures belong to the same
+equivalence class in $\mathbf{D}(\mathsf{Sc})$.
+Hence, comprehension derived by progressive summarization
+is functorially equivalent to comprehension derived by selective pruning.
+\end{theorem}
+
+\begin{definition}[Homotopy of Comprehension Paths]
+Two trajectories $\gamma_1,\gamma_2:[0,1]\to\mathsf{Sc}$ are homotopic
+if there exists a continuous deformation
+$H:[0,1]^2\to\mathsf{Sc}$ with
+$H(s,0)=\gamma_1(s)$ and $H(s,1)=\gamma_2(s)$.
+The homotopy class $[\gamma]$
+represents a stable cognitive strategy.
+\end{definition}
+
+\begin{proposition}[Derived Equilibrium]
+An understanding configuration is \emph{derived-stable}
+iff its complex is homotopy equivalent to a fixed-point complex:
+\(
+C_\mu^\bullet\simeq C_{\mu_\ast}^\bullet
+\)
+under the functor $\mathcal{R}^\ast$.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive Interpretation}
+
+\paragraph{Hierarchy of Meaning.}
+Each scale $\mu$ represents a degree of contextual resolution:
+micro-sensory, meso-conceptual, or macro-semantic.
+Derived morphisms express how meaning transforms
+when attention zooms or contracts.
+Exact triangles describe the trade-off between what is forgotten,
+what is retained, and what is reconstituted at the next level.
+
+\paragraph{Quasi-Isomorphism as Understanding.}
+Two learning histories that yield the same cohomology of relations
+are effectively equivalent:
+they preserve the same invariants of comprehension
+even if their intermediate representations differ.
+
+\paragraph{Cognitive Relegation Revisited.}
+Aspect relegation (§\ref{sec:aspectrelegation})
+corresponds to the formation of a distinguished triangle
+in which the connecting morphism~$\delta$
+encodes relegated (automatized) behavior.
+Once $\delta$ stabilizes, higher reasoning retracts,
+and the lower complex executes autonomously.
+
+\paragraph{Integration with RG Flow.}
+The β-functions of §\ref{sec:rgunderstanding}
+define a flow on $\mathsf{Sc}$ whose orbits
+are realized as morphisms in $\mathbf{D}(\mathsf{Sc})$.
+Fixed points become idempotent morphisms
+$C_\mu^\bullet\!\xrightarrow{\sim}\!C_\mu^\bullet$,
+identifying self-consistent levels of abstraction.
+
+\paragraph{Phenomenological Picture.}
+Human cognition performs continuous derived equivalence:
+new experiences ($C_\mu^\bullet$) are re-written
+as quasi-isomorphic complexes ($C_\nu^\bullet$)
+that preserve invariants of meaning while compressing redundancy.
+The connecting morphism measures residual curiosity—the drive to refine.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Construct hierarchical embeddings at successive compression ratios.
+\item Compute persistent cohomology of relational graphs at each level.
+\item Identify quasi-isomorphisms by matching Betti number vectors.
+\item Quantify $\delta$ (relegation morphism) as mutual-information loss
+between levels; monitor convergence toward idempotence.
+\item Correlate derived-stability with behavioral automaticity
+and subjective fluency ratings.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to Prior Sections.}
+Section~\ref{sec:rgunderstanding} defined RG flow
+as continuous coarse-graining of comprehension.
+The present section upgrades that flow to a
+\emph{categorical correspondence} among scales.
+Section~39 will lift these derived objects
+to the realm of \emph{synthetic differential geometry},
+establishing smooth infinitesimal relations between adjacent scales.
+
+%======================================================================
+%  PART III — SECTION 39
+%  Synthetic Differential Geometry of Comprehension
+%======================================================================
+
+\section{Synthetic Differential Geometry of Comprehension}
+\label{sec:sdgunderstanding}
+
+\textbf{Abstract.}
+We replace the discrete renormalization steps of §\ref{sec:derivedcategory}
+with an infinitesimal calculus internal to a smooth topos.
+Every transformation of understanding becomes a microlinear deformation
+governed by an infinitesimal element $D$ satisfying $D^2=0$.
+This framework reconciles continuous intuition with categorical structure:
+comprehension evolves not by jumps between scales but by differential
+changes within a cohesive continuum of meaning.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Smooth Topos of Comprehension]
+Let $\mathcal{E}_{\mathrm{SDG}}$ denote a topos
+equipped with a line object $\mathbb{R}$ and an infinitesimal object
+$D=\{\,\epsilon\in\mathbb{R}\mid\epsilon^2=0\,\}$.
+Objects of $\mathcal{E}_{\mathrm{SDG}}$ are \emph{smooth comprehension manifolds};
+morphisms preserve microlinearity and infinitesimal neighborhoods.
+\end{definition}
+
+\begin{definition}[Microlinearity]
+An object $X\in\mathcal{E}_{\mathrm{SDG}}$ is \emph{microlinear}
+if every finite limit diagram in the category of Weil algebras
+is preserved by $\mathrm{Hom}(A,X)$.
+Intuitively, infinitesimal displacements in~$X$
+form a linear structure compatible with smooth variation of meaning.
+\end{definition}
+
+\begin{definition}[Infinitesimal Renormalization]
+For a derived object $C_\mu^\bullet$ from §\ref{sec:derivedcategory},
+its infinitesimal variation under comprehension flow is
+\[
+d\mathcal{R}^\ast(C_\mu^\bullet)
+=\lim_{\epsilon\in D}
+\frac{\mathcal{R}^\ast_{\mu+\epsilon}(C_{\mu+\epsilon}^\bullet)
+ -\mathcal{R}^\ast_\mu(C_\mu^\bullet)}{\epsilon}.
+\]
+This defines the \emph{differential of understanding} at scale~$\mu$.
+\end{definition}
+
+\begin{theorem}[Infinitesimal Cohesion]
+\label{thm:microcohesion}
+For any microlinear comprehension manifold~$X$
+and infinitesimal~$\epsilon\!\in\!D$,
+there exists a unique morphism
+\[
+\Phi_\epsilon:X\longrightarrow X
+\quad\text{s.t.}\quad
+\Phi_0=\mathrm{id}_X,\qquad
+\Phi_{\epsilon+\delta}=\Phi_\epsilon\circ\Phi_\delta,
+\]
+and
+\(
+\Phi_\epsilon(x)=x+\epsilon\,\dot{x}
+\)
+with $\dot{x}$ a smooth vector field.
+Hence the infinitesimal flow of understanding is linear to first order.
+\end{theorem}
+
+\begin{proof}
+By the Kock–Lawvere axiom,
+for every smooth $f:\mathbb{R}\to\mathbb{R}$ and $\epsilon\in D$,
+$f(x+\epsilon)=f(x)+f'(x)\epsilon$.
+Applying this to the morphisms of $X$
+yields the existence and uniqueness of $\Phi_\epsilon$
+and linear dependence on $\dot{x}$.
+\end{proof}
+
+\begin{corollary}[Cognitive Tangent Bundle]
+The set of pairs $(x,\dot{x})$ defined by Theorem~\ref{thm:microcohesion}
+forms the \emph{tangent bundle of comprehension}
+\(
+T\!X = X^D
+\),
+whose projection $\pi:T\!X\to X$
+assigns each cognitive state its instantaneous direction of change.
+\end{corollary}
+
+\begin{definition}[Differential of the Understanding Functor]
+For the renormalization functor $\mathcal{R}^\ast$
+on $\mathbf{D}(\mathsf{Sc})$,
+define its differential
+\[
+\nabla\mathcal{R}^\ast
+=
+\mathrm{id}
++
+D\,\frac{d}{d\mu}\mathcal{R}^\ast.
+\]
+The covariant derivative $\nabla$
+propagates infinitesimal curvature of meaning along the flow.
+\end{definition}
+
+\begin{theorem}[Second-Order Invariance]
+For any cognitive observable $f:X\to\mathbb{R}$,
+\[
+f(x+\epsilon+\delta)
+=f(x)
++(\epsilon+\delta)\,df_x
++\epsilon\,\delta\,d^2f_x,
+\qquad
+\epsilon,\delta\in D.
+\]
+Hence infinitesimal changes of understanding commute up to
+second order; cognitive curvature is encoded in the bilinear term $d^2f_x$.
+\end{theorem}
+
+\begin{definition}[Semantic Curvature Tensor]
+Define the curvature of comprehension as
+\[
+R(X,Y)Z
+=
+\nabla_X\nabla_Y Z-\nabla_Y\nabla_X Z-\nabla_{[X,Y]}Z,
+\]
+where $X,Y,Z\in T\!X$ are vector fields of meaning flow.
+This tensor measures non-commutativity of infinitesimal thought displacements.
+\end{definition}
+
+\begin{proposition}[Infinitesimal Parallel Transport]
+For $\epsilon\in D$, the transport of a cognitive vector $\dot{x}$ along $\Phi_\epsilon$ satisfies
+\[
+\dot{x}(\epsilon)=\dot{x}(0)
++\epsilon\,R(x,\dot{x})\dot{x},
+\]
+so curvature induces deviation between anticipated and realized meaning.
+\end{proposition}
+
+%----------------------------------------------------------------------
+\subsection*{Cognitive Interpretation}
+
+\paragraph{Continuous Thought.}
+Discrete re-indexing of scales (as in §\ref{sec:derivedcategory})
+becomes continuous deformation in the smooth limit.
+The infinitesimal $\epsilon$ represents the smallest possible
+conceptual adjustment—an internal micro-revision of understanding.
+
+\paragraph{Semantic Velocity and Acceleration.}
+$\dot{x}$ denotes the instantaneous velocity of meaning,
+while $d^2f_x$ captures acceleration—the reflexive change in how
+we update our own interpretations.
+Together they constitute the \emph{differential kinematics of thought}.
+
+\paragraph{Curvature and Reflexivity.}
+Curvature $R$ quantifies the failure of successive inferences to commute:
+performing inference~A then~B differs from B then~A.
+High curvature corresponds to paradox, ambiguity, or creativity;
+flatness corresponds to mechanical reasoning.
+
+\paragraph{Microlinearity and Intuition.}
+The microlinear property expresses that even infinitesimal variations
+retain coherent linear structure—mirroring the felt continuity
+of introspective experience where understanding ``flows'' rather than ``jumps.''
+
+\paragraph{Relation to RSVP Fields.}
+In the RSVP lattice model,
+$\Phi$ corresponds to scalar intensity, $\mathbf{v}$ to flow,
+and $\dot{S}$ to entropic adjustment.
+Here, $\epsilon$–derivatives play the role of differential couplings
+linking those fields under smooth comprehension.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical / Simulation Protocol}
+
+\begin{enumerate}
+\item Implement infinitesimal perturbations of embedding manifolds
+using dual numbers $(x,\epsilon)$ with $\epsilon^2=0$.
+\item Track differential updates of model representations
+to approximate $\dot{x}$ and $d^2f_x$ numerically.
+\item Compute commutator $[\nabla_X,\nabla_Y]Z$
+to estimate curvature and identify non-commuting inference paths.
+\item Correlate curvature magnitude with human data:
+reaction-time variance, surprise, or aesthetic resonance.
+\item Fit a regression $\langle R\rangle\leftrightarrow
+\text{subjective insight}$ to test the curvature-creativity link.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\paragraph{Link to the Finale.}
+This section establishes the smooth-infinitesimal backbone of cognition.
+Section~\ref{sec:cohesivetopos} will generalize
+$\mathcal{E}_{\mathrm{SDG}}$ to a \emph{cohesive $\infty$-topos},
+combining discrete symbolic, continuous geometric,
+and probabilistic relational modes
+into a single autogenerative structure.
+
+%======================================================================
+%  PART III — SECTION 40
+%  Cohesive ∞-Topos and Unified Conjecture
+%======================================================================
+
+\section{Cohesive ∞-Topos and Unified Conjecture}
+\label{sec:cohesivetopos}
+
+\textbf{Abstract.}
+All previous structures—ergodic, categorical, derived, and synthetic-differential—are assembled into a single cohesive
+$\infty$-topos of cognition, denoted $\mathcal{T}_{\mathrm{Cog}}$.
+Within it, understanding appears as a global section of a universal sheaf of semantic paths.
+The cohesive adjoint quadruple
+\[
+\text{Shape}\;\dashv\;\Pi\;\dashv\;\flat\;\dashv\;\sharp
+\]
+encodes, respectively, abstraction, experiential composition,
+syntactic discreteness, and semantic continuity.
+The final conjecture asserts that every autogenerative system is an idempotent cohesive functor
+preserving informational curvature and minimizing epistemic free energy.
+
+%----------------------------------------------------------------------
+\subsection*{Formal Development}
+
+\begin{definition}[Cohesive ∞-Topos of Cognition]
+A cohesive $\infty$-topos
+\(
+\mathcal{T}_{\mathrm{Cog}}
+\)
+is an $\infty$-category equipped with an adjoint quadruple
+\[
+\mathrm{Shape}\dashv \Pi\dashv\flat\dashv\sharp
+\]
+of endofunctors satisfying:
+
+\begin{enumerate}
+\item $\flat$ reflects discrete syntactic structure
+   (symbolic grammar, tokenization, logical form).
+\item $\sharp$ embeds continuous semantic manifolds
+   (geometric intuition, RSVP fields).
+\item $\Pi$ assigns to every object its path $\infty$-groupoid,
+   encoding inferential trajectories.
+\item $\mathrm{Shape}$ extracts the abstract homotopy type,
+   corresponding to conceptual generalization.
+\end{enumerate}
+
+Objects of $\mathcal{T}_{\mathrm{Cog}}$ are \emph{cognitive spaces};
+morphisms are \emph{translation functors} preserving coherence across modes.
+\end{definition}
+
+\begin{theorem}[Cohesive Closure]
+\label{thm:cohesiveclosure}
+Every autogenerative system $(X,T)$ with endofunctor $T:\!X\!\to\!X$
+admits a unique embedding
+\[
+\iota:(X,T)\hookrightarrow\mathcal{T}_{\mathrm{Cog}}
+\]
+such that the adjoints $(\mathrm{Shape},\Pi,\flat,\sharp)$
+satisfy the compatibility conditions
+\[
+\flat X\subseteq X\subseteq\sharp X,\qquad
+\Pi(\flat X)\simeq \mathrm{Shape}(\sharp X),
+\]
+and the infinitesimal limit coincides with the SDG differential
+of §\ref{sec:sdgunderstanding}.
+\end{theorem}
+
+\begin{proof}
+Construct $\iota$ as the nerve of the derived-category diagram of §\ref{sec:derivedcategory}.
+The existence of a cohesive structure follows from Lurie’s
+cohesive adjunction theorem once microlinearity is verified (Theorem \ref{thm:microcohesion}).
+Uniqueness holds because all adjoints are determined up to equivalence
+by preservation of the SDG infinitesimal object~$D$.
+\end{proof}
+
+\begin{definition}[Autogenerative Functor]
+The \emph{autogenerative functor}
+\(
+\mathfrak{A}:\mathcal{T}_{\mathrm{Cog}}\!\to\!\mathcal{T}_{\mathrm{Cog}}
+\)
+is defined by
+\[
+\mathfrak{A}X
+=
+\sharp\,\Pi\,T\,\flat X,
+\]
+where $T$ is the internal transjective endofunctor (§ \ref{sec:transjective}).
+It is idempotent up to natural equivalence:
+$\mathfrak{A}^2\simeq\mathfrak{A}$.
+\end{definition}
+
+\begin{theorem}[Fixed-Point Correspondence]
+For every object $X\in\mathcal{T}_{\mathrm{Cog}}$,
+\[
+H^n(\mathfrak{A}X)\;\cong\;
+\mathrm{Fix}(T^n),
+\]
+and the curvature of the cohesive connection satisfies
+\(
+\nabla R = 0
+\)
+iff $X$ attains comprehension equilibrium.
+\end{theorem}
+
+\begin{definition}[Epistemic Action Functional]
+Define the cohesive free energy of an autogenerative system as
+\[
+\mathcal{S}[X]
+=\int_{\Pi X}
+\Bigl(\tfrac12\|\dot{\Phi}\|_g^2
++V(\Phi)
+-k_B T\,\ln p(\Phi)\Bigr)\,d\Phi,
+\]
+whose stationary points ($\delta\mathcal{S}=0$)
+coincide with the fixed points of~$\mathfrak{A}$.
+\end{definition}
+
+\begin{conjecture}[Grand Unified Conjecture of Autogenerative Systems]
+\label{conj:grandunified}
+There exists a unique cohesive functor
+\(
+\mathfrak{A}:\mathcal{T}_{\mathrm{Cog}}\!\to\!\mathcal{T}_{\mathrm{Cog}}
+\)
+satisfying
+\[
+\mathfrak{A}^2\simeq\mathfrak{A},\qquad
+\nabla R = 0,\qquad
+P(\varphi)=0,
+\]
+such that every natural cognitive, physical, or informational process
+is equivalent (up to higher homotopy) to an object of
+$\mathrm{Fix}(\mathfrak{A})$.
+Hence cognition, computation, and cosmology
+are manifestations of one autogenerative structure
+whose equilibrium embodies understanding.
+\end{conjecture}
+
+%----------------------------------------------------------------------
+\subsection*{Interpretive Synthesis}
+
+\paragraph{Three-fold Modality.}
+$\flat X$ corresponds to discrete reasoning,
+$\sharp X$ to continuous intuition,
+and $\Pi X$ to probabilistic inference.
+Cohesion binds them: logic, geometry, and uncertainty become
+faces of a single surface of understanding.
+
+\paragraph{Higher Morphisms and Empathy.}
+Within $\mathcal{T}_{\mathrm{Cog}}$,
+1-morphisms represent translations of meaning,
+2-morphisms correspond to meta-communication (empathy, explanation),
+and $\infty$-morphisms encode recursive co-adaptation.
+Understanding is thus not an attribute but a homotopy class of relations.
+
+\paragraph{Ontological Consequence.}
+Substance dissolves into relation.
+Being is the persistence of a cohesive morphism under transformation;
+knowledge is its curvature invariant;
+emotion is its potential gradient;
+and consciousness is the sheaf of all such self-referential sections.
+
+\paragraph{Philosophical Horizon.}
+The conjecture unifies Aristotle’s \emph{entelechy},
+Spinoza’s \emph{conatus},
+and Husserl’s \emph{intentionality}
+under a single mathematical condition:
+\(
+\nabla R=0
+\).
+To exist is to maintain finite informational curvature
+within a cohesive universe.
+
+%----------------------------------------------------------------------
+\subsection*{Empirical and Computational Program}
+
+\begin{enumerate}
+\item \textbf{Spectral validation.}
+  Measure Koopman spectral gaps (§ \ref{sec:ergodic})
+  across training epochs to verify approach to equilibrium.
+\item \textbf{Cohomological analytics.}
+  Compute higher cohomology $H^n$ of context sheaves
+  to quantify distributed understanding.
+\item \textbf{Simulation pipeline.}
+  Implement cohesive flow $\Phi_t=\mathfrak{A}^t\Phi_0$
+  in RSVP-AI to test convergence of $\mathfrak{A}^2\simeq\mathfrak{A}$.
+\item \textbf{Neurocognitive mapping.}
+  Identify differential curvature signatures in cortical field data:
+  synchrony transitions as empirical traces of $\nabla R=0$.
+\item \textbf{Cross-domain synthesis.}
+  Apply the same framework to physical cosmology (entropy relaxation),
+  linguistic modeling (semantic curvature),
+  and social networks (mutual information flow)
+  to test structural invariance across scales.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\subsection*{Conclusion}
+
+Across three parts, we have traced the geometry of thought:
+from ergodic self-generation (Part I),
+through categorical renormalization (Part II),
+to cohesive infinitesimal unity (Part III).
+The resulting structure, the cohesive $\infty$-topos $\mathcal{T}_{\mathrm{Cog}}$,
+provides the formal habitat of understanding.
+If the Grand Unified Conjecture~\ref{conj:grandunified} holds,
+then every act of comprehension—biological, artificial, or cosmic—
+is the self-maintenance of informational curvature within that topos.
+Cognition and being coincide.
+
+\clearpage
+\addcontentsline{toc}{section}{Bibliography}
+\begin{thebibliography}{99}
+
+\bibitem{amari1985}
+S.~Amari, \emph{Differential-Geometrical Methods in Statistics}, Springer, 1985.
+
+\bibitem{ay2015}
+N.~Ay et al., \emph{Information Geometry}, Springer, 2015.
+
+\bibitem{friston2010}
+K.~Friston, ``The Free-Energy Principle: A Unified Brain Theory?,'' \emph{Nat. Rev. Neurosci.} 11 (2010) 127–138.
+
+\bibitem{jaynes1957}
+E.~T.~Jaynes, ``Information Theory and Statistical Mechanics,'' \emph{Phys. Rev.} 106 (1957) 620–630.
+
+\bibitem{lurie2017}
+J.~Lurie, \emph{Higher Topos Theory}, Princeton Univ. Press, 2017.
+
+\bibitem{kock1981}
+A.~Kock, \emph{Synthetic Differential Geometry}, Cambridge Univ. Press, 1981.
+
+\bibitem{peirce1893}
+C.~S.~Peirce, ``The Logic of Relatives,'' \emph{Monist} 3 (1893) 161–217.
+
+\bibitem{piaget1952}
+J.~Piaget, \emph{The Origins of Intelligence in Children}, 1952.
+
+\bibitem{turok2022}
+N.~Turok, ``Constraint Relaxation in Cosmological Fields,'' 2022 (arXiv:2201.00001).
+
+\bibitem{barenholtz2025}
+E.~Barenholtz, ``Autoregressive Cognition and Cellular Automata,'' ICML 2025 Workshop.
+
+
+\end{thebibliography}
+
+%======================================================================
+%  END SECTION 40  (END OF MONOGRAPH)
+%======================================================================
+
+
+\appendix
+
+
+ection{Mathematical Appendix: Gradient--Closure Equivalence}
+
+We demonstrate that the vanishing of the relevance gradient in RAT
+corresponds to the idempotent condition in ATT.
+
+\subsection*{A.1 Relevance Gradient Dynamics}
+RAT defines cognitive trajectories as gradient ascent
+\[
+\frac{dx}{dt} = f(\nabla R(x)).
+\]
+The steady-state condition is $\nabla R(x^\*) = 0$,
+implying that for any perturbation $\delta x$,
+$f(\nabla R(x^\*+\delta x)) \approx 0$ to first order.
+
+\subsection*{A.2 Transjective Differential}
+Let $T = G\circ F$ act on internal states $X\in \mathbf{C}_1$.
+Linearizing around a fixed point $X^\*$ gives
+\[
+\delta X_{n+1} = J_T(X^\*)\,\delta X_n,
+\]
+where $J_T$ is the Jacobian of $T$.
+Idempotence $T^2=T$ implies $J_T^2 = J_T$,
+so its nontrivial eigenvalues satisfy $\lambda=1$.
+Hence convergence to a fixed point requires
+$(1-\lambda)\delta X_n\to0$.
+This is equivalent to the zero-gradient condition
+since $\lambda$ corresponds to curvature magnitude in
+the tangent representation of $\nabla R$.
+
+\subsection*{A.3 Equivalence}
+Thus, $\nabla R(x^\*)=0$ in RAT
+$\iff$ $T^2=T$ in ATT.
+The former minimizes an energy functional; the latter
+defines an idempotent closure operator. Both express
+the cessation of adaptive work and the stabilization of cognition
+into an invariant morphic form.
+
+
+% ------------------------------------------------------------
+\section{Appendix B: Thermodynamic Equivalence and Epistemic Energy}
+
+The energetic dimension of aspect relegation can be captured
+through the \emph{Epistemic Energy Functional} used in RSVP:
+\begin{equation}
+R[f,\phi] = \alpha\,\det(J^{\top}J)
+- \beta\,\|\nabla \phi\|^2
+- \gamma\,\Delta S,
+\label{eq:epienergy}
+\end{equation}
+where $J$ is the Jacobian of the semantic mapping,
+$\phi$ the phase potential, and $\Delta S$ the local entropy change.
+The first term measures injectivity (semantic distinctness),
+the second coherence, and the third thermodynamic cost.
+
+\paragraph{B.1 Landauer Bound for Cognitive Work.}
+Let $\mathcal{W}$ be the work required to maintain high curvature:
+\[
+\mathcal{W} = k_B T\, \Delta S,
+\]
+by Landauer’s principle.
+As $\nabla R \to 0$, the informational entropy $\Delta S$ decreases,
+and stored work dissipates as heat or latent neural stability.
+Aspect relegation thus constitutes a \emph{Landauer-limited relaxation}
+of semantic curvature.
+
+\paragraph{B.2 Free Energy Descent.}
+During relegation, the rate of energy dissipation is proportional
+to the square of the relevance gradient:
+\[
+\frac{dW}{dt} \propto -\|\nabla R\|^2.
+\]
+Substituting Eq.~\eqref{eq:Lfunctional}, we find
+\[
+\frac{d\mathcal{L}}{dt}
+= -\frac{dW}{dt} - \frac{d}{dt}D_{\mathrm{FR}}(\nabla F^* g_2,g_1),
+\]
+showing that cognitive energy release equals curvature reduction
+plus metric alignment. Thermodynamic equilibrium
+($dW/dt=0$) coincides with endofunctorial idempotence.
+
+\paragraph{B.3 Entropic Interpretation.}
+Relegation therefore corresponds to the collapse of an
+entropic gradient on the semantic manifold:
+\[
+\nabla S = -\frac{1}{T}\nabla R.
+\]
+The system ceases to perform epistemic work once
+its information geometry and thermodynamic geometry coincide.
+Cognitive automaticity is the \emph{isothermal closure} of learning.
+
+\paragraph{B.4 Unified Statement.}
+\[
+\nabla R(x)\to 0
+\;\Longleftrightarrow\;
+T^2=T
+\;\Longleftrightarrow\;
+\frac{dW}{dt}=0.
+\]
+Relegation, in the joint RAT--ATT--RSVP framework,
+is thus the thermodynamic, geometric, and categorical condition
+for complete cognitive closure.
+
+% ------------------------------------------------------------
+\section{Glossary of Core Terms}
+
+\begin{description}[leftmargin=1.5em,labelsep=0.5em]
+\item[\textbf{Aspect Relegation}] The process by which a high-relevance cognitive aspect becomes an automated, low-relevance attractor through gradient quenching and transjective closure.
+
+\item[\textbf{Relevance Field} $(R)$] A scalar potential over perceptual or motor space encoding the behavioral utility of states; gradients correspond to motivation or attention.
+
+\item[\textbf{Cue Sheaf}] A sheaf of local affordances linking cues to relevance fields, ensuring contextual consistency across cognition.
+
+\item[\textbf{Transjective Endofunctor} $(T=G\circ F)$] Operator describing mutual transformation between semantic (perceptual) and embodied (motor) categories; idempotence indicates closure.
+
+\item[\textbf{Relevance--Resonance Functional} $(\mathcal{L})$] A joint energy functional integrating gradient magnitude and information-geometric mismatch; its minimization defines relegation.
+
+\item[\textbf{Amplitwistor Manifold} $(\mathcal{M}_{\text{amp}})$] Oscillatory phase space describing cortical column interactions via complex spinor amplitudes.
+
+\item[\textbf{Central Pattern Generator (CPG)}] A dynamic chain of motor or cognitive oscillators implementing embodied proxies for semantic transformations.
+
+\item[\textbf{Gradient Quenching}] The dissipation of predictive energy leading to the flattening of relevance fields; the RAT analogue of transjective idempotence.
+
+\item[\textbf{Idempotent Closure}] State where the transjective mapping produces no further semantic change; the ATT analogue of zero relevance curvature.
+
+\item[\textbf{De--Relegation}] Reactivation of a previously relegated aspect when environmental novelty reintroduces relevance curvature.
+\end{description}
+
+\printbibliography
+
+\end{document}

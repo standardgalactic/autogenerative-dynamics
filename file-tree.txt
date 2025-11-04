@@ -1,0 +1,60 @@
+.
+├── Autogenerative Dynamics.pdf
+├── Autogenerative Dynamics.txt
+├── Autoregressive Systems.pdf
+├── Autoregressive Systems.txt
+├── LICENSE
+├── background
+│   ├── Entropy-Aware Polyglot Computation Framework.mhtml
+│   ├── Entropy-Aware Polyglot Computation Framework.txt
+│   ├── Framework for affective resonance.mhtml
+│   ├── Framework for affective resonance.txt
+│   ├── LaTeX Compilation_ Consciousness Field Dynamics.mhtml
+│   ├── LaTeX Compilation_ Consciousness Field Dynamics.txt
+│   ├── LaTeX Document_ Autogenerative Thesis Structure.mhtml
+│   ├── LaTeX Document_ Autogenerative Thesis Structure.txt
+│   ├── LaTeX Script for Research Monograph.mhtml
+│   ├── LaTeX Script for Research Monograph.txt
+│   ├── Research program summary.mhtml
+│   ├── Research program summary.txt
+│   ├── Rhythmic Inference.pdf
+│   ├── Rhythmic Inference.txt
+│   ├── Transjective Endofunctor Cognition.mhtml
+│   ├── Transjective Endofunctor Cognition.txt
+│   ├── Transjective Endofunctor_ Relational Cognition Theory.mhtml
+│   ├── Transjective Endofunctor_ Relational Cognition Theory.txt
+│   ├── extract-text.py
+│   └── rhythmic-inference.tex
+├── extract-text.py
+├── research
+│   ├── Autogenerative Dynamics.pdf
+│   ├── proposal.aux
+│   ├── proposal.bcf
+│   ├── proposal.log
+│   ├── proposal.out
+│   ├── proposal.pdf
+│   ├── proposal.run.xml
+│   ├── proposal.tex
+│   ├── proposal.toc
+│   └── refs.bib
+├── tree.list
+└── workspace
+    ├── Autoregressive Systems.pdf
+    ├── monograph.aux
+    ├── monograph.bbl
+    ├── monograph.bcf
+    ├── monograph.blg
+    ├── monograph.log
+    ├── monograph.out
+    ├── monograph.pdf
+    ├── monograph.run.xml
+    ├── monograph.tex
+    ├── monograph.toc
+    ├── out
+    │   ├── figs
+    │   │   ├── curvature_field.png
+    │   │   └── topos_diagram.pdf
+    │   └── pdfs
+    └── references.bib
+
+6 directories, 51 files

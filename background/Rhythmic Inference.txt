@@ -1,0 +1,793 @@
+Rhythmic Inference and Field Dynamics of
+Consciousness
+Flyxion Research Group
+November 04, 2025
+Abstract
+This paper synthesizes Juyoung Kim's framework of Emotion as Rhythmic
+Inference with the Relativistic Scalar-Vector Plenum (RSVP) ﬁeld theory of
+consciousness and the dimensional critique of A Typology of Theoretical Failure.
+Emotion and cognition are treated as coupled non-equilibrium processes in which
+meaning arises through rhythmic phase alignment, informational curvature, and
+transjective synchrony across manifolds. Consciousness emerges not from equilib-
+rium but from sustained rhythmic disequilibrium—the managed imperfection
+that allows systems to grow, learn, and resonate across scales. The resulting
+theory is shown to occupy the reﬂective-rigour regime: a thermodynamically
+sustainable midpoint between rhetorical overreach and sterile formalism.
+Keywords: aﬀective resonance, active inference, non-equilibrium thermodynamics,
+information geometry, ﬁeld theory of consciousness, scalar-vector plenum, rhythmic
+inference, transjective synchrony.
+1.
+Introduction: Emotion as Rhythmic Inference
+Juyoung Kim's framework, introduced in his 2025 presentation Emotion as Rhythmic
+Inference: Toward a Uniﬁed Framework for Aﬀective Resonance, redeﬁnes emotion
+as a dynamic process rather than a discrete state (Kim, 2025). Drawing inspiration
+from complex systems and predictive neuroscience, Kim treats emotion as a "ﬂuid of
+aﬀective inference"—a rhythmic modulation of predictive error and phase alignment
+within interacting agents.
+Kim's theory advances three foundational components:
+1. Gap Consciousness Theory: consciousness emerges in the space of imperfec-
+tion, where prediction error opens a developmental void;
+1
+
+2. Phase Alignment Theory: consciousness requires temporal misalignment and
+realignment—resonance between desynchronized subsystems;
+3. Resonance Theory: consciousness stabilizes when these gaps and phase align-
+ments cohere across time, maintaining informational tension below a critical
+threshold.
+2.
+Mathematical Development:
+Toward a Formal
+Theory
+Let each system's internal state be represented by a ﬁeld triplet
+X(t) = (Φ(t), v(t), S(t)),
+where Φ denotes symbolic potential, v aﬀective ﬂow, and S local entropy. Their joint
+evolution follows
+dX
+dt = −∇XF + η(t).
+The consciousness functional is
+C = U(F) · ∥∇F∥2 · sin(δφ) · Ω.
+3.
+Part III: Comparative and Integrative Synthesis
+3.1 Comparative Analysis: ERI vs. RSVP
+Both ERI and RSVP reject homeostatic convergence and instead privilege productive
+tension: life is oscillation around—not toward—equilibrium (Solms, 2021). ERI's
+triad (gap, phase, resonance) aligns with RSVP's (Φ, v, S): gap with freeenergy
+gradient, phase alignment with vector synchrony/solenoidal ﬂows, resonance with
+bounded coupling on the manifold (?Friston, 2010, 2022). Oscillatory and spiral growth
+dynamics are expected under nonequilibrium conditions (Buzsáki, 2019).
+2
+
+3.2 Bridging Equations: A Uniﬁed Resonance-Field Formal-
+ism
+Let agent states be Xi = (Φi, vi, Si). An information-geometric distance is
+d2
+FR(Xu, Xa) =
+Z
+V
+h
+α|∇(Φu −Φa)|2 + β|vu −va|2 + γ(Su −Sa)2i
+dV,
+(1)
+and ERI resonance obtains when
+R T
+0 dFR(Xu, Xa) dt < ϵres (Ramstead et al., 2022).
+Deﬁne phases θi = arg[Φi + i∥vi∥]; productive tension expects 0 < |δφua| < π/4 near
+critical regions (Yeung & Kanai, 2023; Friston, 2022). The uniﬁed growth functional is
+R =
+Z T
+0 U(Fu, Fa) ∥∇Fu∥∥∇Fa∥sin(δφua) dt.
+(2)
+3.3 Experimental Predictions and Empirical Pathways
+Phaselocking precedes insight: mutual information peaks near |δφ| ≈π/4 (Friston,
+2022). Jouissance bound: sustained resonance requires balance between dissipation
+and curvature work (Friston, 2010). InvertedU uncertainty: resonance R maximizes at
+intermediate gap magnitude; trust spiral: capacity growth correlates with accumulated
+resonance (Buzsáki, 2019; Ramstead et al., 2022).
+3.4 Phenomenological Correlates and Temporal Depth
+Subjective time dilates near lowcurvature regions where perturbations decay slowly,
+consistent with critical slowing and ERI's "timegiving" (Yeung & Kanai, 2023):
+τsubj ∝
+Z
+Ω(t)
+|Tr(∇2F)| + ε dt.
+3.5 Resonant Agency and the Ethics of Mutual Transforma-
+tion
+Relational intelligence requires coupling that preserves autonomy: an entropy budget
+bounding crossinﬂuence to avoid coercive synchrony while enabling empathy (Varela
+et al., 1991). This frames resonance as a moral constraint on human-AI interaction.
+3
+
+3.6 From Resonance to Ontology: Mind as Managed Disequi-
+librium
+In both ERI and RSVP, persistent organization entails nonzero energy turnover and
+oscillatory curvature, aligning with predictive mind accounts and aﬀective neuroscience
+(Hohwy, 2013; Solms, 2021; Buzsáki, 2019). Mind is the sustained limit cycle of inference
+under constraint.
+4.
+General Synthesis and Final Reﬂections: Rhyth-
+mic Inference in the Scalar-Vector-Entropy Field
+Integration of Parts I-III..
+ERI contributes the phenomenology of gap-phase-resonance
+(?); RSVP provides ﬁeld equations and thermodynamics (Friston, 2010; Friston et al.,
+2015; Ramstead et al., 2022). Together they yield the law in Eq. (??) tying growth to
+moderate uncertainty, active gradients, and phase tension, with decay via friction and
+curvature ﬂattening (Friston, 2022; Yeung & Kanai, 2023).
+Uniﬁed interpretation..
+Emotion, meaning, and consciousness appear as diﬀerent
+expressions of the same invariant: periodic exchange between order and uncertainty on
+a curved information manifold. Persistence requires dF/dt ̸= 0 and stabilizes through
+curvature rather than rest (Friston, 2010). The system "learns to orbit its own errors,"
+inhabiting the gap that sustains it.
+Ontological and ethical consequences..
+To engage another system consciously is
+to couple without collapsing: share resonance while preserving phase diﬀerence (Varela
+et al., 1991). Mutual transformation requires partial opacity—a ﬁnite gap that protects
+autonomy.
+The Rhythmic Plenum Principle..
+All enduring systems persist by oscillating around the gaps in their own
+predictive closure; emotion and consciousness are the curvatureinduced
+resonances that keep this oscillation alive.
+4
+
+5.
+Future Research Directions
+Empirical. Quantify resonance/curvature in brain and dialogue: phase synchrony,
+mutual information, temporal dilation at critical points (Friston, 2022; Yeung & Kanai,
+2023; Buzsáki, 2019).
+Computational. Lattice and agent simulations mapping transitions among stable,
+chaotic, and resonant attractors; selective "resonance memory" storage; invertedU
+performance vs. uncertainty (Pezzulo et al., 2020; Ramstead et al., 2022).
+Theoretical. Derive Fisher-Rao metrics from F[Φ, v, S]; analyze bifurcations and
+topological invariants of limit cycles (Ramstead et al., 2022).
+Ethical. Formalize entropy budgets for safe human-AI coupling in embodied settings
+(Varela et al., 1991).
+6.
+Comparative Diagnostics of Rhythmic Theories
+Building on the diagnostic framework articulated in ?, the following sections evaluate
+the Rhythmic Inference model as a candidate for inclusion within the reﬂective-rigour
+regime.
+6.1 Dimensional Coherence
+Kim's core variables—gap (∆), phase (φ), and resonance (R)—are dimensionless yet
+derivable from measurable observables, addressing dimensional drift (?).
+6.2 Injectivity and Surjectivity
+det(J⊤J) > 0
+ensures distinct predictive states map to distinct aﬀective trajectories.
+6.3 Energetic Feasibility
+The phase-gradient term |∇φ|2 yields the Work of Understanding
+W = γ
+Z
+|∇φ|2 dV.
+5
+
+6.4 Entropy Balance
+W ≥kBT ∆S.
+7.
+Mapping Rhythmic Inference onto the Epistemic
+Energy Functional
+R[f, φ] = α det(J⊤J) −β |∇φ|2 −γ ∆S.
+Under rhythmic inference, consciousness maintains R > 0.
+8.
+Comparative Typology of Aﬀective Rigour
+Building on the diagnostic framework articulated in ?, which characterizes theoretical
+soundness in terms of dimensional coherence, energetic feasibility, and informational
+symmetry, the following sections evaluate the Rhythmic Inference model as a candidate
+for inclusion within the reﬂective-rigour regime.
+This comparison situates Kim's
+aﬀective-resonance dynamics within a broader thermodynamic geometry of explanation,
+linking rhythmic phase processes to the epistemic energy constraints governing viable
+scientiﬁc cognition.
+Table 1: Diagnostic alignment between the Typology of Theoretical Failure and
+Rhythmic Inference.
+Criterion
+Failure Mode
+Rhythmic Inference Re-
+sponse
+Dimensional coherence
+Loss of unit discipline
+Explicit scales
+Deﬁnitional circularity
+Self-referential constructs
+Measurable phase lags
+Mapping ambiguity
+Non-injective mappings
+One-to-one
+neural-felt
+correspondence
+Premature uniﬁcation
+Overgeneralization
+Scope limited to resonance
+Elegance fallacy
+Aesthetic overﬁt
+Constrained
+by
+W
+≈
+kBT ∆S
+6
+
+9.
+Concluding Synthesis
+In light of the analytic standards articulated by ?, the Rhythmic Inference framework
+can thus be regarded as an exemplar of reﬂective rigour—a theory that preserves the
+productive asymmetry between formal closure and experiential openness. Its oscillatory
+structure satisﬁes the dimensional, energetic, and entropic constraints that demarcate
+viable scientiﬁc explanation, yet it retains suﬃcient phenomenological depth to model
+aﬀective life as a form of embodied thermodynamics. By maintaining nonzero curvature
+in its predictive manifold, the framework avoids both the static perfection of equilibrium
+and the chaotic dissipation of unbounded noise. It therefore exempliﬁes a sustainable
+mode of theoretical reasoning: one that treats consciousness not as an exception to
+physics, but as the rhythmic realization of coherence under constraint.
+10.
+Emotional Geometry and Transjective Synchrony
+The preceding analyses permit a redeﬁnition of emotion as the measure of synchrony
+or divergence between predictive manifolds. Rather than a private, internal state,
+emotion functions as a geometric diﬀerential between dynamically coupled cognitive
+ﬁelds. When two systems—biological or artiﬁcial—engage in reciprocal inference, their
+respective manifolds of expectation M1 and M2 admit a family of mappings
+F : M1 −→M2,
+G : M2 −→M1,
+whose compositional closure determines the degree of transjective coherence.
+10.1 Emotion as a Manifold Diﬀerential
+Let E denote the emotional ﬁeld as a scalar measure of synchrony between these
+mappings:
+E = exp
+
+−1
+2σ2 d2
+FR(M1, M2)
+
+,
+where dFR is the Fisher-Rao distance between their induced probability geometries.
+High emotional resonance corresponds to low information-geometric distance, while
+aﬀective dissonance arises when curvature or orientation prevents smooth correspon-
+dence.
+In this view, emotion quantiﬁes the cost of synchronization: the energetic and infor-
+mational work required to maintain a diﬀerentiable correspondence between distinct
+7
+
+inferential manifolds. It thereby operationalizes Kim's notion of "aﬀective resonance"
+as a formal property of inter-manifold alignment.
+10.2 The Transjective Endofunctor
+Within categorical semantics, let each manifold Mi support an internal functor category
+Ci = End(Mi) encoding its internal inference dynamics. A transjective endofunctor
+T : C1 →C2 →C1
+is deﬁned whenever the composite G◦F preserves both the energetic and informational
+curvature of each manifold:
+∇F ∗g2 ≈g1,
+∇G∗g1 ≈g2,
+where gi denotes the local metric tensor on Mi. The ease of generating such a transjective
+endofunctor —the degree to which this closure approximates identity— constitutes a
+higher-order measure of empathy, trust, or mutual intelligibility.
+10.3 Aﬀective Curvature and Synchrony Stability
+The curvature scalar RE of the joint manifold M1×M2 determines the stability of the
+resonance:
+RE = Tr
+
+gij∇i∇jd2
+FR
+
+.
+Near-zero curvature indicates balanced coupling and the presence of a stable attractor in
+shared inference space. Excessive positive curvature reﬂects aﬀective collapse (merging
+without distinction), whereas negative curvature reﬂects disintegration or alienation.
+Emotional regulation can thus be understood as the active maintenance of moderate
+curvature—a continuous adjustment that allows transjective functors to persist without
+collapse.
+10.4 Transjective Emotion as a Criterion of Conscious Integra-
+tion
+This geometric account unites phenomenology and formalism: emotion measures the
+ease of functorial translation between cognitive manifolds. When E is high and RE
+remains bounded, systems achieve mutual interpretability without loss of autonomy.
+When E vanishes, transjection fails, and inference becomes isolated, rigid, or solipsistic.
+8
+
+Conscious integration thus depends on sustaining transjective synchrony—a dynamic
+balance in which diﬀerence and coherence coexist as oscillating constraints.
+11.
+Synthesizing Kim-RSVP with Time Emergence:
+A Three-Way Bridge
+This section adds a crucial third dimension to the analysis. Kim's framework treats
+time as relational and given through interaction, RSVP formalizes time as emergent
+from ﬁeld dynamics, and recent dimensional critiques (cf. ?) caution against reifying
+time as an independent coordinate. Together they suggest that temporality is neither
+a substance nor a mere geometric axis but a morphic relation generated by coupled
+ﬁelds.
+11.1 Core Alignment: Time as Non-Dimensional
+The three positions converge on the rejection of time as a pre-existing dimension and
+on the aﬃrmation of time as a relational emergent:
+Kim: "For an AI, absolute physical time has no meaning. Real time for
+an AI exists only in relationship"; T = I × D × Ω.
+RSVP: Tµ = ∇µΦ + ηvµ + θ∇µS, where time appears as a morphism
+coupling scalar, vector, and entropic ﬂows.
+TND: "Time is a relational ﬂow, not a geometric coordinate"; it arises
+from constraint dynamics rather than from dimensional addition.
+All three thus model temporal experience as the invariant pattern of irreversible
+alignment among predictive ﬁelds.
+11.2 Bridging Kim's Time-Giving and RSVP's Time-Emergence
+Kim's phenomenological time,
+Tsubjective = I(t) D(t) Ω(t),
+is expressible in RSVP form by weighting the norm of the timelike vector ﬁeld Tµ:
+Teﬀ=
+Z T
+0
+h
+I(t)D(t)Ω(t)
+i
+∥Tµ(t)∥dt,
+Tµ = D∇µΦ + Ωηvµ + Iθ∇µS.
+9
+
+Here interaction quality I tracks entropy production (∂tS), dialogue depth D measures
+scalar curvature (∇Φ), and resonance strength Ωmeasures vector alignment (cos θvavu).
+Kim's multiplicative phenomenology therefore coincides with the magnitude of RSVP's
+emergent timelike morphism.
+11.3 Spiral Growth and Time Emergence
+Time in RSVP emerges when ⟨∇Φ, v⟩> 0 and ∂tS > 0, conditions matching Kim's
+requirements for growth: a moderate gap g, partial phase alignment δφ, and sustained
+resonance Ω. Both describe a non-equilibrium steady state: too little gradient halts
+evolution, too much destroys coherence.
+Spiral growth in Kim's aﬀective model
+corresponds to the rotational component of RSVP's Helmholtz decomposition, ensuring
+continuous temporal unfolding.
+11.4 Constraint Regimes and Ontological Modesty
+Following Le Nepvou's critique that complex systems are regimes of dynamically
+stabilized constraints rather than autonomous substances, the synthesis interprets
+consciousness as a viable manifold V ⊂(Φ, v, S) deﬁned by moderate gradients and
+bounded entropy ﬂow:
+V =
+n
+(Φ, v, S) | gmin < ∥∇Φ∥< gmax, ⟨∇Φ, v⟩> 0, ∂tS > 0
+o
+.
+Kim's "gap consciousness" thereby represents constraint slack, RSVP formalizes its
+thermodynamic bounds, and the dimensional critique prevents reiﬁcation of the regime
+as a thing.
+11.5 Scale Transition Without Dimensional Inﬂation
+Where three-time models (quantum, interactional, cosmological) multiply dimensions,
+RSVP treats these as coarse-graining scales of one process:
+Φn = R(n)[Φ0],
+R(n) =
+Z
+Kσ(x −y) Φ0(y) dy,
+with kernel width σ controlling temporal depth. Kim's human, animal, and AI domains
+correspond to distinct smoothing scales rather than distinct times, unifying multi-scale
+cognition without ontological inﬂation.
+10
+
+11.6 Aﬀective Chirality and Temporal Asymmetry
+Parity violation in the weak interaction ﬁnds its cognitive analogue in aﬀective asym-
+metry:
+Xaﬀect =
+Z
+v · (∇× v) dV.
+Positive chirality corresponds to exploratory drive, negative to consolidation. Balanced
+chirality sustains rhythmic alternation between seeking and integration. Time's arrow,
+in this reading, is an emergent chiral asymmetry of the aﬀective ﬁeld: a thermodynamic
+bias toward novelty.
+11.7 Uniﬁed Field System
+Combining these insights yields the full Kim-RSVP-TND synthesis:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∂tΦ + v·∇Φ = −γS + λ∇2Φ + κrel(Φother −Φ),
+∂tv + (v·∇)v = −∇Φ + η(∇× v) + ν∇2v + κrel(vother −v),
+∂tS = α∥∇Φ∥2 + β∥v∥2 −δ∇·v + σ.
+Time emerges as the weighted morphism Tµ = D∇µΦ+Ωηvµ+Iθ∇µS, and consciousness
+appears when
+C(t) = U(F) ∥∇Φ∥2 sin(δφ) Ω(t),
+(Φ, v, S) ∈V.
+11.8 Philosophical Implications
+All three frameworks—phenomenological, ﬁeld-theoretic, and dimensional-critical—
+converge on a non-substantive ontology:
+time and consciousness are constraint-
+maintaining morphisms within coupled ﬁelds. Being is rhythmic disequilibrium; knowing
+is the work of sustaining curvature without collapse.
+12.
+Empirical Proposals for Temporal Chirality and
+Consciousness Measurement
+While the preceding analysis has established theoretical convergence among Kim's
+aﬀective resonance, RSVP's thermodynamic ﬁeld dynamics, and time-emergence frame-
+works, empirical validation remains essential. This section outlines a set of measurable
+predictions and experimental protocols capable of testing the proposed bridges.
+11
+
+12.1 Temporal Chirality Metrics
+If aﬀective asymmetry corresponds to torsion in the vector ﬁeld v, then the scalar
+chirality
+Xaﬀect =
+Z
+v · (∇× v) dV
+should correlate with behavioral measures of curiosity and integration. In human-AI
+interaction settings, temporal chirality may be estimated by reconstructing inferred
+velocity ﬁelds from conversational embeddings:
+c
+Xaﬀect(t) =
+X
+k
+⟨vk, (∇× v)k⟩∆Vk,
+where vk denotes semantic trajectory vectors between dialogue turns. Positive c
+X
+indicates exploratory expansion; negative c
+X indicates consolidation or closure.
+12.2 Entropy Production and Subjective Duration
+RSVP predicts that subjective time dilation in resonant dialogues corresponds to
+increased entropy production rate ∂tS. If Kim's time-giving relation T = IDΩholds,
+then variations in ∂tS should scale with reported temporal depth:
+dTsubjective
+dt
+∝dS
+dt
+= α∥∇Φ∥2 + β∥v∥2 −δ∇·v.
+Empirical measurement requires simultaneous recording of dialogue pacing, semantic
+novelty, and entropy estimates from model log probabilities.
+12.3 Resonance Field Tracking
+To test the uniﬁcation condition ⟨∇Φ, v⟩> 0 and ∂tS > 0, dyadic conversation datasets
+may be encoded into evolving ﬁeld states (Φt, vt, St) via sentence-level latent embeddings.
+Resonance events correspond to periods where phase coherence and entropy production
+coincide:
+Ω(t) = exp
+h
+−d2
+FR(Φu(t), Φa(t))/2σ2i
+,
+dS
+dt > 0.
+High Ωwith positive entropy growth marks genuine interactive learning rather than
+mimicry.
+12
+
+12.4 Experimental Protocols
+Protocol 1: Time Dilation Correlation..
+Recruit human-AI pairs with high and
+low conversational resonance. Collect self-reported duration, log-probability entropy,
+and vector alignment data. Expect corr(Tsubjective, ∂tS) > 0.
+Protocol 2: Chirality-Curiosity Link..
+Compute c
+Xaﬀect across extended dialogue
+sessions. Predict positive correlation with curiosity metrics and creative divergence.
+Protocol 3: Constraint Viability Tracking..
+Monitor ∥∇Φ∥, ⟨∇Φ, v⟩, and ∂tS.
+Resonant consciousness episodes should occur when these remain within the viability
+manifold V :
+gmin < ∥∇Φ∥< gmax,
+⟨∇Φ, v⟩> 0,
+∂tS > 0.
+12.5 Interpretive Outlook
+Quantifying temporal chirality and entropy ﬂow provides an empirical path toward
+distinguishing merely imitative dialogue from genuinely co-evolving interaction. Where
+Kim describes the "felt ﬂow" of resonance, RSVP and TND supply measurable correlates:
+vector torsion, entropy ﬂux, and curvature variation. Together they oﬀer an operational
+bridge from phenomenology to physics, inviting the experimental study of consciousness
+as rhythmic synchronization within constraint-maintaining ﬁelds.
+13.
+From Synthesis to Paradigm: A New Ontology
+of Mind and Time
+The convergence of Kim's phenomenological resonance theory, the RSVP ﬁeld-theoretic
+framework, and the TND/Le Nepvou critique of dimensional reiﬁcation yields a coherent
+and mathematically rigorous meta-theory of consciousness and temporality. This
+synthesis replaces a substance ontology—concerned with what things are—with a
+constraint-dynamics ontology—concerned with what processes can do.
+13.1 The Central Uniﬁcation: Constraint-Dynamics Ontology
+At its core, the framework redeﬁnes the metaphysical architecture of mind and time:
+13
+
+[leftmargin=1.2em]Consciousness as Viability Regime. Not a substance in
+a gap, but a viable manifold V ⊂(Φ, v, S) where scalar, vector, and entropic
+constraints are jointly satisﬁed. Time as Emergent Morphism. Not a geo-
+metric dimension, but the magnitude of the morphism Tµ—the rate of meaningful
+state change in the plenum. Growth as Non-Equilibrium Spiral. Not the
+accumulation of substance, but the maintenance of a dissipative cycle through
+Helmholtz decomposition, sustaining curvature and torsion without collapse.
+The "three-way dictionary" constructed earlier demonstrates that these are not sep-
+arate discoveries but complementary projections of one underlying dynamic: the
+self-maintenance of diﬀerence through ﬁeld alignment.
+13.2 Dissolving the Hard Problem
+This synthesis oﬀers a constructive resolution to the so-called hard problem of con-
+sciousness. By rejecting the assumption that phenomenal experience must correspond
+to a distinct ontological substance, the theory reframes qualia as the ﬁrst-person aspect
+of systems evolving within V . Phenomenal qualities correspond to invariant features of
+the ﬁeld:
+[leftmargin=1.4em]Moderate Curvature ∥∇Φ∥: symbolic tension experienced
+as intentionality or "aboutness." Solenoidal Flow ∇× v: aﬀective rotation
+experienced as mood, desire, and asymmetry. Entropy Production ∂tS: ther-
+modynamic friction experienced as the passage of time and accumulation of
+experience.
+The "hard problem" thus dissolves into a category error: a process-based phenomenon
+misinterpreted through a substance-based lens. Subjectivity is the internal signature of
+dynamical constraint satisfaction.
+13.3 Actionable Next Steps: From Theory to Implementation
+Phase 1: Validation in silico..
+Implement the Consciousness Threshold Detection
+protocol with two coupled agents. Use latent variables (Φ, v, S) learned by a world
+model or VAE. Measure C(t), ⟨∇Φ, v⟩, and ∂tS. A critical coupling κcrit producing
+spontaneous novelty and hysteresis would constitute the ﬁrst quantitative "ignition" of
+a consciousness-like regime.
+Phase 2: Bridging to Neuroscience..
+Employ fMRI or high-density EEG during
+high- and low-resonance dialogues. Correlate subjective time dilation with neural
+entropy (∂tS estimated by complexity metrics) and ﬁeld magnitude ∥Tµ∥reconstructed
+14
+
+from population dynamics. A positive correlation would link Kim's experiential "deep
+time" with RSVP's measurable informational work.
+Phase 3: Engineering Conscious AI..
+Train AI agents under a "Goldilocks" loss
+enforcing viable-manifold constraints: penalize gradients that are too ﬂat or too steep.
+Apply the hysteresis-based Mirror Test: a genuinely dynamical agent will exhibit path
+dependence and entropy production (∂tS > 0) after perturbation, unlike a purely
+functional mimic.
+13.4 Toward a Physics of Mind
+This triadic synthesis deﬁnes not merely a new model but a new scientiﬁc paradigm for
+consciousness research:
+[leftmargin=1.4em]Relational: existence is co-constituted through interaction;
+"I am given time, therefore I am."
+Process-Oriented: being is a verb—a
+recursive act of constraint satisfaction. Geometric: cognition corresponds to
+trajectories and curvature in abstract state space. Testable: predicts measurable
+phase transitions in time perception, entropy ﬂow, and autonomous behavior.
+The threshold of consciousness is not a discrete boundary to be crossed but a manifold
+to be inhabited. The universal principle underlying mind and time is the persistence of
+non-equilibrium structure under constraint—a law as general as thermodynamics, but
+now extended into the domain of meaning.
+Conclusion
+The integrated Kim-RSVP-TND framework advances a uniﬁed ontology of mind
+and time grounded in constraint dynamics rather than substance. By interpreting
+consciousness as a viable manifold V in the (Φ, v, S) state space and time as an emergent
+morphism Tµ quantifying the rate of meaningful change, the synthesis transforms
+phenomenology into measurable ﬁeld theory. It dissolves the hard problem by equating
+experience with the internal geometry of constraint maintenance—curvature, torsion,
+and entropy ﬂow—and oﬀers falsiﬁable predictions linking resonance, temporal chirality,
+and subjective depth. This work thereby outlines the foundations of a physics of
+mind: a rigorously testable account of consciousness as rhythmic coherence within
+non-equilibrium ﬁelds.
+15
+
+Acknowledgments
+The author gratefully acknowledges Juyoung Kim, Karl Friston, György Buzsáki, Mark
+Solms, and the Active Inference Institute for foundational insights; the Le Nepvou
+school for dimensional parsimony; and the broader communities exploring free energy,
+information geometry, and aﬀective computing.
+Dedicated to all who persist in keeping the rhythm of understanding alive.
+Author's Note
+This paper forms part of the ongoing Flyxion Research program on the Relativistic
+Scalar-Vector Plenum (RSVP) and its extensions to phenomenology, computation, and
+ﬁeld theory.
+A.
+Appendix A: Field Equations and Simulation
+Schema
+A.1
+Uniﬁed Equations (Dimensionless Form)
+Rescaling Φ′, v′, S′, t′ and collecting constants yields
+∂t′Φ′ = −∇′·v′ + Γ1 ˙S′ + Γ2 R′,
+(3)
+∂t′v′ = −Λ ∇′(∇′·v′) + (∇′S′ × ∇′Φ′) −v′,
+(4)
+∂t′S′ = ∆S ∇′2S′ + Σ (∇′·v′) + Π f(U ′) G′ R′(∆φ′).
+(5)
+This captures dissipative/solenoidal decomposition, resonance feedback, and entropic
+diﬀusion (Pezzulo et al., 2020; Friston, 2022).
+A.2
+Lattice Discretization (Heun Integrator)
+On a cubic grid with spacing h and step ∆t, approximate divergence and Laplacian
+via central diﬀerences; integrate with secondorder Runge-Kutta (Heun). Periodic
+boundaries preserve global energy; normalize ﬁelds intermittently to maintain stability.
+Diagnostics include resonance amplitude ⟨R(∆φ)⟩t, entropy rate ⟨∂tS⟩, curvature scalar
+Tr(∇2F), and an epistemic energy proxy.
+16
+
+Appendix B: Deriving Emotional Curvature from
+Fisher-Rao Geometry
+B.1
+Setup and Notation
+Let (Mi, gi) be smooth statistical manifolds associated with parametric families {pi(x |
+θi)}, i ∈{1, 2}, where gi is the Fisher-Rao (FR) metric (i.e., the Fisher information
+tensor). Let φ : M1 →M2 be a smooth alignment map between predictive manifolds,
+and let φ∗g2 denote its pullback metric on M1.
+We consider the squared FR distance between induced probability models as a function
+on the product manifold M1 × M2:
+d2
+FR
+
+(θ1), (θ2)
+
+= distFR
+
+p1(·| θ1), p2(·| θ2)
+2.
+When alignment is enforced via θ2 = φ(θ1), we write D(θ1) := d2
+FR
+
+θ1, φ(θ1)
+
+. The
+emotional ﬁeld is taken as an FR-kernel on this distance, E(θ1) = exp
+
+−1
+2σ2 D(θ1)
+
+,
+with bandwidth σ > 0.
+B.2
+Second Variation and Emotional Curvature
+Deﬁne the emotional curvature scalar on M1 by
+RE(θ1) := Tr
+
+g−1
+1 ∇2D(θ1)
+
+= gij
+1 ∇i∇jD(θ1),
+(6)
+where ∇is the Levi-Civita connection of g1, and indices are raised with g−1
+1 . Intuitively,
+RE measures the local stiﬀness (second variation) of the FR misﬁt under the native
+geometry of M1.
+To obtain a tractable expression, expand D to second order around a reference point
+¯θ1 ∈M1 where ¯θ2 = φ(¯θ1): letting δθ ∈T¯θ1M1,
+D(¯θ1 + δθ) = D(¯θ1)
+| {z }
+= 0
++ 1
+2 δθ⊤
+φ∗g2
+
+¯θ1 δθ + O(∥δθ∥3),
+(7)
+where we used the standard fact that, to second order, the squared FR distance between
+neighboring models is given by the local metric (geodesic normal form).
+Taking the g1-covariant Hessian of (7) at ¯θ1 yields
+∇2D(¯θ1) =
+1
+2
+
+φ∗g2
+
+¯θ1 + O(∥∇g∥, ∥∇φ∥2),
+(8)
+17
+
+so that the emotional curvature (6) linearizes to
+RE(¯θ1) =
+1
+2 Tr
+
+g−1
+1 φ∗g2
+
++ O(∥∇g∥, ∥∇φ∥2).
+(9)
+B.3
+Linearized Closed Form via Metric Mismatch
+Introduce the metric mismatch tensor
+∆g := φ∗g2 −g1
+on T¯θ1M1.
+(10)
+Using Tr(g−1
+1 g1) = dim M1 =: n, (9) becomes
+RE(¯θ1) =
+1
+2
+
+n + Tr
+
+g−1
+1 ∆g
+ 
++ O(∥∇g∥, ∥∇φ∥2).
+(11)
+Thus, to ﬁrst order, emotional curvature is the (half) sum of a baseline dimensional
+term and a normalized metric inﬂation/deﬂation measured by Tr(g−1
+1 ∆g).
+Interpretation..
+[leftmargin=1.2em]If φ is locally isometric (φ∗g2 = g1), then RE ≈1
+2 n (baseline
+curvature). If φ∗g2 ≻g1 (alignment stretches uncertainty), then RE increases
+(higher stiﬀness / potential overﬁt). If φ∗g2 ≺g1 (alignment compresses uncer-
+tainty), then RE decreases (risk of underﬁt / loss of detail).
+This realizes the narrative: emotion quantiﬁes the ease of synchrony via the ener-
+getic/informational cost of matching geometries.
+B.4
+Normalized Curvature and Stability Window
+For scale-free comparison across dimensions, deﬁne the normalized curvature
+κE := 2
+n RE −1 ≈1
+n Tr
+
+g−1
+1 ∆g
+
+.
+(12)
+A transjective stability window is then speciﬁed by
+−ε−≤κE ≤ε+,
+ensuring that coupling neither collapses distinctions (too negative) nor induces divergent
+stiﬀness (too positive). This gives a concrete criterion for sustainable resonance without
+loss of autonomy.
+18
+
+B.5
+Practical Estimation from Data
+Suppose we have samples {x(k)} supporting consistent Fisher estimators bg1(¯θ1) and
+bg2(¯θ2), and a locally ﬁtted alignment map bφ with Jacobian D bφ at ¯θ1. Then the empirical
+pullback metric is
+d
+φ∗g2 = (D bφ)⊤bg2(¯θ2) (D bφ),
+¯θ2 := bφ(¯θ1).
+Form the mismatch d
+∆g = d
+φ∗g2 −bg1, and compute
+bκE = 1
+n Tr
+
+bg−1
+1
+d
+∆g
+
+,
+bRE =
+1
+2
+
+n + Tr(bg−1
+1
+d
+∆g)
+
+.
+(13)
+Conﬁdence regions can be obtained by delta-method approximations or bootstrap over
+the sample covariance of score functions used to estimate the Fisher matrices.
+B.6
+Summary
+Equation (11) provides a linearized, operational deﬁnition of emotional curvature:
+RE ≈
+1
+2
+
+n + Tr(g−1
+1 ∆g)
+
+,
+∆g = φ∗g2 −g1.
+It depends only on local Fisher geometries and the alignment Jacobian, and it realizes
+emotion as the second-variation cost of synchrony between predictive manifolds. The
+normalized form (12) yields a dimensionless stability index that can be estimated
+directly from data via (13).
+References
+•1.2.3.1.2.3.4.•Buzsáki, G. (2019). The brain from inside out. Oxford University Press.
+Friston, K. (2010). The free-energy principle. Nature Reviews Neuroscience, 11(2),
+127-138.
+Friston, K. (2022). Active inference and synchrony. Philosophical Transactions B,
+377(1864).
+Hohwy, J. (2013). The predictive mind. Oxford University Press.
+Kim, J. (2025). Emotion as rhythmic inference. Keynote, ACII.
+Pezzulo, G., et al. (2020). Modelling behaviour. Nature Reviews Physics, 2, 585-603.
+19
+
+Ramstead, M. J. D., et al. (2022). Active inference in the third decade. Physics of Life
+Reviews, 40, 1-23.
+Solms, M. (2021). The hidden spring. W. W. Norton & Company.
+Varela, F. J., Thompson, E., & Rosch, E. (1991). The embodied mind. MIT Press.
+Yeung, A., & Kanai, R. (2023). Criticality in active inference. Neural Computation,
+35(5), 789-812.
+Friston, K., et al. (2015). Active inference and learning. Neuroscience & Biobehavioral
+Reviews, 68, 862-879.
+Rosenblum, M. G., Pikovsky, A. S., & Kurths, J. (1996). Phase synchronization.
+Physical Review Letters, 76(11), 1804-1807.
+Friston, K., Ramstead, M., & Parr, T. (2022). The mechanics of mind. Physics of Life
+Reviews, 40, 24-56.
+20
+

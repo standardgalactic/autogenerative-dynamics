@@ -1,0 +1,78 @@
+\contentsline {part}{Prelude: Historical and Conceptual Foundations}{3}{part*.1}%
+\contentsline {section}{\numberline {1}From Shannon to Barenholtz}{3}{section.1}%
+\contentsline {section}{\numberline {2}Phenomenology of the ``Pregnant Present''}{3}{section.2}%
+\contentsline {section}{\numberline {3}Autogeneration: Four Pillars}{3}{section.3}%
+\contentsline {section}{\numberline {4}Unifying Prior Work}{3}{section.4}%
+\contentsline {section}{\numberline {5}Programmatic Commitments}{3}{section.5}%
+\contentsline {part}{I\hspace {1em}Theoretical Foundations}{4}{part.1}%
+\contentsline {section}{\numberline {6}Core Definitions}{4}{section.6}%
+\contentsline {section}{\numberline {7}Fundamental Conjectures}{4}{section.7}%
+\contentsline {paragraph}{Conjecture A (Language Non-Markovianity).}{4}{paragraph*.2}%
+\contentsline {paragraph}{Conjecture B (Topological Necessity).}{4}{paragraph*.3}%
+\contentsline {paragraph}{Conjecture C (Universal Structure).}{4}{paragraph*.4}%
+\contentsline {paragraph}{Conjecture D (Physics Extension).}{4}{paragraph*.5}%
+\contentsline {part}{II\hspace {1em}Language and Computation}{4}{part.2}%
+\contentsline {section}{\numberline {8}Information Geometry of Token Space}{5}{section.8}%
+\contentsline {section}{\numberline {9}Spectral Analysis of Attention}{5}{section.9}%
+\contentsline {section}{\numberline {10}Rough Path Signatures}{5}{section.10}%
+\contentsline {section}{\numberline {11}Topological Data Analysis}{5}{section.11}%
+\contentsline {part}{III\hspace {1em}Cognitive Extensions}{5}{part.3}%
+\contentsline {section}{\numberline {12}Human Language Processing}{5}{section.12}%
+\contentsline {section}{\numberline {13}Behavioral Non-Markovian Effects}{6}{section.13}%
+\contentsline {section}{\numberline {14}Non-Linguistic Cognition}{6}{section.14}%
+\contentsline {part}{IV\hspace {1em}Biological Systems}{6}{part.4}%
+\contentsline {section}{\numberline {15}Developmental Biology}{6}{section.15}%
+\contentsline {section}{\numberline {16}Morphogenesis}{6}{section.16}%
+\contentsline {section}{\numberline {17}Immunity and Microbiome}{6}{section.17}%
+\contentsline {part}{V\hspace {1em}Physics Applications}{6}{part.5}%
+\contentsline {section}{\numberline {18}Non-Markovian Quantum Mechanics}{7}{section.18}%
+\contentsline {section}{\numberline {19}Action Principles with Memory}{7}{section.19}%
+\contentsline {section}{\numberline {20}Cosmology and Arrow of Time}{7}{section.20}%
+\contentsline {part}{VI\hspace {1em}Advanced Mathematical Frameworks}{7}{part.6}%
+\contentsline {section}{\numberline {21}Sheaf Theory: Contextual Semantics}{7}{section.21}%
+\contentsline {section}{\numberline {22}Topos Theory: Contextual Logic}{8}{section.22}%
+\contentsline {section}{\numberline {23}Operads: Compositional Operations}{8}{section.23}%
+\contentsline {section}{\numberline {24}Homotopy Type Theory and $\infty $-Categories}{8}{section.24}%
+\contentsline {section}{\numberline {25}Tropical Geometry and Optimality}{8}{section.25}%
+\contentsline {section}{\numberline {26}Spectral Graph Theory}{8}{section.26}%
+\contentsline {section}{\numberline {27}Noncommutative Geometry}{8}{section.27}%
+\contentsline {section}{\numberline {28}Rough Paths}{8}{section.28}%
+\contentsline {section}{\numberline {29}Persistent Sheaf Cohomology}{9}{section.29}%
+\contentsline {section}{\numberline {30}Quantum Information}{9}{section.30}%
+\contentsline {section}{\numberline {31}Renormalization Group}{9}{section.31}%
+\contentsline {section}{\numberline {32}Metric and Geometric Group Theory}{9}{section.32}%
+\contentsline {section}{\numberline {33}Algebraic/Derived Geometry and Mirror Symmetry}{9}{section.33}%
+\contentsline {section}{\numberline {34}Higher Gauge Theory}{9}{section.34}%
+\contentsline {section}{\numberline {35}Condensed \& Perfectoid Mathematics; Teichmüller; Synthetic Calculi}{9}{section.35}%
+\contentsline {part}{VII\hspace {1em}Computational Infrastructure}{9}{part.7}%
+\contentsline {section}{\numberline {36}Visualization}{10}{section.36}%
+\contentsline {section}{\numberline {37}Measurement}{10}{section.37}%
+\contentsline {section}{\numberline {38}Platforms}{10}{section.38}%
+\contentsline {part}{VIII\hspace {1em}Applications}{10}{part.8}%
+\contentsline {section}{\numberline {39}Geometry-Guided Training}{10}{section.39}%
+\contentsline {section}{\numberline {40}Memory-Optimized Architectures}{10}{section.40}%
+\contentsline {section}{\numberline {41}Controllable Generation and Safety}{11}{section.41}%
+\contentsline {part}{IX\hspace {1em}Formalization and Proofs}{11}{part.9}%
+\contentsline {section}{\numberline {42}Autogenerative Functors and Language Sheaves}{11}{section.42}%
+\contentsline {section}{\numberline {43}Geodesic Coherence}{11}{section.43}%
+\contentsline {section}{\numberline {44}Cohomological Memory}{11}{section.44}%
+\contentsline {section}{\numberline {45}Gauge-Theoretic Context}{11}{section.45}%
+\contentsline {section}{\numberline {46}Renormalization and Zipf Fixed Point}{12}{section.46}%
+\contentsline {section}{\numberline {47}Autogenerative Theorem}{12}{section.47}%
+\contentsline {part}{X\hspace {1em}Research Proposal: A Five-Year Experimental Theory of Autogeneration}{12}{part.10}%
+\contentsline {section}{\numberline {48}Executive Summary}{12}{section.48}%
+\contentsline {section}{\numberline {49}Detailed Aims}{12}{section.49}%
+\contentsline {section}{\numberline {50}Background and Preliminary Data}{13}{section.50}%
+\contentsline {section}{\numberline {51}Experimental Roadmap}{13}{section.51}%
+\contentsline {subsection}{\numberline {51.1}Tier I — Formal \& Computational (Y1–Y2)}{13}{subsection.51.1}%
+\contentsline {subsection}{\numberline {51.2}Tier II — Linguistic \& Cognitive (Y2–Y3)}{13}{subsection.51.2}%
+\contentsline {subsection}{\numberline {51.3}Tier III — Biological \& Physical (Y3–Y5)}{13}{subsection.51.3}%
+\contentsline {section}{\numberline {52}Infrastructure}{14}{section.52}%
+\contentsline {section}{\numberline {53}Evaluation Metrics}{14}{section.53}%
+\contentsline {section}{\numberline {54}Team and Facilities}{14}{section.54}%
+\contentsline {section}{\numberline {55}Budget Summary (USD)}{14}{section.55}%
+\contentsline {section}{\numberline {56}Risk Mitigation}{15}{section.56}%
+\contentsline {section}{\numberline {57}Dissemination Plan}{15}{section.57}%
+\contentsline {section}{\numberline {58}Ethical Statement}{15}{section.58}%
+\contentsline {section}{\numberline {59}Timeline Gantt (selected)}{15}{section.59}%
+\contentsline {section}{\numberline {60}Conclusion}{15}{section.60}%
