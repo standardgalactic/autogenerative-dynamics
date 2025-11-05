@@ -91,7 +91,10 @@ audio {
   text-shadow: 0 0 8px #00ff99;
 }
 
-  mjx-container { color: #00ff99 !important; }
+  mjx-container {
+  color: #00ff99 !important;
+  text-shadow: 0 0 6px #00ff99;
+  }
 
 
 /* -------- Terminal Glow Animation -------- */
@@ -148,13 +151,20 @@ articleLinks.forEach(link => {
     const file = link.getAttribute('data-file');
     const res = await fetch(file);
     const text = await res.text();
+
     articleList.style.display = 'none';
     backButton.style.display = 'inline-block';
     articleContent.style.display = 'block';
     articleContent.innerHTML = marked.parse(text);
-if (window.MathJax && window.MathJax.typesetPromise) {
-  window.MathJax.typesetPromise([articleContent]);
-}
+
+    // Wait a short tick for the DOM to update before MathJax typesets
+    requestAnimationFrame(() => {
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetClear();
+        window.MathJax.typesetPromise([articleContent])
+          .catch(err => console.error("MathJax render error:", err));
+      }
+    });
   });
 });
 
