@@ -91,6 +91,9 @@ audio {
   text-shadow: 0 0 8px #00ff99;
 }
 
+  mjx-container { color: #00ff99 !important; }
+
+
 /* -------- Terminal Glow Animation -------- */
 @keyframes flicker {
   0% { opacity: 1; }
@@ -98,6 +101,7 @@ audio {
   100% { opacity: 1; }
 }
 body { animation: flicker 3s infinite; }
+  
 </style>
 </head>
 
@@ -148,6 +152,9 @@ articleLinks.forEach(link => {
     backButton.style.display = 'inline-block';
     articleContent.style.display = 'block';
     articleContent.innerHTML = marked.parse(text);
+if (window.MathJax && window.MathJax.typesetPromise) {
+  window.MathJax.typesetPromise([articleContent]);
+}
   });
 });
 
@@ -286,6 +293,22 @@ player.addEventListener('seeked', () => {
   currentSubIndex = -1; // Force re-evaluation
 });
 </script>
+  
+<!-- MathJax for LaTeX rendering -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  svg: { fontCache: 'global' },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+};
+</script>
+  
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 <!-- Load marked.js for Markdown rendering -->
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
